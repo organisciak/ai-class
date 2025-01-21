@@ -1,0 +1,51 @@
+[
+  {
+    "title": "Introduction to AI in Society",
+    "filename": "01-intro-to-ai.html",
+    "slidePath": "/slides/01-intro-to-ai.html",
+    "docPath": "/notes/01-intro-to-ai",
+    "original": "01-intro-to-ai.md"
+  },
+  {
+    "title": "Technical Foundations of Modern AI",
+    "filename": "02-technical-foundations.html",
+    "slidePath": "/slides/02-technical-foundations.html",
+    "docPath": "/notes/02-technical-foundations",
+    "original": "02-technical-foundations.md"
+  },
+  {
+    "title": "03-talking-to-bots",
+    "filename": "03-talking-to-bots.html",
+    "slidePath": "/slides/03-talking-to-bots.html",
+    "docPath": "/notes/03-talking-to-bots",
+    "original": "03-talking-to-bots.md"
+  },
+  {
+    "title": "04-ai-co-creativity",
+    "filename": "04-ai-co-creativity.html",
+    "slidePath": "/slides/04-ai-co-creativity.html",
+    "docPath": "/notes/04-ai-co-creativity",
+    "original": "04-ai-co-creativity.md"
+  },
+  {
+    "title": "Effective Use of Chat Bots in Research",
+    "filename": "05-information-behavior.html",
+    "slidePath": "/slides/05-information-behavior.html",
+    "docPath": "/notes/05-information-behavior",
+    "original": "05-information-behavior.md"
+  },
+  {
+    "title": "06-classification",
+    "filename": "06-classification.html",
+    "slidePath": "/slides/06-classification.html",
+    "docPath": "/notes/06-classification",
+    "original": "06-classification.md"
+  },
+  {
+    "title": "The Ugly Side of Chat Bots",
+    "filename": "07-ethics-and-bias.html",
+    "slidePath": "/slides/07-ethics-and-bias.html",
+    "docPath": "/notes/07-ethics-and-bias",
+    "original": "07-ethics-and-bias.md"
+  }
+]
