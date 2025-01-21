@@ -2,7 +2,7 @@
 marp: true
 theme: custom-theme
 paginate: true
-header: "AI/IA"
+header: "[AI/IA](https://ai.porg.dev)"
 footer: "Introduction to AI In Society"
 
 ---
@@ -273,3 +273,7 @@ Regulation 2024/1689. *Regulation (EU) 2024/1689 on harmonised rules on artifici
 Wang, B., Rau, P. P., & Yuan, T. (2022). Measuring user competence in using artificial intelligence. *Behavior & Information Technology*, *42*(3), 1-14.
 
 Williamson, S. M., & Prybutok, V. (2024). The Era of Artificial Intelligence Deception: Unraveling the Complexities of False Realities. *Information*, *15*(6), 299.
+
+---
+
+[References](https://ai.porg.dev/notes/references)

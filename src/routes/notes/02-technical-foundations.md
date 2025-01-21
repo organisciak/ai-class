@@ -2,7 +2,7 @@
 marp: true
 theme: custom-theme
 paginate: true
-header: "AI/IA"
+header: "[AI/IA](https://ai.porg.dev)"
 footer: "Technical Foundations of Modern AI"
 ---
 
@@ -124,6 +124,8 @@ Take turns asking each other:
 ---
 
 # The Evolution of Text Understanding
+
+Today's class tracks the evolution of Large Language Models from the *natural language processing (NLP) side*. Concurrently, there was a rich history in machine learning and artificial intelligence, that eventually intersects with the text handling. See the [https://www.nature.com/articles/nature14539](Deep Learning) article for a good overview.
 
 ---
 
@@ -256,14 +258,6 @@ a document about pets might represent all of the concepts that the words in the 
 (Img: <a href="https://gist.github.com/fgiobergia/b3a20e097f9b697d0a02fb17685cfd5a">Flavio Giobergia</a>)
 </span>
 
-<style>
-.footnote {
-    border-top: 0.1em dashed #555;
-    font-size: 60%;
-    margin-top: auto;
-}
-</style>
-
 ----
 
 ## Transfer Learning
@@ -338,7 +332,7 @@ Key Points:
 # Transformer Models
 *2017: Attention is All You Need, 2018: BERT*
 
-- 'Transformer' proposed using self-attention for sequence modeling
+- 'Transformer' proposed using self-attention for sequence modeling (Vaswani et al. 2017)
 - BERT applied this to a masked training training (Devlin et al. 2018)
 - T5 (Raffel et al. 2020) compared different training strategies and introduced 'Text to Text' approach
 - GPT introduced decoder-only models (i.e. models that *generate* from the input rather than transformer the input to output)
@@ -425,6 +419,14 @@ so we can find them easily, especially in big places like libraries or on the in
 - Additional training on instruction-following tasks
 - RLHF helps align with intended use
 
+----
+
+## ChatGPT
+
+- instruction-tuned GPT model
+- released in November 2022
+- immediately captured the public imagination - and launched the the rapid (rabid?) commercialization of artificial intelligence
+
 ---
 
 # Beyond Text: Multi-Modal Transformers
@@ -436,7 +438,18 @@ so we can find them easily, especially in big places like libraries or on the in
 
 - **Multi-Modal Models**
 
----
+----
+
+## Why does the history matter?
+
+- Transfer learning is a double-edged sword
+   - makes models general purpose and accessible to masses
+   - hard to inspect, hard to match performance with your own data
+   - But, don't need to train your model from scratch - try *fine-tuning* if you need to adapt to your own data
+- parameterization matters for formal use of these models - we'll discussion temperature and few-shot learning in coming weeks
+- commercial arms race has consequences for collaboration, reproducibility, and risks, though value for general accessibility and infrastructure
+
+----
 
 # Looking Ahead
 
@@ -451,3 +464,7 @@ so we can find them easily, especially in big places like libraries or on the in
 In this lab, you'll learn to use AI systems as a constructive critic to identify potential problems, weaknesses, or overlooked issues in your work. By having AI tools take an adversarial stance, you'll practice extracting valuable feedback while learning to evaluate and filter AI critiques.
 
 Link in [Canvas](https://canvas.du.edu/)
+
+---
+
+[References](https://ai.porg.dev/notes/references)

@@ -15,6 +15,8 @@ async function processSlides() {
   const imagesOutputDir = path.join(slidesOutputDir, 'images')
   const dataDir = path.join(rootDir, 'src', 'lib', 'data')
 
+  const referencesPath = path.join(rootDir, '..', 'references.md')
+
   // Ensure directories exist
   await fs.mkdir(slidesOutputDir, { recursive: true })
   await fs.mkdir(markdownOutputDir, { recursive: true })
@@ -26,6 +28,18 @@ async function processSlides() {
   const mdFiles = files.filter(file => file.endsWith('.md'))
 
   const slideRefs = []
+
+  // Copy references.md to notes directory
+  try {
+    const referencesContent = await fs.readFile(referencesPath, 'utf-8')
+    await fs.writeFile(
+      path.join(markdownOutputDir, 'references.md'),
+      referencesContent
+    )
+    console.log('Copied references.md to notes directory')
+  } catch (error) {
+    console.error('Error copying references.md:', error)
+  }
 
   // Process each markdown file
   for (const file of mdFiles) {
