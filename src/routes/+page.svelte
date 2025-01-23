@@ -3,9 +3,7 @@
     import slides from "$lib/data/slides.json";
     import { onMount } from 'svelte';
     import MisalignedH1 from '$lib/components/ui/misalignedText/MisalignedH1.svelte';
-    import MisalignedH2 from '$lib/components/ui/misalignedText/MisalignedH2.svelte';
     import { Button } from "$lib/components/ui/button";
-    import TripleHr from '$lib/components/ui/tripleHr/TripleHr.svelte'; 
     
     let debug = false;
     
@@ -47,7 +45,7 @@
             
             <Card class={!available ? 'opacity-50' : ''}>
                 <CardHeader>
-                    <CardTitle class="text-xl">
+                    <CardTitle class="text-xl ">
                         {slide.title === slide.original.replace('.md', '') 
                             ? `Lecture ${slideNumber}` 
                             : slide.title}
@@ -81,6 +79,4 @@
             </Card>
         {/each}
     </div>
-
-    <TripleHr class_name="mt-8" lines={4} width="100%" />
 </div>
