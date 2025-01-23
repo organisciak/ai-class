@@ -56,6 +56,17 @@ const config: Config = {
 			},
 			fontFamily: {
 				sans: [...fontFamily.sans]
+			},
+			borderWidth: {
+				'3': '3px',  // Adding the middle weight we need
+				'1': '1px',
+			  },
+			boxShadow: {
+				'misprint': '2px 2px 0px 0px rgba(0,255,255,0.5), -2px -2px 0px 0px rgba(255,0,255,0.5), 1px -1px 0px 0px rgba(255,255,0,0.5)',
+				'misprint-sm': '1px 1px 0px 0px rgba(0,255,255,0.5), -1px -1px 0px 0px rgba(255,0,255,0.5), 2px -2px 0px 0px rgba(255,255,0,0.5)',
+				'misprint-hover': '2px 2px 0px 0px rgba(0,255,255,0.3), -2px -2px 0px 0px rgba(255,0,255,0.3), 2px -2px 0px 0px rgba(255,255,0,0.5)',
+				'misprint-dark': '2px 2px 0px 0px rgba(0,255,255,0.3), -2px -2px 0px 0px rgba(255,0,255,0.3), 1px -1px 0px 0px rgba(255,255,0,0.3)',
+				'misprint-dark-hover': '2px 2px 0px 0px rgba(0,255,255,0.3), -2px -2px 0px 0px rgba(255,0,255,0.3), 2px -2px 0px 0px rgba(255,255,0,0.3)',
 			}
 		}
 	},

@@ -75,4 +75,21 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  .workbench-gfont {
+    font-family: "Workbench", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "BLED" 0,
+      "SCAN" 0;
+  }
+
+  .josefin-sans-gfont {
+    font-family: "Josefin Sans", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+
 }

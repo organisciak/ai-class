@@ -2,6 +2,10 @@
     import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "$lib/components/ui/card";
     import slides from "$lib/data/slides.json";
     import { onMount } from 'svelte';
+    import MisalignedH1 from '$lib/components/ui/misalignedText/MisalignedH1.svelte';
+    import MisalignedH2 from '$lib/components/ui/misalignedText/MisalignedH2.svelte';
+    import { Button } from "$lib/components/ui/button";
+    import TripleHr from '$lib/components/ui/tripleHr/TripleHr.svelte'; 
     
     let debug = false;
     
@@ -25,9 +29,16 @@
 </script>
 
 <div class="container mx-auto p-8">
-    <h1 class="mb-8 scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+    <MisalignedH1 class_name="workbench-gfont mb-8 scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
         AI/IA - Artificial Intelligence in the Information Age
-    </h1>
+    </MisalignedH1>
+
+
+    
+
+    <h2 class="josefin-sans-gfont mt-4 mb-4 scroll-m-20 text-2xl font-extrabold tracking-tight lg:text-3xl">
+        Slides
+    </h2>
     
     <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {#each slides as slide}
@@ -52,28 +63,24 @@
                 </CardHeader>
                 <CardContent class="flex gap-4">
                     {#if available}
-                        <a 
-                            href={slide.slidePath} 
-                            class="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground ring-offset-background transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-                        >
+                        <Button href={slide.slidePath} class="shadow-misprint hover:shadow-misprint-hover">
                             View Slides
-                        </a>
-                        <a 
-                            href={slide.docPath}
-                            class="inline-flex items-center justify-center rounded-md bg-secondary px-4 py-2 text-sm font-medium text-secondary-foreground ring-offset-background transition-colors hover:bg-secondary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-                        >
+                        </Button>
+                        <Button href={slide.docPath} variant="secondary" class="shadow-misprint hover:shadow-misprint-hover">
                             Read Notes
-                        </a>
+                        </Button>
                     {:else}
-                        <span class="inline-flex items-center justify-center rounded-md bg-muted px-4 py-2 text-sm font-medium text-muted-foreground">
+                        <Button disabled variant="outline">
                             View Slides
-                        </span>
-                        <span class="inline-flex items-center justify-center rounded-md bg-muted px-4 py-2 text-sm font-medium text-muted-foreground">
+                        </Button>
+                        <Button disabled variant="outline">
                             Read Notes
-                        </span>
+                        </Button>
                     {/if}
                 </CardContent>
             </Card>
         {/each}
     </div>
+
+    <TripleHr class_name="mt-8" lines={4} width="100%" />
 </div>
