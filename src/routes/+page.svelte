@@ -27,7 +27,7 @@
 </script>
 
 <div class="container mx-auto p-8">
-    <MisalignedH1 class_name="workbench-gfont mb-8 scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+    <MisalignedH1 class_name="workbench-gfont mb-8 scroll-m-20 text-3xl font-extrabold tracking-tight lg:text-4xl">
         AI/IA - Artificial Intelligence in the Information Age
     </MisalignedH1>
 

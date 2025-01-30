@@ -16,6 +16,8 @@ Deerwester, S., Dumais, S. T., Furnas, G. W., Landauer, T. K., & Harshman, R. (1
 
 Devlin, J., Chang, M.-W., Lee, K., & Toutanova, K. (2018). BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding. *arXiv preprint arXiv:1810.04805*.
 
+Doshi, A. R., & Hauser, O. (2023). Generative artificial intelligence enhances creativity but reduces the diversity of novel content (SSRN Scholarly Paper 4535536). Social Science Research Network. https://doi.org/10.2139/ssrn.4535536
+
 Hoffmann, J., Borgeaud, S., Mensch, A., Buchatskaya, E., Cai, T., Rutherford, E., Casas, D. de L., Hendricks, L. A., Welbl, J., Clark, A., Hennigan, T., Noland, E., Millican, K., Driessche, G. van den, Damoc, B., Guy, A., Osindero, S., Simonyan, K., Elsen, E., … Sifre, L. (2022). Training Compute-Optimal Large Language Models (arXiv:2203.15556). arXiv. https://doi.org/10.48550/arXiv.2203.15556
 
 Kaplan, J., McCandlish, S., Henighan, T., Brown, T. B., Chess, B., Child, R., Gray, S., Radford, A., Wu, J., & Amodei, D. (2020). Scaling Laws for Neural Language Models (arXiv:2001.08361). arXiv. https://doi.org/10.48550/arXiv.2001.08361
@@ -35,6 +37,8 @@ Pennington, J., Socher, R., & Manning, C. (2014). Glove: Global vectors for word
 Regulation 2024/1689. *Regulation (EU) 2024/1689 on harmonised rules on artificial intelligence*.
 
 Raffel, C., Shazeer, N., Roberts, A., Lee, K., Narang, S., Matena, M., Zhou, Y., Li, W., & Liu, P. J. (2020). Exploring the limits of transfer learning with a unified text-to-text transformer. *Journal of Machine Learning Research*, 21(140), 1–67.
+
+Rafner, J., Beaty, R. E., Kaufman, J. C., Lubart, T., & Sherson, J. (2023). Creativity in the age of generative AI. Nature Human Behaviour, 7(11), 1836-1838. doi:https://doi.org/10.1038/s41562-023-01751-1
 
 Salton, G., Wong, A., & Yang, C. S. (1975). A vector space model for automatic indexing. *Communications of the ACM*, 18(11), 613–620. https://doi.org/10.1145/361219.361220
 

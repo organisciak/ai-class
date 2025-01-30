@@ -125,6 +125,10 @@ But:
     'This is terrible' -> negative
     Now classify: 'It's okay I guess'"
 
+<p class="footnote">
+A less important distinction for this class, but good to note: few-shot can be used in the context of <em>training</em>, or <em>prompting</em>. For our uses, we're really talking about the latter - giving a general model a few examples of expected output.
+</p>
+
 ----
 
 LLMs are remarkably good at zero-shot and few-shot learning
