@@ -1,0 +1,71 @@
+[
+    {
+        "original": "ai-tool-evaluation.md",
+        "title": "AI Tool Evaluation Journal",
+        "description": "Compare different AI tools on specific tasks to understand their capabilities, limitations, and appropriate use cases.",
+        "docPath": "/labs/ai-tool-evaluation",
+        "week": 1,
+        "coreCompetencies": [
+            "Critical Analysis, Fluency, and Evaluation",
+            "Technical Understanding",
+            "Skilling and Productivity"
+        ]
+    },
+    {
+        "original": "bot-dont-kill-my-vibe.md",
+        "title": "Bot Don't Kill My Vibe",
+        "description": "Use AI as a constructive critic to identify potential problems and weaknesses in your work.",
+        "docPath": "/labs/bot-dont-kill-my-vibe",
+        "week": 2,
+        "coreCompetencies": [
+            "Critical Analysis, Fluency, and Evaluation",
+            "Skilling and Productivity"
+        ]
+    },
+    {
+        "original": "make-it-more.md",
+        "title": "Make It More",
+        "description": "Practice iterative refinement using AI by progressively transforming content through specific lenses or directions.",
+        "docPath": "/labs/make-it-more",
+        "week": 3,
+        "coreCompetencies": [
+            "Skilling and Productivity",
+            "Art and Creativity",
+            "Critical Analysis"
+        ]
+    },
+    {
+        "original": "ai-in-the-wild.md",
+        "title": "AI in the Wild Collection",
+        "description": "Document and analyze notable real-world AI applications and implications observed throughout the quarter.",
+        "docPath": "/labs/ai-in-the-wild",
+        "week": 0,
+        "coreCompetencies": [
+            "Society, Ethics and Policy",
+            "Critical Analysis, Fluency, and Evaluation"
+        ]
+    },
+    {
+        "original": "new-hobby.md",
+        "title": "New Hobby",
+        "description": "Use AI to assist in learning a new skill or exploring a new hobby while documenting the learning process.",
+        "docPath": "/labs/new-hobby",
+        "week": 4,
+        "coreCompetencies": [
+            "Art and Creativity",
+            "Skilling and Productivity",
+            "Technical Understanding"
+        ]
+    },
+    {
+        "original": "prompt-and-circumstance.md",
+        "title": "Prompt & Circumstance",
+        "description": "Design a self-contained interactive experience that lives entirely within a single AI prompt.",
+        "docPath": "/labs/prompt-and-circumstance",
+        "week": 5,
+        "coreCompetencies": [
+            "Art and Creativity",
+            "Skilling and Productivity"
+        ]
+    }
+] 
