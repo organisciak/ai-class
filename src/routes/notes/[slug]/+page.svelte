@@ -1,7 +1,26 @@
 <script lang="ts">    
     export let data;
     import SimpleHeader from '$lib/interface/SimpleHeader.svelte';
+    import { MetaTags } from 'svelte-meta-tags';
 </script>
+
+{#if data?.slideData}
+    <MetaTags
+        title={data.slideData.title}
+        titleTemplate="%s | AI Literacy"
+        description={`Course notes for ${data.slideData.title}`}
+        openGraph={{
+            title: data.slideData.title,
+            description: `Course notes for ${data.slideData.title}`,
+            type: 'article'
+        }}
+        twitter={{
+            cardType: 'summary',
+            title: data.slideData.title,
+            description: `Course notes for ${data.slideData.title}`
+        }}
+    />
+{/if}
 
 <SimpleHeader />
 <div class="container mx-auto max-w-screen-md py-8 px-4">

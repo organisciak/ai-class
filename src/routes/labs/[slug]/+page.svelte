@@ -1,7 +1,29 @@
 <script lang="ts">    
     export let data;
     import SimpleHeader from '$lib/interface/SimpleHeader.svelte';
+    import { MetaTags } from 'svelte-meta-tags';
 </script>
+
+{#if data?.labData}
+    <MetaTags
+        title={data.labData.title}
+        titleTemplate="Lab: %s | AI Literacy"
+        description={data.labData.description}
+        openGraph={{
+            title: data.labData.title,
+            description: data.labData.description,
+            type: 'article',
+            article: {
+                tags: data.labData.coreCompetencies
+            }
+        }}
+        twitter={{
+            cardType: 'summary',
+            title: data.labData.title,
+            description: data.labData.description
+        }}
+    />
+{/if}
 
 <SimpleHeader />
 <div class="container mx-auto max-w-screen-md py-8 px-4">

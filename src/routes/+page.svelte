@@ -5,6 +5,7 @@
     import { onMount } from 'svelte';
     import MisalignedH1 from '$lib/components/ui/misalignedText/MisalignedH1.svelte';
     import { Button } from "$lib/components/ui/button";
+    import { MetaTags } from 'svelte-meta-tags';
     
     let debug = false;
     let showBackToTop = false;
@@ -55,6 +56,22 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 </script>
+
+<MetaTags
+    title="AI/IA - AI in the Information Age"
+    titleTemplate="%s"
+    description="Course materials for Artificial Intelligence in the Information Age. Explore slides, labs, and resources about AI literacy, technical foundations, and societal impact."
+    openGraph={{
+        title: "AI/IA - Artificial Intelligence in the Information Age",
+        description: "Course materials for Artificial Intelligence in the Information Age. Explore slides, labs, and resources about AI literacy, technical foundations, and societal impact.",
+        type: 'website'
+    }}
+    twitter={{
+        cardType: 'summary',
+        title: "AI/IA - Artificial Intelligence in the Information Age",
+        description: "Course materials for Artificial Intelligence in the Information Age. Explore slides, labs, and resources about AI literacy, technical foundations, and societal impact."
+    }}
+/>
 
 <div class="container mx-auto p-8">
     <MisalignedH1 class_name="workbench-gfont mb-8 scroll-m-20 text-3xl font-extrabold tracking-tight lg:text-4xl">
