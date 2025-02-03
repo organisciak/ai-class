@@ -280,8 +280,8 @@ They requires a new kind of learned literacy
 
 ## Labs
 
-- Bot Don't Kill My Vibe
-- Make it More
+- [Bot Don't Kill My Vibe](/labs/bot-dont-kill-my-vibe)
+- [Make it More](/labs/make-it-more)
 
 Both of today's Labs have a discussion forum. Work on the labs in-class and possibly at home, and post your work there before next week's class.
 

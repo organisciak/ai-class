@@ -244,35 +244,7 @@ Goals of this class
 1. Create accounts on a hosted platform (e.g. OpenAI, Gemini, Claude) if you don't already have one
 2. Help out others if it's their first time
 3. Begin exploring AI tools
-4. Complete **Lab: Tool Evaluation Journal** - posted on Canvas
-
----
-
-<!-- _class: references -->
-
-# References
-
-Bender, E. M., Gebru, T., McMillan-Major, A., & Shmitchell, S. (2021). On the dangers of stochastic parrots: Can language models be too big?🦜. *Proceedings of the 2021 ACM FAT Conference*, 610-623.
-
-Bick, A., Blandin, A., & Deming, D. J. (2024). *The Rapid Adoption of Generative AI* (Working Paper 32966). National Bureau of Economic Research.
-
-Brynjolfsson, E., Li, D., & Raymond, L. R. (2023). *Generative AI at Work* (Working Paper 31161). National Bureau of Economic Research.
-
-Cox, A. (2024). Algorithmic Literacy, AI Literacy and Responsible Generative AI Literacy. *Journal of Web Librarianship*, 1–18.
-
-Dell'Acqua, F., et al. (2023). Navigating the jagged technological frontier: Field experimental evidence of the effects of AI on knowledge worker productivity and quality. *Harvard Business School Working Paper*.
-
-Long, D., & Magerko, B. (2020). What is AI Literacy? Competencies and Design Considerations. *Proceedings of CHI 2020*, 1–16.
-
-Miao, F., Shiohira, K., & UNESCO. (2024). *AI competency framework for students*. UNESCO Digital Library.
-
-Noy, S., & Zhang, W. (2023). Experimental evidence on the productivity effects of generative artificial intelligence. *Science*, *381*(6654), 187-192.
-
-Regulation 2024/1689. *Regulation (EU) 2024/1689 on harmonised rules on artificial intelligence*.
-
-Wang, B., Rau, P. P., & Yuan, T. (2022). Measuring user competence in using artificial intelligence. *Behavior & Information Technology*, *42*(3), 1-14.
-
-Williamson, S. M., & Prybutok, V. (2024). The Era of Artificial Intelligence Deception: Unraveling the Complexities of False Realities. *Information*, *15*(6), 299.
+4. Complete **[Lab: Tool Evaluation Journal](/labs/ai-tool-evaluation)**
 
 ---
 

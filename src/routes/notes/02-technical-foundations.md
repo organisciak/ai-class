@@ -453,7 +453,7 @@ so we can find them easily, especially in big places like libraries or on the in
 
 # Looking Ahead
 
-- Lab: New Hobby - Covering in a couple weeks, but may be something you want to think about early!
+- [Lab: New Hobby](/labs/new-hobby) - Covering in a couple weeks, but may be something you want to think about early!
 - Next Week: Prompt Engineering Fundamentals
 - Questions?
 
@@ -463,7 +463,9 @@ so we can find them easily, especially in big places like libraries or on the in
 
 In this lab, you'll learn to use AI systems as a constructive critic to identify potential problems, weaknesses, or overlooked issues in your work. By having AI tools take an adversarial stance, you'll practice extracting valuable feedback while learning to evaluate and filter AI critiques.
 
-Link in [Canvas](https://canvas.du.edu/)
+[Link to Details](labs/bot-dont-kill-my-vibe)
+
+Post your entry on Canvas
 
 ---
 
