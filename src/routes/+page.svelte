@@ -10,8 +10,8 @@
     let showBackToTop = false;
     
     onMount(() => {
-        const urlParams = new URLSearchParams(window.location.search);
-        debug = urlParams.get('debug') === 'true';
+        debug = new URLSearchParams(window.location.search).get('debug') === 'true';
+        console.log('Debug mode:', debug);
         
         // Add scroll listener for back to top button
         window.addEventListener('scroll', () => {
@@ -23,7 +23,7 @@
     const startDate = new Date('2025-01-09');
     const now = new Date();
     
-    function isLectureAvailable(slideNumber: string) {
+    $: isLectureAvailable = (slideNumber: string) => {
         if (debug) return true;
         
         const weekNumber = parseInt(slideNumber) - 1;
@@ -32,7 +32,7 @@
         return now >= lectureDate;
     }
 
-    function isLabAvailable(week: number) {
+    $: isLabAvailable = (week: number) => {
         if (debug) return true;
         if (week === 0) return true; // Always available if week is 0
         

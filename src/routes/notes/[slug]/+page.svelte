@@ -1,7 +1,9 @@
 <script lang="ts">    
     export let data;
+    import SimpleHeader from '$lib/interface/SimpleHeader.svelte';
 </script>
 
+<SimpleHeader />
 <div class="container mx-auto max-w-screen-md py-8 px-4">
     <article class="prose prose-slate
                     dark:prose-invert

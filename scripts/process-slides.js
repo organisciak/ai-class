@@ -73,7 +73,8 @@ async function processSlides() {
       inputPath,
       '--output', outputPath,
       '--html',
-      '--allow-local-files'
+      '--allow-local-files',
+      '--theme', path.join(slidesSourceDir, 'custom-theme.css')
     ])
 
     if (exitStatus > 0) {

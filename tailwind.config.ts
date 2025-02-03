@@ -4,7 +4,7 @@ import type { Config } from "tailwindcss";
 const config: Config = {
 	darkMode: ["class"],
 	content: ["./src/**/*.{html,js,svelte,ts,md}"],
-	safelist: ["dark"],
+	safelist: ["dark", "cursor-pointer"],
 	theme: {
 		container: {
 			center: true,

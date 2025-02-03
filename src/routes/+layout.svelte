@@ -5,5 +5,4 @@
 </script>
 
 {@render children()}
-
 <Footer />
