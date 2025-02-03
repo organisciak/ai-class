@@ -74,7 +74,8 @@ async function processSlides() {
       '--output', outputPath,
       '--html',
       '--allow-local-files',
-      '--theme', path.join(slidesSourceDir, 'custom-theme.css')
+      '--theme', path.join(slidesSourceDir, 'custom-theme.css'),
+      '--no-cache'
     ])
 
     if (exitStatus > 0) {

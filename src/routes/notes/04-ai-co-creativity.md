@@ -207,7 +207,7 @@ Claude 3.5 Sonnet: https://docs.anthropic.com/en/release-notes/system-prompts
 
 I've been creating some examples to model this.
 
-- [Phone Adventure](https://chatgpt.com/g/g-679bcae93b9481919ba974889f97e04d-phone-adventure)
+- [Phone Adventure](https://chatgpt.com/g/g-679bcae93b9481919ba974889f97e04d-phone-adventure) ([prompt](https://gist.github.com/organisciak/8004bf3ca10a30e11ee5741905d7d4d7))
 - [Recipe Master](https://chatgpt.com/g/g-679bc913e62881918e3184610ee78c74-recipe-master) ([prompt](https://gist.githubusercontent.com/organisciak/bf065f30beed8f8d468d0995b59f8eb8/raw/875f6c91523495d32a30c92f16a5cd9331b9a438/gistfile1.txt))
 - [Poster Parser](https://chatgpt.com/g/g-md7NjNgW7-poster-parser) ([prompt](https://gist.githubusercontent.com/organisciak/d6348559374ac06b4634e9ebe8195a65/raw/eb074f3636225ac145f3e279cab404f4b029bf9e/gistfile1.txt))
 
