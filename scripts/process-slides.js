@@ -8,14 +8,14 @@ const execAsync = promisify(exec)
 
 async function processSlides() {
   const rootDir = process.cwd()
-  const slidesSourceDir = path.join(rootDir, '..', 'slides')
+  const slidesSourceDir = path.join(rootDir, '..', 'class-materials', 'slides')
   const slidesOutputDir = path.join(rootDir, 'static', 'slides')
   const markdownOutputDir = path.join(rootDir, 'src', 'routes', 'notes')
   const imagesSourceDir = path.join(slidesSourceDir, 'images')
   const imagesOutputDir = path.join(slidesOutputDir, 'images')
   const dataDir = path.join(rootDir, 'src', 'lib', 'data')
 
-  const referencesPath = path.join(rootDir, '..', 'references.md')
+  const referencesPath = path.join(rootDir, '..', 'class-materials', 'references.md')
 
   // Ensure directories exist
   await fs.mkdir(slidesOutputDir, { recursive: true })
@@ -68,6 +68,15 @@ async function processSlides() {
     const titleMatch = content.match(/(?:title:\s*["'](.+?)["'])|(?:^#\s+(.+))/m)
     const title = titleMatch ? (titleMatch[1] || titleMatch[2]) : file.replace('.md', '')
 
+    // Extract metadata from content
+    const headerMatch = content.match(/header:\s*"([^"]+)"/);
+    const footerMatch = content.match(/footer:\s*"([^"]+)"/);
+    const header = headerMatch ? headerMatch[1] : '';
+    const footer = footerMatch ? footerMatch[1] : '';
+    
+    // Build description from header/footer if available
+    const description = [header, footer].filter(Boolean).join(' - ');
+
     // Convert to HTML using Marp CLI
     const exitStatus = await marpCli([
       inputPath,
@@ -75,7 +84,10 @@ async function processSlides() {
       '--html',
       '--allow-local-files',
       '--theme', path.join(slidesSourceDir, 'custom-theme.css'),
-      '--no-cache'
+      '--title', title,
+      '--description', description,
+      '--author', 'Peter Organisciak, University of Denver',
+      '--keywords', 'AI, artificial intelligence, information science'
     ])
 
     if (exitStatus > 0) {
