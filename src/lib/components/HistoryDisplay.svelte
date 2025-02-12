@@ -48,7 +48,7 @@
                     </div>
                     <p 
                         class="text-sm text-muted-foreground cursor-pointer {expandedId === item.id ? '' : 'line-clamp-2'}"
-                        on:click={() => toggleExpand(item.id)}
+                        onclick={() => toggleExpand(item.id)}
                     >
                         {item.prompt}
                     </p>

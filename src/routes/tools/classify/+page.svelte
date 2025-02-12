@@ -11,12 +11,12 @@
     import ResultsDisplay from "$lib/components/ResultsDisplay.svelte";
     import HistoryDisplay from "$lib/components/HistoryDisplay.svelte";
 
-    let inProgress = false;
-    let error: string | null = null;
-    let completedBatches = 0;
-    let totalBatches = 0;
-    let isPaused = false;
-    let metrics: ValidationStats = { rmse: null, pearsonR: null };
+    let inProgress = $state(false);
+    let error: string | null = $state(null);
+    let completedBatches = $state(0);
+    let totalBatches = $state(0);
+    let isPaused = $state(false);
+    let metrics: ValidationStats = $state({ rmse: null, pearsonR: null });
 
     const promptStore = createPromptStore();
 

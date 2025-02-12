@@ -3,9 +3,9 @@
     import { Textarea } from "$lib/components/ui/textarea";
     import { Send, PlayCircle } from "lucide-svelte";
 
-    let inputText = "";
+    let inputText = $state("");
     let maxLength = 1000;
-    let showAppendedText = false;
+    let showAppendedText = $state(false);
 
     // Create event dispatcher
     import { createEventDispatcher } from 'svelte';
@@ -28,7 +28,7 @@
     <div class="border rounded-lg p-4">
         <button 
             class="flex items-center justify-between w-full text-left"
-            on:click={() => showAppendedText = !showAppendedText}
+            onclick={() => showAppendedText = !showAppendedText}
         >
             <span class="text-sm font-medium">Appended Instructions</span>
             <span class="text-muted-foreground">{showAppendedText ? '▼' : '▶'}</span>

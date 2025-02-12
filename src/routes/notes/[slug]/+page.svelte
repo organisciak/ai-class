@@ -1,7 +1,7 @@
 <script lang="ts">    
-    export let data;
     import SimpleHeader from '$lib/interface/SimpleHeader.svelte';
     import { MetaTags } from 'svelte-meta-tags';
+    let { data } = $props();
 </script>
 
 {#if data?.slideData}
@@ -35,7 +35,7 @@
                     prose-a:text-primary
                     prose-img:max-h-[600px] prose-img:max-w-[800px] prose-img:object-contain">
         {#if data?.content}
-            <svelte:component this={data.content} />
+            <data.content />
         {:else}
             <p>No content loaded</p>
         {/if}

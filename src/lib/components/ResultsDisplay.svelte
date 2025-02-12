@@ -9,14 +9,25 @@
         isGood: boolean;
     }
 
-    export let completedBatches: number = 0;
-    export let totalBatches: number = 0;
-    export let inProgress: boolean = false;
-    export let error: string | null = null;
-    export let isPaused: boolean = false;
-    export let metrics: { rmse: number | null; pearsonR: number | null };
+    interface Props {
+        completedBatches?: number;
+        totalBatches?: number;
+        inProgress?: boolean;
+        error?: string | null;
+        isPaused?: boolean;
+        metrics: { rmse: number | null; pearsonR: number | null };
+    }
 
-    $: results = [
+    let {
+        completedBatches = 0,
+        totalBatches = 0,
+        inProgress = false,
+        error = null,
+        isPaused = false,
+        metrics
+    }: Props = $props();
+
+    let results = $derived([
         { 
             metric: "RMSE", 
             value: metrics.rmse, 
@@ -27,7 +38,7 @@
             value: metrics.pearsonR, 
             isGood: metrics.pearsonR !== null && metrics.pearsonR > 0.7 
         }
-    ];
+    ]);
 </script>
 
 <div class="space-y-4">
