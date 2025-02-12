@@ -8,6 +8,8 @@ footer: "Co-Creativity and Professional Practice"
 
 # Co-Creativity and Professional Practice
 
+![https://replicate.com/organisciak/rad-posters/examples#iila43lblogpqbd5gqijtflbey bg fill opacity:0.3](/slides/images/04/rad-waves.png)
+
 ----
 
 ## Skill Check 

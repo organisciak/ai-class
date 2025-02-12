@@ -4,35 +4,40 @@
     "filename": "01-intro-to-ai.html",
     "slidePath": "/slides/01-intro-to-ai.html",
     "docPath": "/notes/01-intro-to-ai",
-    "original": "01-intro-to-ai.md"
+    "original": "01-intro-to-ai.md",
+    "backgroundImage": "slides/images/01/alphafold.png"
   },
   {
     "title": "Technical Foundations of Modern AI",
     "filename": "02-technical-foundations.html",
     "slidePath": "/slides/02-technical-foundations.html",
     "docPath": "/notes/02-technical-foundations",
-    "original": "02-technical-foundations.md"
+    "original": "02-technical-foundations.md",
+    "backgroundImage": "slides/images/02/byte-mag.jpg"
   },
   {
     "title": "How to Talk to Chat Bots",
     "filename": "03-talking-to-bots.html",
     "slidePath": "/slides/03-talking-to-bots.html",
     "docPath": "/notes/03-talking-to-bots",
-    "original": "03-talking-to-bots.md"
+    "original": "03-talking-to-bots.md",
+    "backgroundImage": "slides/images/03/log-probabilities.png"
   },
   {
     "title": "Co-Creativity and Professional Practice",
     "filename": "04-ai-co-creativity.html",
     "slidePath": "/slides/04-ai-co-creativity.html",
     "docPath": "/notes/04-ai-co-creativity",
-    "original": "04-ai-co-creativity.md"
+    "original": "04-ai-co-creativity.md",
+    "backgroundImage": "slides/images/04/rad-waves.png"
   },
   {
     "title": "AI in Information Behavior",
     "filename": "05-information-behavior.html",
     "slidePath": "/slides/05-information-behavior.html",
     "docPath": "/notes/05-information-behavior",
-    "original": "05-information-behavior.md"
+    "original": "05-information-behavior.md",
+    "backgroundImage": "slides/images/05/librariesofthefuture.png"
   },
   {
     "title": "Classification and Subject Access, Information Organization",
