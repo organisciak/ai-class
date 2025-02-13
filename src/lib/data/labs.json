@@ -67,5 +67,17 @@
             "Art and Creativity",
             "Skilling and Productivity"
         ]
+    },
+    {
+        "original": "classification.md",
+        "title": "Classification Prompt Battle",
+        "description": "Design and refine prompts for AI systems to classify data, iteratively testing against validation datasets to improve classification accuracy.",
+        "docPath": "/labs/classification",
+        "week": 6,
+        "coreCompetencies": [
+            "Technical Understanding",
+            "Critical Analysis, Fluency, and Evaluation",
+            "Skilling and Productivity"
+        ]
     }
 ] 
