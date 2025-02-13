@@ -1,3 +1,19 @@
+function validateInputs(predictions: number[], actuals: number[]): boolean {
+    if (!predictions?.length || !actuals?.length || predictions.length !== actuals.length) {
+        return false;
+    }
+    return true;
+}
+
+function filterNullPairs(predictions: number[], actuals: number[]): [number, number][] {
+    return predictions.reduce((pairs, pred, i) => {
+        if (pred != null && actuals[i] != null) {
+            pairs.push([pred, actuals[i]]);
+        }
+        return pairs;
+    }, [] as [number, number][]);
+}
+
 /**
  * Calculates the Root Mean Square Error (RMSE) between predicted and actual values
  * @param predictions Array of predicted values
@@ -6,13 +22,20 @@
  */
 export function calculateRMSE(predictions: number[], actuals: number[]): number | null {
     // Validate inputs
-    if (!predictions?.length || !actuals?.length || predictions.length !== actuals.length) {
+    if (!validateInputs(predictions, actuals)) {
         return null;
     }
 
-    const n = predictions.length;
-    const sumSquaredDiff = predictions.reduce((sum, pred, i) => {
-        const diff = pred - actuals[i];
+    // Filter out pairs where either value is null/undefined
+    const validPairs = filterNullPairs(predictions, actuals);
+
+    if (validPairs.length === 0) {
+        return null;
+    }
+
+    const n = validPairs.length;
+    const sumSquaredDiff = validPairs.reduce((sum, [pred, actual]) => {
+        const diff = pred - actual;
         return sum + (diff * diff);
     }, 0);
 
@@ -27,7 +50,14 @@ export function calculateRMSE(predictions: number[], actuals: number[]): number 
  */
 export function calculatePearsonR(predictions: number[], actuals: number[]): number | null {
     // Validate inputs
-    if (!predictions?.length || !actuals?.length || predictions.length !== actuals.length) {
+    if (!validateInputs(predictions, actuals)) {
+        return null;
+    }
+
+    // Filter out pairs where either value is null/undefined
+    const validPairs = filterNullPairs(predictions, actuals);
+
+    if (validPairs.length === 0) {
         return null;
     }
 

@@ -18,7 +18,7 @@ export interface ClassifyRequest {
  */
 export interface Classification {
     text: string;
-    score: number;
+    score: number | null;
 }
 
 /**
@@ -26,6 +26,11 @@ export interface Classification {
  */
 export interface ClassifyResponse {
     classifications: Classification[];
+    metadata: {
+        rawResponse: string;
+        fullPrompt: string;
+        originalPrompt: string;
+    };
 }
 
 /**
@@ -36,11 +41,20 @@ export interface PromptMetrics {
     pearsonR: number;
 }
 
+export interface PromptRunResultVsTruth {
+    text: string;
+    score: number | null;
+    truth: number | null;
+}
+
 /**
  * Record of a single prompt evaluation run
  */
 export interface PromptRun {
+    id?: string;
     timestamp: number;
     prompt: string;
+    mode: "quick" | "full";
     metrics: PromptMetrics;
+    results: PromptRunResultVsTruth[];
 }

@@ -79,7 +79,12 @@
     {#each results as result}
         <div class="space-y-2">
             <div class="flex justify-between items-center">
-                <span class="font-medium">{result.metric}</span>
+                <div class="flex items-center gap-2">
+                    <span class="font-medium">{result.metric}</span>
+                    <span class="text-sm text-muted-foreground">
+                        ({result.metric === 'RMSE' ? 'lower is better' : 'higher is better'})
+                    </span>
+                </div>
                 <Badge 
                     variant={inProgress ? "secondary" : (result.isGood ? "default" : "destructive")}
                     class={inProgress ? "opacity-50" : ""}

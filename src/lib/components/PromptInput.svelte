@@ -21,7 +21,7 @@
             id="prompt-input"
             bind:value={inputText}
             placeholder="Enter your classification prompt..."
-            class="min-h-[200px] resize-y"
+            class="min-h-[400px] resize-y"
         />
     </div>
     
@@ -37,15 +37,16 @@
         {#if showAppendedText}
             <p class="text-sm text-muted-foreground italic mb-2">This is appended to your prompt. It cannot be changed.</p>
             <div class="mt-2 text-sm text-muted-foreground font-mono whitespace-pre-wrap">
+## Final Output Format
+
+Include a triple-backtick-escaped CSV response with final annotations. If there were other requests, include those earlier in your response; the annotations should be at the very bottom of your response.
+
 ## Examples to Label
 
 - &#123;...&#125;
 - &#123;...&#125;
 
-## Final Output Format
-
-Include a markdown escaped CSV response with final annotations. If there were other requests, include those earlier in your response; the annotations should be at the very bottom of your response.
-            </div>
+</div>
         {/if}
     </div>
 

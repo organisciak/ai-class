@@ -10,6 +10,7 @@
     import PromptInput from "$lib/components/PromptInput.svelte";
     import ResultsDisplay from "$lib/components/ResultsDisplay.svelte";
     import HistoryDisplay from "$lib/components/HistoryDisplay.svelte";
+	import type { PromptRunResultVsTruth } from "$lib/types";
 
     let inProgress = $state(false);
     let error: string | null = $state(null);
@@ -72,14 +73,20 @@
                 await new Promise(resolve => setTimeout(resolve, 1000));
             }
 
+            const results: PromptRunResultVsTruth[] = allResults.map((result, index) => ({
+                text: result.text,
+                score: result.score,
+                truth: actuals[index]
+            }));
+
             // After all batches are processed, save the run to history
             promptStore.saveRun({
                 id: crypto.randomUUID(),
                 prompt,
                 mode,
                 metrics,
-                timestamp: new Date().toISOString(),
-                results: allResults
+                timestamp: Date.now(),
+                results
             });
 
         } catch (e) {
