@@ -1,0 +1,405 @@
+{
+    "description": "This dataset contains responses to the question, 'What is a surprising use for a box?'. It is sourced from multiple studies, with different participant groups and different experimental conditions. The responses are scores by human judges on a scale of 1-5, with 1 being the least original and 5 being the most original. The ground truth is an average of multiple judges, rounded to one decimal point.",
+    "examples": [
+        {
+            "text": "use it to float on water like a cardboard boat",
+            "truth": 2.0
+        },
+        {
+            "text": "Bookbag use for books",
+            "truth": 2.0
+        },
+        {
+            "text": "throw it at people",
+            "truth": 1.7
+        },
+        {
+            "text": "A trap for an elf",
+            "truth": 3.3
+        },
+        {
+            "text": "hippie purse recycled",
+            "truth": 3.3
+        },
+        {
+            "text": "You can make a dollhouse out of them by taking the 1 and cutting it up to make furniture and an additional for the home itself",
+            "truth": 2.0
+        },
+        {
+            "text": "Hiding place",
+            "truth": 1.6
+        },
+        {
+            "text": "break it down and break dance on it",
+            "truth": 2.1
+        },
+        {
+            "text": "use as a chair",
+            "truth": 1.3
+        },
+        {
+            "text": "nail polish display case",
+            "truth": 1.7
+        },
+        {
+            "text": "window shutter",
+            "truth": 2.1
+        },
+        {
+            "text": "wrist prop for nail shops",
+            "truth": 3.3
+        },
+        {
+            "text": "use as clothes",
+            "truth": 2.0
+        },
+        {
+            "text": "a home entertainment system",
+            "truth": 2.3
+        },
+        {
+            "text": "haunted house",
+            "truth": 2.0
+        },
+        {
+            "text": "Stash all of my candy",
+            "truth": 1.6
+        },
+        {
+            "text": "as a playpen for a child",
+            "truth": 1.7
+        },
+        {
+            "text": "mailbox",
+            "truth": 1.6
+        },
+        {
+            "text": "spacecraft",
+            "truth": 2.2
+        },
+        {
+            "text": "A wagon",
+            "truth": 2.3
+        },
+        {
+            "text": "fake TV",
+            "truth": 2.0
+        },
+        {
+            "text": "tent",
+            "truth": 2.1
+        },
+        {
+            "text": "base for a sand castle",
+            "truth": 2.7
+        },
+        {
+            "text": "a water float",
+            "truth": 2.2
+        },
+        {
+            "text": "robot suit",
+            "truth": 1.9
+        },
+        {
+            "text": "smoking inside it",
+            "truth": 1.9
+        },
+        {
+            "text": "transport items",
+            "truth": 1.0
+        },
+        {
+            "text": "raincoat",
+            "truth": 1.6
+        },
+        {
+            "text": "dress up like Tetris blocks",
+            "truth": 3.5
+        },
+        {
+            "text": "put it over your head for shade",
+            "truth": 2.0
+        },
+        {
+            "text": "Foot Stool",
+            "truth": 1.0
+        },
+        {
+            "text": "transportation",
+            "truth": 1.3
+        },
+        {
+            "text": "tearing",
+            "truth": 1.5
+        },
+        {
+            "text": "to cut and from other objects from",
+            "truth": 1.3
+        },
+        {
+            "text": "use it as a flower pot",
+            "truth": 1.7
+        },
+        {
+            "text": "shower curtain",
+            "truth": 2.7
+        },
+        {
+            "text": "use them for art projects",
+            "truth": 1.7
+        },
+        {
+            "text": "break dancing mat",
+            "truth": 2.0
+        },
+        {
+            "text": "flattened for a dog bed",
+            "truth": 2.0
+        },
+        {
+            "text": "build a hoover craft",
+            "truth": 2.7
+        },
+        {
+            "text": "If its a wooden  it can be used as a shelving unit on a wall",
+            "truth": 1.9
+        },
+        {
+            "text": "use it to make a sand castle",
+            "truth": 2.7
+        },
+        {
+            "text": "wear as a shpe",
+            "truth": 1.3
+        },
+        {
+            "text": "cut it in half and slide down a hill on it",
+            "truth": 2.5
+        },
+        {
+            "text": "make a pool",
+            "truth": 2.3
+        },
+        {
+            "text": "as a shelter",
+            "truth": 1.7
+        },
+        {
+            "text": "home for a person without one",
+            "truth": 1.3
+        },
+        {
+            "text": "dancing stool",
+            "truth": 2.2
+        },
+        {
+            "text": "Recreate a scene from your favorite movie or book inside the",
+            "truth": 2.3
+        },
+        {
+            "text": "lake",
+            "truth": 1.7
+        },
+        {
+            "text": "baby bed",
+            "truth": 1.9
+        },
+        {
+            "text": "receipts",
+            "truth": 1.0
+        },
+        {
+            "text": "keep a pet in it",
+            "truth": 1.7
+        },
+        {
+            "text": "break it down and dance on a flat surface",
+            "truth": 2.2
+        },
+        {
+            "text": "Make 3D art",
+            "truth": 1.9
+        },
+        {
+            "text": "cut it up to make other things",
+            "truth": 1.5
+        },
+        {
+            "text": "house for animals",
+            "truth": 1.0
+        },
+        {
+            "text": "to be home for a pet mouse/snail",
+            "truth": 1.3
+        },
+        {
+            "text": "to draw on",
+            "truth": 1.3
+        },
+        {
+            "text": "stepper",
+            "truth": 1.0
+        },
+        {
+            "text": "Filling it with mirrors and shining a light in it",
+            "truth": 3.3
+        },
+        {
+            "text": "use as something to sled on",
+            "truth": 2.5
+        },
+        {
+            "text": "build a castle",
+            "truth": 1.7
+        },
+        {
+            "text": "used as a pot for a plant",
+            "truth": 1.7
+        },
+        {
+            "text": "a bird house",
+            "truth": 2.3
+        },
+        {
+            "text": "throw it around with friends",
+            "truth": 1.7
+        },
+        {
+            "text": "mail shipment",
+            "truth": 1.0
+        },
+        {
+            "text": "break up and use as plates",
+            "truth": 1.9
+        },
+        {
+            "text": "computer",
+            "truth": 1.3
+        },
+        {
+            "text": "Make a soccer  basketball goal",
+            "truth": 2.4
+        },
+        {
+            "text": "Coffin",
+            "truth": 2.1
+        },
+        {
+            "text": "As a shape shifter",
+            "truth": 2.0
+        },
+        {
+            "text": "roll dice with it",
+            "truth": 2.7
+        },
+        {
+            "text": "hold hair products",
+            "truth": 1.0
+        },
+        {
+            "text": "light it on fire",
+            "truth": 2.2
+        },
+        {
+            "text": "Shovel",
+            "truth": 2.1
+        },
+        {
+            "text": "Can be used when cleaning to et in between small cracks and corners",
+            "truth": 3.3
+        },
+        {
+            "text": "shirt",
+            "truth": 1.7
+        },
+        {
+            "text": "To use as a peg leg",
+            "truth": 3.3
+        },
+        {
+            "text": "decorate",
+            "truth": 1.5
+        },
+        {
+            "text": "a home",
+            "truth": 1.3
+        },
+        {
+            "text": "taking up space",
+            "truth": 1.7
+        },
+        {
+            "text": "a house for ants",
+            "truth": 1.6
+        },
+        {
+            "text": "use it as a giant dice",
+            "truth": 3.3
+        },
+        {
+            "text": "use it as a bag",
+            "truth": 1.8
+        },
+        {
+            "text": "used a  shooting target",
+            "truth": 1.7
+        },
+        {
+            "text": "make small buildings for fun",
+            "truth": 2.0
+        },
+        {
+            "text": "barricade",
+            "truth": 2.8
+        },
+        {
+            "text": "a refrigerator",
+            "truth": 2.0
+        },
+        {
+            "text": "MAKE THE TO KEEP CHICK",
+            "truth": 2.1
+        },
+        {
+            "text": "you can make a fort out of it",
+            "truth": 1.3
+        },
+        {
+            "text": "doll house",
+            "truth": 1.9
+        },
+        {
+            "text": "flatten it to make it into a sled for grassy hills",
+            "truth": 2.2
+        },
+        {
+            "text": "to paint when you are feeling inspired",
+            "truth": 1.7
+        },
+        {
+            "text": "food",
+            "truth": 1.5
+        },
+        {
+            "text": "use it to put something in",
+            "truth": 1.0
+        },
+        {
+            "text": "flying into outer space to have sex on the moon",
+            "truth": 2.7
+        },
+        {
+            "text": "Makeshift table leg",
+            "truth": 2.1
+        },
+        {
+            "text": "solar eclipse viewer",
+            "truth": 3.0
+        },
+        {
+            "text": "peg board for painting hardware",
+            "truth": 3.0
+        }
+    ]
+}

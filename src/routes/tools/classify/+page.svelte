@@ -15,6 +15,8 @@
 	import type { PromptRunResultVsTruth } from "$lib/types";
 
     import * as Select from "$lib/components/ui/select";
+    import * as Collapsible from "$lib/components/ui/collapsible";
+    import { ChevronDown } from "lucide-svelte";
 
     let inProgress = $state(false);
     let error: string | null = $state(null);
@@ -30,16 +32,16 @@
 
     onMount(async () => {
         try {
-            const [aut_brick, aut_lightbulb, aut_book] = await Promise.all([
+            const [aut_brick, aut_box, aut_knife] = await Promise.all([
                 loadDataset('aut_brick'),
-                loadDataset('aut_lightbulb'),
-                loadDataset('aut_book')
+                loadDataset('aut_box'),
+                loadDataset('aut_knife')
             ]);
             
             datasets = {
                 "Alternate Uses Task: Brick": aut_brick,
-                "Alternate Uses Task: Lightbulb": aut_lightbulb,
-                "Alternate Uses Task: Book": aut_book
+                "Alternate Uses Task: Box": aut_box,
+                "Alternate Uses Task: Knife": aut_knife
             };
         } catch (error) {
             console.error('Failed to load datasets:', error);
@@ -154,7 +156,6 @@
              <Card>
                 <CardHeader>
                     <CardTitle>Dataset</CardTitle>
-                    <CardDescription>Select the dataset you want to classify</CardDescription>
                 </CardHeader>
                 <CardContent>
                     {#if isLoading}
@@ -186,9 +187,34 @@
                     {/if}
 
                     {#if description}
-                        <div class="dataset-description">
-                            <p class="text-xs">{description}</p>
-                        </div>
+                        <Collapsible.Root class="mt-4">
+                            <div class="flex items-center space-x-2">
+                                <Collapsible.Trigger
+                                    class="flex items-center gap-2 text-xs hover:underline"
+                                >
+                                    <span>Show dataset description</span>
+                                    <ChevronDown class="h-4 w-4" />
+                                </Collapsible.Trigger>
+                            </div>
+                            <Collapsible.Content class="mt-2">
+                                <div class="dataset-description">
+                                    <p class="text-xs">{description}</p>
+                                    
+                                    {#if currentExamples.length > 0}
+                                        <div class="mt-2">
+                                            <p class="text-sm font-semibold">Examples</p>
+                                            {#each currentExamples.slice(0, 3) as example}
+                                                <hr class="my-2" />
+                                                <div class="text-xs mt-1">
+                                                    Text: {example.text}<br>
+                                                    Truth: {example.truth}
+                                                </div>
+                                            {/each}
+                                        </div>
+                                    {/if}
+                                </div>
+                            </Collapsible.Content>
+                        </Collapsible.Root>
                     {/if}
                 </CardContent>
             </Card>
@@ -244,8 +270,5 @@
 </div>
 
 <style>
-    .dataset-description {
-        margin-bottom: 2rem;
-        font-style: italic;
-    }
+
 </style>

@@ -1,0 +1,405 @@
+{
+    "description": "This dataset contains responses to the question, 'What is a surprising use for a knife?'. It is sourced from multiple studies, with different participant groups and different experimental conditions. The responses are scores by human judges on a scale of 1-5, with 1 being the least original and 5 being the most original. The ground truth is an average of multiple judges, rounded to one decimal point.",
+    "examples": [
+        {
+            "text": "to get the food out of your teeth",
+            "truth": 1.7
+        },
+        {
+            "text": "shave a squirrel",
+            "truth": 2.5
+        },
+        {
+            "text": "to stick objects to a cork board",
+            "truth": 2.0
+        },
+        {
+            "text": "deliver",
+            "truth": 1.3
+        },
+        {
+            "text": "carve objects from wood",
+            "truth": 1.0
+        },
+        {
+            "text": "fork",
+            "truth": 1.3
+        },
+        {
+            "text": "cut a steak",
+            "truth": 1.0
+        },
+        {
+            "text": "wrapping presents",
+            "truth": 2.3
+        },
+        {
+            "text": "cut fruit",
+            "truth": 1.0
+        },
+        {
+            "text": "to clean your teeth - the point = a toothpick",
+            "truth": 2.5
+        },
+        {
+            "text": "engrave",
+            "truth": 1.5
+        },
+        {
+            "text": "reflector (signal)",
+            "truth": 2.3
+        },
+        {
+            "text": "use as scredriver",
+            "truth": 1.7
+        },
+        {
+            "text": "use it as a screwdriver",
+            "truth": 2.0
+        },
+        {
+            "text": "eating",
+            "truth": 1.0
+        },
+        {
+            "text": "fingernail clippers",
+            "truth": 1.5
+        },
+        {
+            "text": "scrape",
+            "truth": 1.1
+        },
+        {
+            "text": "juggling untensil",
+            "truth": 2.0
+        },
+        {
+            "text": "as a tool to cut through fabric or similar \"screens\" when an item needs to be recovered",
+            "truth": 1.3
+        },
+        {
+            "text": "cut a hole into a wall",
+            "truth": 1.0
+        },
+        {
+            "text": "mirror by the reflection",
+            "truth": 2.0
+        },
+        {
+            "text": "use knives as arrows",
+            "truth": 2.0
+        },
+        {
+            "text": "poking random holes in wood or napkins",
+            "truth": 1.3
+        },
+        {
+            "text": "write with the tip with ink",
+            "truth": 2.0
+        },
+        {
+            "text": "juggle them",
+            "truth": 2.0
+        },
+        {
+            "text": "as a kitchen implement in cooking activities",
+            "truth": 1.0
+        },
+        {
+            "text": "create what you can imagine",
+            "truth": 2.3
+        },
+        {
+            "text": "open a locked door",
+            "truth": 1.5
+        },
+        {
+            "text": "people wear them on clothes to start a new trend",
+            "truth": 2.8
+        },
+        {
+            "text": "splint (hold broken bone straight)",
+            "truth": 3.0
+        },
+        {
+            "text": "slice tires",
+            "truth": 1.2
+        },
+        {
+            "text": "to be used as the heel of a high heel shoe",
+            "truth": 4.2
+        },
+        {
+            "text": "reaching something under a couch",
+            "truth": 3.3
+        },
+        {
+            "text": "could have contest to see who can cut a vegetable the fastest in slices",
+            "truth": 1.5
+        },
+        {
+            "text": "cut a rope",
+            "truth": 1.0
+        },
+        {
+            "text": "play \"darts\" with",
+            "truth": 1.7
+        },
+        {
+            "text": "creative carvings",
+            "truth": 1.3
+        },
+        {
+            "text": "to keep lines straight in marching band",
+            "truth": 2.8
+        },
+        {
+            "text": "If the knife is really clean, sometimes you can see your self in it, use it for a mirror",
+            "truth": 2.7
+        },
+        {
+            "text": "to start a car",
+            "truth": 2.0
+        },
+        {
+            "text": "eat off it",
+            "truth": 1.0
+        },
+        {
+            "text": "screw in screws",
+            "truth": 1.7
+        },
+        {
+            "text": "cut tress",
+            "truth": 1.3
+        },
+        {
+            "text": "as a marker to make sure photos are hung straight",
+            "truth": 2.3
+        },
+        {
+            "text": "nail file",
+            "truth": 1.8
+        },
+        {
+            "text": "murdering",
+            "truth": 1.0
+        },
+        {
+            "text": "cleaning fingernails",
+            "truth": 1.7
+        },
+        {
+            "text": "to cut fingers/ toe nails",
+            "truth": 1.7
+        },
+        {
+            "text": "cutting flowers",
+            "truth": 1.3
+        },
+        {
+            "text": "hang on wall as decoration",
+            "truth": 1.7
+        },
+        {
+            "text": "chisel",
+            "truth": 1.7
+        },
+        {
+            "text": "door",
+            "truth": 2.0
+        },
+        {
+            "text": "used to pry something open",
+            "truth": 1.2
+        },
+        {
+            "text": "as a weapon",
+            "truth": 1.0
+        },
+        {
+            "text": "a light reflector",
+            "truth": 2.0
+        },
+        {
+            "text": "a wall decoration",
+            "truth": 2.3
+        },
+        {
+            "text": "to clean under your finger nails",
+            "truth": 1.7
+        },
+        {
+            "text": "kill flies",
+            "truth": 1.0
+        },
+        {
+            "text": "to use as chopsticks",
+            "truth": 2.3
+        },
+        {
+            "text": "challenge a Mexican to a knife fight",
+            "truth": 1.7
+        },
+        {
+            "text": "to cut",
+            "truth": 1.0
+        },
+        {
+            "text": "break into houses",
+            "truth": 1.5
+        },
+        {
+            "text": "replacement for a bottle in \"spin the bottle\"",
+            "truth": 2.8
+        },
+        {
+            "text": "cut tape",
+            "truth": 1.0
+        },
+        {
+            "text": "shave my face",
+            "truth": 1.3
+        },
+        {
+            "text": "cover it and put it on display",
+            "truth": 2.0
+        },
+        {
+            "text": "opening jars",
+            "truth": 2.0
+        },
+        {
+            "text": "reflect light",
+            "truth": 2.0
+        },
+        {
+            "text": "cutting things that would normally require scissors",
+            "truth": 1.3
+        },
+        {
+            "text": "cut stain glass",
+            "truth": 1.3
+        },
+        {
+            "text": "statue",
+            "truth": 2.0
+        },
+        {
+            "text": "to do surgery",
+            "truth": 1.3
+        },
+        {
+            "text": "wear as a necklace",
+            "truth": 2.0
+        },
+        {
+            "text": "chopping",
+            "truth": 1.0
+        },
+        {
+            "text": "gear",
+            "truth": 2.0
+        },
+        {
+            "text": "spin the knife (knock-off spin the bottle)",
+            "truth": 2.5
+        },
+        {
+            "text": "assasinate everyone",
+            "truth": 1.0
+        },
+        {
+            "text": "to turn on a car",
+            "truth": 2.0
+        },
+        {
+            "text": "scratch a mosquito bite",
+            "truth": 2.3
+        },
+        {
+            "text": "throw it at the dart board",
+            "truth": 1.7
+        },
+        {
+            "text": "get the dirt from under your nails",
+            "truth": 1.7
+        },
+        {
+            "text": "killings",
+            "truth": 1.0
+        },
+        {
+            "text": "melt the knife and make anything metal",
+            "truth": 2.7
+        },
+        {
+            "text": "opening objects (door, cans etc)",
+            "truth": 2.0
+        },
+        {
+            "text": "you could dull the blade",
+            "truth": 1.5
+        },
+        {
+            "text": "prize in a box of Trix",
+            "truth": 3.7
+        },
+        {
+            "text": "sex toy",
+            "truth": 3.0
+        },
+        {
+            "text": "use instead of scissors",
+            "truth": 1.3
+        },
+        {
+            "text": "small chair leg",
+            "truth": 3.0
+        },
+        {
+            "text": "hair accessory",
+            "truth": 2.5
+        },
+        {
+            "text": "sharpen pencils",
+            "truth": 1.6
+        },
+        {
+            "text": "hang car keys on it",
+            "truth": 2.7
+        },
+        {
+            "text": "head scratcher",
+            "truth": 2.3
+        },
+        {
+            "text": "weight",
+            "truth": 2.3
+        },
+        {
+            "text": "use as writing utensils",
+            "truth": 1.7
+        },
+        {
+            "text": "instead of throwing darts, throw knives",
+            "truth": 1.7
+        },
+        {
+            "text": "stir thing with it",
+            "truth": 1.7
+        },
+        {
+            "text": "removing stickers",
+            "truth": 2.0
+        },
+        {
+            "text": "fall into a kinfe and feel it piercing through your body",
+            "truth": 1.3
+        },
+        {
+            "text": "paint mixer",
+            "truth": 1.7
+        }
+    ]
+}

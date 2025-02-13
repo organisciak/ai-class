@@ -1,236 +1,136 @@
 {
-    "description": "This dataset contains responses to the question, 'What is a surprising use for a brick?'. It is sourced from multiple studies, with different participant groups and different expetimental conditions. The responses are scores by human judges on a scale of 1-5, with 1 being the least original and 5 being the most original. The ground truth is an average of multiple judges, rounded to one decimal point.",
+    "description": "This dataset contains responses to the question, 'What is a surprising use for a brick?'. It is sourced from multiple studies, with different participant groups and different experimental conditions. The responses are scores by human judges on a scale of 1-5, with 1 being the least original and 5 being the most original. The ground truth is an average of multiple judges, rounded to one decimal point.",
     "examples": [
         {
-            "text": "add height to a bed",
-            "truth": 1.4
-        },
-        {
-            "text": "glass breaker",
-            "truth": 1.5
-        },
-        {
-            "text": "to fix a wobbly surface (like a broken or leaning table)",
-            "truth": 1.4
-        },
-        {
-            "text": "use with chalk and use it as a writing board",
+            "text": "use it to draw on a sidewalk",
             "truth": 2.2
         },
         {
-            "text": "Arts and crafts",
-            "truth": 1.4
-        },
-        {
-            "text": "use them as a mouse connected to a computer to keep students in grade school from destroying the mouse",
-            "truth": 2.6
-        },
-        {
-            "text": "companion (like a teddy bear)",
-            "truth": 1.4
-        },
-        {
-            "text": "used to build a chair",
-            "truth": 1.0
-        },
-        {
-            "text": "use them for paving a driveway",
-            "truth": 1.0
-        },
-        {
-            "text": "use it to smash bugs",
-            "truth": 3.0
-        },
-        {
-            "text": "use a brick to keep a door held open",
-            "truth": 1.0
-        },
-        {
-            "text": "a workout weight",
-            "truth": 1.7
-        },
-        {
-            "text": "use it to prop things up",
+            "text": "you can use to build an empire",
             "truth": 1.8
         },
         {
-            "text": "put it in a sock and make a weapon",
-            "truth": 2.5
-        },
-        {
-            "text": "brick chairs",
-            "truth": 2.0
-        },
-        {
-            "text": "use as a paperweight",
-            "truth": 1.5
-        },
-        {
-            "text": "display donor names",
-            "truth": 4.0
-        },
-        {
-            "text": "make a maze with bricks",
-            "truth": 2.2
-        },
-        {
-            "text": "breaking into someone's house",
-            "truth": 1.5
-        },
-        {
-            "text": "flower planter",
-            "truth": 3.0
-        },
-        {
-            "text": "blanket",
-            "truth": 1.8
-        },
-        {
-            "text": "sinker for minow catcher",
-            "truth": 2.3
-        },
-        {
-            "text": "open a bottle",
-            "truth": 2.7
-        },
-        {
-            "text": "Door stop",
-            "truth": 1.1
-        },
-        {
-            "text": "leveling a table, etc",
-            "truth": 1.7
-        },
-        {
-            "text": "masonry",
-            "truth": 1.5
-        },
-        {
-            "text": "building houses, schools, stores, buildings, part of bridges",
-            "truth": 1.0
-        },
-        {
-            "text": "Scratch-n-sniff   smells likes.",
-            "truth": 3.4
-        },
-        {
-            "text": "Use it to crush ice for margaritas",
-            "truth": 3.5
-        },
-        {
-            "text": "building a patio",
-            "truth": 1.3
-        },
-        {
-            "text": "Closing an oven door",
-            "truth": 1.5
-        },
-        {
-            "text": "fake binoculars",
-            "truth": 3.5
-        },
-        {
-            "text": "building some sort of model",
-            "truth": 1.3
-        },
-        {
-            "text": "to kill somebody with",
-            "truth": 1.0
-        },
-        {
-            "text": "toss the game like toss the balloon",
-            "truth": 1.4
-        },
-        {
-            "text": "Build a sidewalk or road.",
-            "truth": 1.0
-        },
-        {
-            "text": "sharpen a knife with it",
-            "truth": 2.2
-        },
-        {
-            "text": "using it as a weapon",
-            "truth": 1.4
+            "text": "Hurting someone",
+            "truth": 1.2
         },
         {
             "text": "use as a level to make sure something is straight",
             "truth": 2.2
         },
         {
-            "text": "make a dog house",
-            "truth": 1.0
+            "text": "flower planter",
+            "truth": 3.0
         },
         {
-            "text": "car jack",
-            "truth": 2.0
+            "text": "pen and pencil holder",
+            "truth": 3.0
         },
         {
-            "text": "as a target at shooting range",
-            "truth": 1.8
+            "text": "black board (or brick board) to write messages on",
+            "truth": 3.5
         },
         {
-            "text": "painting - put paint on brick and sponge on wall (to make brick wall)",
-            "truth": 2.3
-        },
-        {
-            "text": "try to make the float on water",
-            "truth": 1.8
-        },
-        {
-            "text": "decorative purposes",
+            "text": "supporting furniture",
             "truth": 1.5
         },
         {
-            "text": "desk",
-            "truth": 1.6
+            "text": "keep a car from rolling down a hill",
+            "truth": 1.2
         },
         {
-            "text": "Build a chimney",
+            "text": "a flower pot for the bricks with holes",
+            "truth": 2.3
+        },
+        {
+            "text": "using to contain a fire by building a little wall around the fire",
             "truth": 1.4
         },
         {
-            "text": "to feed birds (out of the little holes on the brick)",
-            "truth": 3.0
+            "text": "Heat it and cook food on top of it",
+            "truth": 3.2
         },
         {
-            "text": "grind up and use as color",
+            "text": "friend (like the volley ball on Castaway)",
+            "truth": 2.7
+        },
+        {
+            "text": "using the edges to dig a hole",
             "truth": 3.3
         },
         {
-            "text": "you can use it as a boarder",
-            "truth": 1.0
+            "text": "sinker for minow catcher",
+            "truth": 2.3
         },
         {
-            "text": "Build a wall",
-            "truth": 1.1
+            "text": "to steady an unbalanced table (if one leg is too short)",
+            "truth": 1.3
         },
         {
-            "text": "an arm support (for typing)",
-            "truth": 3.0
-        },
-        {
-            "text": "dumbbell",
-            "truth": 1.8
-        },
-        {
-            "text": "book case",
+            "text": "level a desk/ table",
             "truth": 1.7
         },
         {
-            "text": "the color can be used to do drawings",
+            "text": "patch up a hole in the garden",
+            "truth": 1.7
+        },
+        {
+            "text": "companion (like a teddy bear)",
+            "truth": 1.4
+        },
+        {
+            "text": "name plate for a desk",
+            "truth": 2.7
+        },
+        {
+            "text": "pound meat",
+            "truth": 2.7
+        },
+        {
+            "text": "as the line in the middle of a volleyball court",
             "truth": 2.6
         },
         {
-            "text": "chalk",
+            "text": "use them as a mouse connected to a computer to keep students in grade school from destroying the mouse",
             "truth": 2.6
         },
         {
-            "text": "You can use for clothes they will just be heavy.",
+            "text": "carve a bunch into chess pieces",
+            "truth": 4.5
+        },
+        {
+            "text": "use a brick as a plate",
+            "truth": 2.0
+        },
+        {
+            "text": "use it to hide a key outside your house",
             "truth": 2.2
         },
         {
-            "text": "use to make a road/way in most underdeveloped countries",
+            "text": "make something heavier",
+            "truth": 1.3
+        },
+        {
+            "text": "sidewalk",
+            "truth": 1.1
+        },
+        {
+            "text": "to throw through a window, or to break something",
+            "truth": 1.3
+        },
+        {
+            "text": "you can take pictures of it, or with it",
+            "truth": 2.0
+        },
+        {
+            "text": "Anchor for small boat",
+            "truth": 1.8
+        },
+        {
+            "text": "hold up window",
+            "truth": 2.7
+        },
+        {
+            "text": "use many bricks for a walkway",
             "truth": 1.0
         },
         {
@@ -238,168 +138,268 @@
             "truth": 2.3
         },
         {
-            "text": "chair",
-            "truth": 1.5
+            "text": "fort",
+            "truth": 1.2
         },
         {
-            "text": "murals",
-            "truth": 2.3
+            "text": "holding things (like a tarp) down",
+            "truth": 1.7
         },
         {
-            "text": "build a campfire with them placed in a circle",
-            "truth": 1.0
-        },
-        {
-            "text": "cooking",
-            "truth": 1.8
-        },
-        {
-            "text": "window opener (break glass)",
-            "truth": 1.3
-        },
-        {
-            "text": "throw it at somebody",
-            "truth": 1.8
-        },
-        {
-            "text": "To stand on during pictures to make yourself taller",
-            "truth": 1.8
+            "text": "canvas (art)",
+            "truth": 1.7
         },
         {
             "text": "Prop for unstable table",
             "truth": 2.3
         },
         {
-            "text": "Anchor for small boat",
-            "truth": 1.8
-        },
-        {
-            "text": "a canvas for a picture",
+            "text": "Draw on it",
             "truth": 3.0
         },
         {
-            "text": "make letters",
-            "truth": 2.2
+            "text": "as a foot stool",
+            "truth": 1.4
         },
         {
-            "text": "defend",
+            "text": "decorative purposes",
+            "truth": 1.5
+        },
+        {
+            "text": "make a flower bed",
+            "truth": 2.1
+        },
+        {
+            "text": "nail paint color",
+            "truth": 2.6
+        },
+        {
+            "text": "hammer",
+            "truth": 1.8
+        },
+        {
+            "text": "weight/counterweight",
             "truth": 1.7
+        },
+        {
+            "text": "painting - put paint on brick and sponge on wall (to make brick wall)",
+            "truth": 2.3
+        },
+        {
+            "text": "Art Project Material",
+            "truth": 3.0
+        },
+        {
+            "text": "Throwing it at someone",
+            "truth": 1.5
+        },
+        {
+            "text": "make something taller, ie a dorm bed",
+            "truth": 1.3
         },
         {
             "text": "arm strength",
             "truth": 1.4
         },
         {
-            "text": "weigh down objects",
-            "truth": 1.0
-        },
-        {
-            "text": "hold up window",
-            "truth": 2.7
-        },
-        {
-            "text": "paint a face on it and call it a pet",
-            "truth": 4.0
-        },
-        {
-            "text": "make a path to walk on",
-            "truth": 1.0
-        },
-        {
-            "text": "hold down paper on a desk",
-            "truth": 1.7
-        },
-        {
-            "text": "and bury someone under a pile of them. You've got anything from building to creating smaller things like grills out of bricks.",
+            "text": "put a car on",
             "truth": 2.3
-        },
-        {
-            "text": "a weight (for exercising)",
-            "truth": 1.5
-        },
-        {
-            "text": "to throw through a window, or to break something",
-            "truth": 1.3
-        },
-        {
-            "text": "pen and pencil holder",
-            "truth": 3.0
-        },
-        {
-            "text": "art canvas",
-            "truth": 2.8
-        },
-        {
-            "text": "use as a base for a heavy object",
-            "truth": 2.2
-        },
-        {
-            "text": "to make sidewalks",
-            "truth": 1.0
-        },
-        {
-            "text": "use it in place of a rolling pin",
-            "truth": 3.0
-        },
-        {
-            "text": "pound meat",
-            "truth": 2.7
-        },
-        {
-            "text": "building a chimney",
-            "truth": 1.3
-        },
-        {
-            "text": "missile",
-            "truth": 3.0
-        },
-        {
-            "text": "use many bricks for a walkway",
-            "truth": 1.0
-        },
-        {
-            "text": "using to contain a fire by building a little wall around the fire",
-            "truth": 1.4
-        },
-        {
-            "text": "toss a",
-            "truth": 1.4
-        },
-        {
-            "text": "supporting furniture",
-            "truth": 1.5
         },
         {
             "text": "skates (ice)",
             "truth": 2.7
         },
         {
-            "text": "put it under a car tire to keep the car from rolling back",
-            "truth": 1.2
+            "text": "Use it to crush ice for margaritas",
+            "truth": 3.5
         },
         {
-            "text": "to stunt your growth",
+            "text": "open a can",
+            "truth": 1.7
+        },
+        {
+            "text": "usage in martial arts",
+            "truth": 1.7
+        },
+        {
+            "text": "as the bottom of a shoe",
+            "truth": 2.0
+        },
+        {
+            "text": "put signs of",
             "truth": 1.8
         },
         {
-            "text": "ti use it to hold the A/c in place",
+            "text": "use them for paving a driveway",
+            "truth": 1.0
+        },
+        {
+            "text": "Projectile",
+            "truth": 1.8
+        },
+        {
+            "text": "for art",
+            "truth": 2.1
+        },
+        {
+            "text": "weigh down objects",
+            "truth": 1.0
+        },
+        {
+            "text": "make a path to walk on",
+            "truth": 1.0
+        },
+        {
+            "text": "to give texture",
+            "truth": 2.3
+        },
+        {
+            "text": "Counterweight for a small child playing on a see saw",
             "truth": 3.0
         },
         {
-            "text": "a slingshot pellet for a big slingshot",
-            "truth": 3.7
+            "text": "to hold open a door",
+            "truth": 1.7
+        },
+        {
+            "text": "Arts and crafts",
+            "truth": 1.4
+        },
+        {
+            "text": "hold down paper on a desk",
+            "truth": 1.7
+        },
+        {
+            "text": "medical tool",
+            "truth": 3.0
+        },
+        {
+            "text": "Chalk",
+            "truth": 2.5
+        },
+        {
+            "text": "use to make a road/way in most underdeveloped countries",
+            "truth": 1.0
+        },
+        {
+            "text": "balloon weight",
+            "truth": 1.8
+        },
+        {
+            "text": "build outdoor barbecue",
+            "truth": 1.5
+        },
+        {
+            "text": "break something - a window",
+            "truth": 1.5
+        },
+        {
+            "text": "desk",
+            "truth": 1.6
+        },
+        {
+            "text": "used to build a chair",
+            "truth": 1.0
+        },
+        {
+            "text": "Scratch-n-sniff   smells likes.",
+            "truth": 3.4
+        },
+        {
+            "text": "strap it on your shoe height",
+            "truth": 1.0
+        },
+        {
+            "text": "Door stopper",
+            "truth": 1.0
+        },
+        {
+            "text": "use as exercise weight",
+            "truth": 4.0
+        },
+        {
+            "text": "a mold for the inside circles",
+            "truth": 2.5
+        },
+        {
+            "text": "and bury someone under a pile of them. You've got anything from building to creating smaller things like grills out of bricks.",
+            "truth": 2.3
+        },
+        {
+            "text": "designs",
+            "truth": 1.7
+        },
+        {
+            "text": "Holding something down",
+            "truth": 1.5
+        },
+        {
+            "text": "reshape a with power tools",
+            "truth": 2.2
+        },
+        {
+            "text": "smash window",
+            "truth": 3.0
         },
         {
             "text": "using as a weapon",
             "truth": 1.7
         },
         {
-            "text": "Leave on gas pedal  cruise control no longer broken...",
-            "truth": 2.2
+            "text": "three little pig's house",
+            "truth": 3.8
         },
         {
-            "text": "for art",
-            "truth": 2.1
+            "text": "use it behind your wheel so it wouldn't roll the car",
+            "truth": 1.7
+        },
+        {
+            "text": "used to destroy a computer",
+            "truth": 1.4
+        },
+        {
+            "text": "craft it into a homemade present for someone",
+            "truth": 1.4
+        },
+        {
+            "text": "a canvas for a picture",
+            "truth": 3.0
+        },
+        {
+            "text": "creating a blockade",
+            "truth": 1.0
+        },
+        {
+            "text": "shin guards",
+            "truth": 3.0
+        },
+        {
+            "text": "put it in a sock and make a weapon",
+            "truth": 2.5
+        },
+        {
+            "text": "making other types of animals, people, things",
+            "truth": 1.7
+        },
+        {
+            "text": "a balloon anchor",
+            "truth": 1.4
+        },
+        {
+            "text": "pave a road with it",
+            "truth": 1.3
+        },
+        {
+            "text": "Closing an oven door",
+            "truth": 1.5
+        },
+        {
+            "text": "masonry",
+            "truth": 1.5
+        },
+        {
+            "text": "you can use it as a boarder",
+            "truth": 1.0
         }
     ]
 }
