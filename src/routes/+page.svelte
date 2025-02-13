@@ -7,8 +7,8 @@
     import { Button } from "$lib/components/ui/button";
     import { MetaTags } from 'svelte-meta-tags';
 
-    let debug = false;
-    let showBackToTop = false;
+    let debug = $state(false);
+    let showBackToTop = $state(false);
 
     onMount(() => {
         debug = new URLSearchParams(window.location.search).get('debug') === 'true';
@@ -24,16 +24,16 @@
     const startDate = new Date('2025-01-09');
     const now = new Date();
 
-    $: isLectureAvailable = (slideNumber: string) => {
+    let isLectureAvailable = $derived((slideNumber: string) => {
         if (debug) return true;
 
         const weekNumber = parseInt(slideNumber) - 1;
         const lectureDate = new Date(startDate);
         lectureDate.setDate(startDate.getDate() + (weekNumber * 7));
         return now >= lectureDate;
-    }
+    })
 
-    $: isLabAvailable = (week: number) => {
+    let isLabAvailable = $derived((week: number) => {
         if (debug) return true;
         if (week === 0) return true; // Always available if week is 0
 
@@ -42,7 +42,7 @@
         labDate.setDate(startDate.getDate() + (weekNumber * 7));
 
         return now >= labDate;
-    }
+    })
 
     // Add new function for smooth scrolling
     function scrollToSection(id: string) {

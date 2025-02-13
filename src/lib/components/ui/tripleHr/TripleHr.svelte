@@ -1,9 +1,18 @@
 <script lang="ts">
-    export let color = "#0066cc"; // Commodore-style blue
-    export let width = "100%";
-    export let class_name = "";
-    export let lines = 3;
-    $: isFullWidth = width === "100%" || width === "100vw";
+  interface Props {
+    color?: string; // Commodore-style blue
+    width?: string;
+    class_name?: string;
+    lines?: number;
+  }
+
+  let {
+    color = "#0066cc",
+    width = "100%",
+    class_name = "",
+    lines = 3
+  }: Props = $props();
+    let isFullWidth = $derived(width === "100%" || width === "100vw");
 </script>
   
 <div class="flex flex-col {isFullWidth ? '' : 'mx-auto'} {class_name}" style="width: {width}">

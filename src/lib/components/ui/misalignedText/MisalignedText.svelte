@@ -1,10 +1,22 @@
 <!-- MisalignedText.svelte -->
 <script lang="ts">
-    export let size = 'text-4xl';
-    export let element = 'div';
-    export let class_name = '';
-    export let chaotic = false;
-    export let mouseTracking = false;
+  interface Props {
+    size?: string;
+    element?: string;
+    class_name?: string;
+    chaotic?: boolean;
+    mouseTracking?: boolean;
+    children?: import('svelte').Snippet;
+  }
+
+  let {
+    size = 'text-4xl',
+    element = 'div',
+    class_name = '',
+    chaotic = false,
+    mouseTracking = false,
+    children
+  }: Props = $props();
   
     // Predefined Tailwind translation classes
     const translationOptions = {
@@ -12,8 +24,8 @@
       y: ['translate-y-0.5', 'translate-y-1', 'translate-y-1.5', '-translate-y-0.5', '-translate-y-1', '-translate-y-1.5']
     };
   
-    let containerElement: HTMLElement;
-    let mousePosition = { x: 0, y: 0 };
+    let containerElement: HTMLElement = $state();
+    let mousePosition = $state({ x: 0, y: 0 });
   
     function handleMouseMove(event: MouseEvent) {
         if (!mouseTracking) return;
@@ -67,13 +79,13 @@
       };
     }
   
-    $: offsets = getRandomTranslations();
+    let offsets = $derived(getRandomTranslations());
   </script>
   
   <div 
     bind:this={containerElement}
-    on:mousemove={handleMouseMove}
-    on:mouseleave={() => {
+    onmousemove={handleMouseMove}
+    onmouseleave={() => {
         if (!containerElement) return;
         // Reset CSS variables on mouse leave
         containerElement.style.setProperty('--offset-cyan-x', '0rem');
@@ -94,7 +106,7 @@
       this={element} 
       class="relative z-10"
     >
-      <slot />
+      {@render children?.()}
     </svelte:element>
     
     <!-- Decorative layers -->
@@ -102,20 +114,20 @@
       aria-hidden="true" 
       class="absolute top-0 left-0 text-cyan-500 mix-blend-multiply opacity-75 select-none z-0 {offsets.cyan.x} {offsets.cyan.y}"
     >
-      <slot />
+      {@render children?.()}
     </span>
     
     <span 
       aria-hidden="true" 
       class="absolute top-0 left-0 text-pink-500 mix-blend-multiply opacity-75 select-none {offsets.magenta.x} {offsets.magenta.y}"
     >
-      <slot />
+      {@render children?.()}
     </span>
     
     <span 
       aria-hidden="true" 
       class="absolute top-0 left-0 text-yellow-500 mix-blend-multiply opacity-75 select-none {offsets.yellow.x} {offsets.yellow.y}"
     >
-      <slot />
+      {@render children?.()}
     </span>
   </div>

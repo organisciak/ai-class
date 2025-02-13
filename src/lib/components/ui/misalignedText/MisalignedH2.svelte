@@ -2,9 +2,19 @@
   <!-- MisalignedH2.svelte -->
   <script lang="ts">
     import MisalignedText from './MisalignedText.svelte';
-    export let class_name = '';
-    export let chaotic = false;
-    export let mouseTracking = false;
+  interface Props {
+    class_name?: string;
+    chaotic?: boolean;
+    mouseTracking?: boolean;
+    children?: import('svelte').Snippet;
+  }
+
+  let {
+    class_name = '',
+    chaotic = false,
+    mouseTracking = false,
+    children
+  }: Props = $props();
   </script>
   
   <MisalignedText
@@ -14,5 +24,5 @@
     {chaotic}
     mouseTracking={mouseTracking}
   >
-    <slot />
+    {@render children?.()}
   </MisalignedText>
