@@ -1,5 +1,6 @@
 <script lang="ts">
     import { Button } from "$lib/components/ui/button";
+    import SimpleHeader from '$lib/interface/SimpleHeader.svelte';
     import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "$lib/components/ui/card";
     import { Separator } from "$lib/components/ui/separator";
     import { Brain, History, CheckCircle2, XCircle } from "lucide-svelte";
@@ -17,6 +18,7 @@
     import * as Select from "$lib/components/ui/select";
     import * as Collapsible from "$lib/components/ui/collapsible";
     import { ChevronDown } from "lucide-svelte";
+    import MisalignedH1 from '$lib/components/ui/misalignedText/MisalignedH1.svelte';
 
     let inProgress = $state(false);
     let error: string | null = $state(null);
@@ -142,11 +144,17 @@
     }
 </script>
 
+<SimpleHeader />
 <div class="container mx-auto p-6 max-w-5xl">
     <!-- Header -->
     <div class="flex items-center gap-2 mb-6">
         <Brain class="h-6 w-6" />
-        <h1 class="text-2xl font-bold">Classification Tool</h1>
+        <MisalignedH1 class_name="text-2xl font-bold josefin-sans-gfont">
+            Classification Tool
+        </MisalignedH1>
+        <a href="/labs/classification" class="workbench-gfont text-sm text-muted-foreground hover:underline ml-2">
+            View Lab Details  →
+        </a>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-6">
@@ -155,7 +163,7 @@
             <!-- Prompt Input Card -->
              <Card>
                 <CardHeader>
-                    <CardTitle>Dataset</CardTitle>
+                    <CardTitle class="josefin-sans-gfont">Dataset</CardTitle>
                 </CardHeader>
                 <CardContent>
                     {#if isLoading}
@@ -221,7 +229,7 @@
 
             <Card>
                 <CardHeader>
-                    <CardTitle>Input Text</CardTitle>
+                    <CardTitle class="josefin-sans-gfont">Input Text</CardTitle>
                     <CardDescription>Enter the text you want to classify</CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -238,7 +246,7 @@
             <!-- Current Results Card -->
             <Card>
                 <CardHeader>
-                    <CardTitle>Results</CardTitle>
+                    <CardTitle class="josefin-sans-gfont">Results</CardTitle>
                     <CardDescription>Current classification results</CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -257,7 +265,7 @@
             <Card>
                 <CardHeader>
                     <div class="flex items-center justify-between">
-                        <CardTitle>History</CardTitle>
+                        <CardTitle class="josefin-sans-gfont">History</CardTitle>
                         <History class="h-5 w-5 text-muted-foreground" />
                     </div>
                 </CardHeader>

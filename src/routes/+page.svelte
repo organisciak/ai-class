@@ -95,6 +95,12 @@
             </Button>
             <Button
                 variant="outline"
+                on:click={() => scrollToSection('tools-section')}
+                class="flex-1">
+                Tools
+            </Button>
+            <Button
+                variant="outline"
                 on:click={() => scrollToSection('labs-section')}
                 class="flex-1">
                 Labs
@@ -192,6 +198,34 @@
         </div>
 
         <div class="mt-8 lg:mt-0 lg:pl-8">
+            <!-- Add Tools section before Labs -->
+            <h2 id="tools-section" class="josefin-sans-gfont mt-4 mb-4 scroll-m-20 text-xl font-extrabold tracking-tight lg:text-2xl">
+                Tools
+            </h2>
+
+            <div class="grid gap-6 md:grid-cols-2 mb-12">
+                <Card>
+                    <CardHeader>
+                        <CardTitle class="text-md group">
+                            <a href="/tools/classify" class="flex items-center gap-2 hover:underline">
+                                Classification Tool
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="opacity-40 group-hover:opacity-100 transition-opacity">
+                                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                                </svg>
+                            </a>
+                        </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <p class="text-sm">
+                            Part of <a href="/labs/classification" class="underline">Lab: Classification Prompt Battle</a>
+                        </p>
+                    </CardContent>
+                </Card>
+            </div>
+
             <h2 id="labs-section" class="josefin-sans-gfont mt-4 mb-4 scroll-m-20 text-xl font-extrabold tracking-tight lg:text-2xl">
                 Labs
             </h2>
