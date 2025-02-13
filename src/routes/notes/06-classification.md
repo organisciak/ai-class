@@ -36,44 +36,44 @@ From last week:
 
 ## Structured vs Unstructured Data
 
-* Structured data: data that is organized in a predefined format, such as numbers, dates, and categorical variables.
-* Unstructured data: data that is not organized in a predefined format, such as text, images, audio, and video.
+- Structured data: data that is organized in a predefined format, such as numbers, dates, and categorical variables.
+- Unstructured data: data that is not organized in a predefined format, such as text, images, audio, and video.
 
 ----
 
 ## Supervised vs Unsupervised Learning
 
-* **Supervised Learning**: Model learns from labeled training data
-  * Examples: Classification, regression
-  * Requires human-annotated data
-  * More accurate for specific tasks
-  * E.g., spam detection, sentiment analysis
+- **Supervised Learning**: Model learns from labeled training data
+  - Examples: Classification, regression
+  - Requires human-annotated data
+  - More accurate for specific tasks
+  - E.g., spam detection, sentiment analysis
 
-* **Unsupervised Learning**: Model finds patterns in unlabeled data
-  * Examples: Clustering, dimensionality reduction
-  * No human annotation needed
-  * Good for discovering hidden patterns
-  * E.g., customer segmentation, topic modeling
+- **Unsupervised Learning**: Model finds patterns in unlabeled data
+  - Examples: Clustering, dimensionality reduction
+  - No human annotation needed
+  - Good for discovering hidden patterns
+  - E.g., customer segmentation, topic modeling
 
 ----
 
 ## Classification
 
-* Classification is the process of categorizing data into predefined categories or classes.
-* It is *traditionally* a type of supervised learning, where the model is trained on labeled data.
+- Classification is the process of categorizing data into predefined categories or classes.
+- It is *traditionally* a type of supervised learning, where the model is trained on labeled data.
 
 ![bg left:25%](/slides/images/06/classification.svg)
 
 <p class="footnote">
-  * As we'll see, few shot prompting of large pretrained models is changing how we approach it!
+As we'll see, few shot prompting of large pretrained models is changing how we approach it!
 </p>
 
 ---
 
 ## Information Extraction
 
-* The process of extracting data from unstructured data
-* Classification *describes* the data (metadata), Information Extraction *extracts* the data in some standardized format(content)
+- The process of extracting data from unstructured data
+- Classification *describes* the data (metadata), Information Extraction *extracts* the data in some standardized format(content)
 
 ----
 
@@ -81,10 +81,10 @@ From last week:
 
 ### Classification
 
-* Identifying spam/phishing emails
-* Sentiment analysis; e.g. customer feedback, book reviews
-* Customer feedback analysis – e.g. extracting themes from survey responses
-* Categorizing reference questions for service improvement
+- Identifying spam/phishing emails
+- Sentiment analysis; e.g. customer feedback, book reviews
+- Customer feedback analysis – e.g. extracting themes from survey responses
+- Categorizing reference questions for service improvement
 
 -----
 
@@ -92,17 +92,17 @@ From last week:
 
 ### Information Extraction
 
-* Meeting note action item extraction
-* Classifying library materials by subject headings or call numbers
-* Content analysis of research papers – e.g. extracting methodology types, research approaches, key findings, citations
-* Identifying themes in qualitative research data
+- Meeting note action item extraction
+- Classifying library materials by subject headings or call numbers
+- Content analysis of research papers – e.g. extracting methodology types, research approaches, key findings, citations
+- Identifying themes in qualitative research data
 
 ---
 
 ## The falling burden of training data
 
-* Historically, training data was a limiting factor - you needed *many* examples, well-labeled
-* Now, with generative AI, we can use *fewer* examples (few-shot) or even *none* (zero-shot)
+- Historically, training data was a limiting factor - you needed *many* examples, well-labeled
+- Now, with generative AI, we can use *fewer* examples (few-shot) or even *none* (zero-shot)
 
 ![bg right:30%](/slides/images/06/trainingdata.svg)
 
@@ -134,26 +134,30 @@ Example from my research: classifying creativity tests
 
 
 <div class="columns">
-<div class="column-25">
+<div class="column">
 
-**Baseline**
+  <h4>Baseline</h4>
 
-- Ranges from 0.12 (LSA, Semdis) - 0.26 (OCS)
+  <ul>
+    <li>Ranges from 0.12 (LSA, Semdis) - 0.26 (OCS)</li>
+  </ul>
 
 </div>
 <div class="column">
 
-**LLM Prompted (c.2022)**
+<h3>LLM Prompted (c.2022)</h3>
 
-*Zero-Shot*
+<p><em>Zero-Shot</em></p>
+<ul>
+  <li>GPT-3 Davinci: .13</li>
+  <li>GPT-3.5: .19</li>
+</ul>
 
-- GPT-3 Davinci: .13
-- GPT-3.5: .19
-  
-*5-Shot*
-
-- GPT-3 Davinci: .42
-- GPT-3.5: .43
+<p><em>5-Shot</em></p>
+<ul>
+  <li>GPT-3 Davinci: .42</li>
+  <li>GPT-3.5: .43</li>
+</ul>
 
 </div>
 </div>
@@ -165,38 +169,47 @@ Example from my research: classifying creativity tests
 *Fine-tuning a model is better, but prompted models are rapidly improving.*
 
 <div class="columns">
-<div class="column-25 text-sm">
+  <div class="column-25 text-sm">
 
-**Baseline**
+  <h3>Baseline</h3>
 
-- Ranges from 0.12 (LSA, Semdis) - 0.26 (OCS)
+  <ul>
+    <li>Ranges from 0.12 (LSA, Semdis) - 0.26 (OCS)</li>
+  </ul>
 
-</div>
-<div class="column-50">
+  </div>
 
-**LLM Prompted (adding GPT-4)**
+  <div class="column-50">
 
-*Zero-Shot*
+  <h3>LLM Prompted (adding GPT-4)</h3>
 
-- GPT-4: .53 (vs. .19 for GPT-3.5)
-  
-*5-Shot*
+  <p><em>Zero-Shot</em></p>
+  <ul>
+    <li>GPT-4: .53 (vs. .19 for GPT-3.5)</li>
+  </ul>
 
-- GPT-4: .66 (vs. .43 for GPT-3.5)
-  
-*20-Shot*
+  <p><em>5-Shot</em></p>
+  <ul>
+    <li>GPT-4: .66 (vs. .43 for GPT-3.5)</li>
+  </ul>
 
-- GPT-4: .70
+  <p><em>20-Shot</em></p>
+  <ul>
+    <li>GPT-4: .70</li>
+  </ul>
 
-</div>
+  </div>
 
-<div class="column-25 text-sm">
+  <div class="column-25 text-sm">
 
-**LLM Fine-Tuned**
+  <h2>LLM Fine-Tuned</h2>
 
-- T5 Large: .76
-- GPT-3 Davinci: .81
-</div>
+  <ul>
+    <li>T5 Large: .76</li>
+    <li>GPT-3 Davinci: .81</li>
+  </ul>
+
+  </div>
 
 </div>
 
@@ -353,10 +366,10 @@ Optimize prompts with DSPy! <https://github.com/stanfordnlp/dspy>
 
 ## Fine-tuning!
 
-* Fine-tuning is the process of training a model on a specific task and dataset
-* It is a type of supervised learning, where the model is trained on labeled data
-* You're *training up* from a language model, so the resource use is not prohibitive. E.g. `gpt-4o-mini` or `gpt-4o`
-* the emergence of GenAI as an industry has made this much easier! You're not coding neural networks, just uploading data of USER INPUT -> EXPECTED BOT RESPONSE
+- Fine-tuning is the process of training a model on a specific task and dataset
+- It is a type of supervised learning, where the model is trained on labeled data
+- You're *training up* from a language model, so the resource use is not prohibitive. E.g. `gpt-4o-mini` or `gpt-4o`
+- the emergence of GenAI as an industry has made this much easier! You're not coding neural networks, just uploading data of USER INPUT -> EXPECTED BOT RESPONSE
 
 ![](/slides/images/06/fine-tuning-example.png)
 
