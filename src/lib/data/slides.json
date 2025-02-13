@@ -44,7 +44,8 @@
     "filename": "06-classification.html",
     "slidePath": "/slides/06-classification.html",
     "docPath": "/notes/06-classification",
-    "original": "06-classification.md"
+    "original": "06-classification.md",
+    "backgroundImage": "slides/images/06/sentiment-distribution.png"
   },
   {
     "title": "Ethics and Bias in AI Systems, Safety Considerations",
