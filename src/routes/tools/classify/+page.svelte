@@ -6,11 +6,15 @@
     import { classifyBatch } from "$lib/api";
     import { calculateMetrics } from "$lib/metrics";
     import { createPromptStore } from "$lib/storage.svelte";
+    import { onMount } from 'svelte';
+    import { loadDataset } from '$lib/data/datasetLoader';
 
     import PromptInput from "$lib/components/PromptInput.svelte";
     import ResultsDisplay from "$lib/components/ResultsDisplay.svelte";
     import HistoryDisplay from "$lib/components/HistoryDisplay.svelte";
 	import type { PromptRunResultVsTruth } from "$lib/types";
+
+    import * as Select from "$lib/components/ui/select";
 
     let inProgress = $state(false);
     let error: string | null = $state(null);
@@ -21,8 +25,48 @@
 
     const promptStore = createPromptStore();
 
+    let datasets = $state({});
+    let isLoading = $state(true);
+
+    onMount(async () => {
+        try {
+            const [aut_brick, aut_lightbulb, aut_book] = await Promise.all([
+                loadDataset('aut_brick'),
+                loadDataset('aut_lightbulb'),
+                loadDataset('aut_book')
+            ]);
+            
+            datasets = {
+                "Alternate Uses Task: Brick": aut_brick,
+                "Alternate Uses Task: Lightbulb": aut_lightbulb,
+                "Alternate Uses Task: Book": aut_book
+            };
+        } catch (error) {
+            console.error('Failed to load datasets:', error);
+        } finally {
+            isLoading = false;
+        }
+    });
+
+    // Update the derived values to handle the loading state
+    let selectedDataset = $state(Object.keys(datasets)[0] || '');
+    let currentExamples = $derived(datasets[selectedDataset]?.examples || [] as LabeledExample[]);
+    let description = $derived(datasets[selectedDataset]?.description || '');
+    let examples = $derived(currentExamples);
+
+    // For the Select component
+    let selected = $derived({
+        value: selectedDataset,
+        label: selectedDataset
+    });
+
     async function handleClassify(event: CustomEvent<{ prompt: string; mode: 'quick' | 'full' }>) {
         const { prompt, mode } = event.detail;
+        
+        // Use the examples based on the mode that was clicked
+        const selectedExamples = mode === 'quick' 
+            ? currentExamples.slice(0, 20) 
+            : currentExamples;
         
         // Reset state
         inProgress = true;
@@ -33,37 +77,34 @@
 
         try {
             // Generate example texts based on mode
-            const examples = Array.from(
-                { length: mode === 'quick' ? 4 : 20 },
-                (_, i) => `Example ${i + 1}`
-            );
-
-            const batchSize = 2;
+            const batchSize = 10;
             const batches = [];
             
-            // Split examples into batches
-            for (let i = 0; i < examples.length; i += batchSize) {
-                batches.push(examples.slice(i, i + batchSize));
+            // Split examples into batches using the mode-specific examples
+            for (let i = 0; i < selectedExamples.length; i += batchSize) {
+                batches.push(selectedExamples.slice(i, i + batchSize));
             }
             
             totalBatches = batches.length;
             const allResults = [];
             const predictions: number[] = [];
             const actuals: number[] = [];
+            const rawResponses: string[] = [];
 
             // Process each batch
             for (let i = 0; i < batches.length; i++) {
-                const batchExamples = batches[i].map(text => ({ text }));
+                const batchExamples = batches[i].map(example => ({ text: example.text }));
                 const request = { prompt, examples: batchExamples };
                 
                 const response = await classifyBatch(request);
                 allResults.push(...response.classifications);
                 
-                // Update metrics for each batch
-                response.classifications.forEach(result => {
+                // Store raw responses
+                rawResponses.push(response.metadata.rawResponse);
+                
+                response.classifications.forEach((result, idx) => {
                     predictions.push(result.score);
-                    // Generate random actual value between 0 and 1 for testing
-                    const actual = Math.random();
+                    const actual = parseFloat(batches[i][idx].truth);
                     actuals.push(actual);
                 });
                 
@@ -84,9 +125,11 @@
                 id: crypto.randomUUID(),
                 prompt,
                 mode,
+                dataset: selectedDataset,
                 metrics,
                 timestamp: Date.now(),
-                results
+                results,
+                rawResponse: rawResponses.join('\n\n------\n\n')
             });
 
         } catch (e) {
@@ -104,17 +147,62 @@
         <h1 class="text-2xl font-bold">Classification Tool</h1>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-6">
         <!-- Left Column: Input and Controls -->
         <div class="space-y-6">
             <!-- Prompt Input Card -->
+             <Card>
+                <CardHeader>
+                    <CardTitle>Dataset</CardTitle>
+                    <CardDescription>Select the dataset you want to classify</CardDescription>
+                </CardHeader>
+                <CardContent>
+                    {#if isLoading}
+                        <p>Loading datasets...</p>
+                    {:else}
+                        <Select.Root
+                            selected={selected}
+                            onSelectedChange={(v) => {
+                                if (v) selectedDataset = v.value;
+                            }}
+                        >
+                            <Select.Trigger>
+                                <Select.Value placeholder="Select a dataset" />
+                            </Select.Trigger>
+                            <Select.Content>
+                                <Select.Group>
+                                    <Select.Label>Available Datasets</Select.Label>
+                                    {#each Object.keys(datasets) as dataset}
+                                        <Select.Item 
+                                            value={dataset}
+                                            label={dataset}
+                                        >
+                                            {dataset}
+                                        </Select.Item>
+                                    {/each}
+                                </Select.Group>
+                            </Select.Content>
+                        </Select.Root>
+                    {/if}
+
+                    {#if description}
+                        <div class="dataset-description">
+                            <p class="text-xs">{description}</p>
+                        </div>
+                    {/if}
+                </CardContent>
+            </Card>
+
             <Card>
                 <CardHeader>
                     <CardTitle>Input Text</CardTitle>
                     <CardDescription>Enter the text you want to classify</CardDescription>
                 </CardHeader>
                 <CardContent>
-                    <PromptInput on:classify={handleClassify} />
+                    <PromptInput 
+                        on:classify={handleClassify} 
+                        disabledButtons={!!selectedDataset}
+                    />
                 </CardContent>
             </Card>
         </div>
@@ -154,3 +242,10 @@
         </div>
     </div>
 </div>
+
+<style>
+    .dataset-description {
+        margin-bottom: 2rem;
+        font-style: italic;
+    }
+</style>
