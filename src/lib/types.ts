@@ -21,6 +21,11 @@ export interface Classification {
     score: number | null;
 }
 
+export interface LabeledExample {
+    text: string;
+    truth: string;
+}
+
 /**
  * Response format from classification
  */
@@ -55,6 +60,8 @@ export interface PromptRun {
     timestamp: number;
     prompt: string;
     mode: "quick" | "full";
+    dataset: string;
+    rawResponse: string | null;
     metrics: PromptMetrics;
     results: PromptRunResultVsTruth[];
 }

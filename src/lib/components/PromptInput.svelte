@@ -7,6 +7,11 @@
     let maxLength = 1000;
     let showAppendedText = $state(false);
 
+    // Use $props() instead of export let
+    let { disabledButtons } = $props<{
+        disabledButtons: boolean;
+    }>();
+
     // Create event dispatcher
     import { createEventDispatcher } from 'svelte';
     const dispatch = createEventDispatcher<{
@@ -55,13 +60,20 @@ Include a triple-backtick-escaped CSV response with final annotations. If there 
             {inputText.length}/{maxLength} characters
         </span>
         <div class="space-x-2">
-            <Button variant="outline" on:click={() => dispatch('classify', { prompt: inputText, mode: 'quick' })}>
+            <Button 
+                variant="outline" 
+                on:click={() => dispatch('classify', { prompt: inputText, mode: 'quick' })}
+                disabled={!disabledButtons}
+            >
                 <Send class="mr-2 h-4 w-4" />
-                Quick Test
+                Quick Run
             </Button>
-            <Button on:click={() => dispatch('classify', { prompt: inputText, mode: 'full' })}>
+            <Button 
+                on:click={() => dispatch('classify', { prompt: inputText, mode: 'full' })}
+                disabled={!disabledButtons}
+            >
                 <PlayCircle class="mr-2 h-4 w-4" />
-                Full Validation
+                Full Run
             </Button>
         </div>
     </div>

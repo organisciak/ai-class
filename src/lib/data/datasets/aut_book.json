@@ -1,0 +1,85 @@
+{
+    "description": "This dataset contains examples of alternate uses for a book.",
+    "examples": [
+        {
+            "text": "use it to flatten out curled papers",
+            "truth": 3.0
+        },
+        {
+            "text": "to make crafts",
+            "truth": 2.8
+        },
+        {
+            "text": "for competitions",
+            "truth": 2.3
+        },
+        {
+            "text": "put your monitor",
+            "truth": 2.0
+        },
+        {
+            "text": "prop for photos",
+            "truth": 3.0
+        },
+        {
+            "text": "computer stand",
+            "truth": 2.7
+        },
+        {
+            "text": "to fuel a fire",
+            "truth": 2.5
+        },
+        {
+            "text": "studying",
+            "truth": 1.5
+        },
+        {
+            "text": "bug smasher",
+            "truth": 3.0
+        },
+        {
+            "text": "a sun shade",
+            "truth": 3.3
+        },
+        {
+            "text": "facial obfuscation",
+            "truth": 3.8
+        },
+        {
+            "text": "to use as a weapon",
+            "truth": 3.5
+        },
+        {
+            "text": "kill flies",
+            "truth": 3.0
+        },
+        {
+            "text": "learning material",
+            "truth": 1.5
+        },
+        {
+            "text": "cookie tray",
+            "truth": 4.5
+        },
+        {
+            "text": "cup holder",
+            "truth": 3.7
+        },
+        {
+            "text": "hard surface",
+            "truth": 2.0
+        },
+        {
+            "text": "to enjoy",
+            "truth": 1.5
+        },
+        {
+            "text": "smack mosquitoes",
+            "truth": 3.0
+        },
+        {
+            "text": "stac",
+            "truth": 2.0
+        }
+    ]
+}

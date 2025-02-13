@@ -1,0 +1,405 @@
+{
+    "description": "This dataset contains responses to the question, 'What is a surprising use for a brick?'. It is sourced from multiple studies, with different participant groups and different expetimental conditions. The responses are scores by human judges on a scale of 1-5, with 1 being the least original and 5 being the most original. The ground truth is an average of multiple judges, rounded to one decimal point.",
+    "examples": [
+        {
+            "text": "add height to a bed",
+            "truth": 1.4
+        },
+        {
+            "text": "glass breaker",
+            "truth": 1.5
+        },
+        {
+            "text": "to fix a wobbly surface (like a broken or leaning table)",
+            "truth": 1.4
+        },
+        {
+            "text": "use with chalk and use it as a writing board",
+            "truth": 2.2
+        },
+        {
+            "text": "Arts and crafts",
+            "truth": 1.4
+        },
+        {
+            "text": "use them as a mouse connected to a computer to keep students in grade school from destroying the mouse",
+            "truth": 2.6
+        },
+        {
+            "text": "companion (like a teddy bear)",
+            "truth": 1.4
+        },
+        {
+            "text": "used to build a chair",
+            "truth": 1.0
+        },
+        {
+            "text": "use them for paving a driveway",
+            "truth": 1.0
+        },
+        {
+            "text": "use it to smash bugs",
+            "truth": 3.0
+        },
+        {
+            "text": "use a brick to keep a door held open",
+            "truth": 1.0
+        },
+        {
+            "text": "a workout weight",
+            "truth": 1.7
+        },
+        {
+            "text": "use it to prop things up",
+            "truth": 1.8
+        },
+        {
+            "text": "put it in a sock and make a weapon",
+            "truth": 2.5
+        },
+        {
+            "text": "brick chairs",
+            "truth": 2.0
+        },
+        {
+            "text": "use as a paperweight",
+            "truth": 1.5
+        },
+        {
+            "text": "display donor names",
+            "truth": 4.0
+        },
+        {
+            "text": "make a maze with bricks",
+            "truth": 2.2
+        },
+        {
+            "text": "breaking into someone's house",
+            "truth": 1.5
+        },
+        {
+            "text": "flower planter",
+            "truth": 3.0
+        },
+        {
+            "text": "blanket",
+            "truth": 1.8
+        },
+        {
+            "text": "sinker for minow catcher",
+            "truth": 2.3
+        },
+        {
+            "text": "open a bottle",
+            "truth": 2.7
+        },
+        {
+            "text": "Door stop",
+            "truth": 1.1
+        },
+        {
+            "text": "leveling a table, etc",
+            "truth": 1.7
+        },
+        {
+            "text": "masonry",
+            "truth": 1.5
+        },
+        {
+            "text": "building houses, schools, stores, buildings, part of bridges",
+            "truth": 1.0
+        },
+        {
+            "text": "Scratch-n-sniff   smells likes.",
+            "truth": 3.4
+        },
+        {
+            "text": "Use it to crush ice for margaritas",
+            "truth": 3.5
+        },
+        {
+            "text": "building a patio",
+            "truth": 1.3
+        },
+        {
+            "text": "Closing an oven door",
+            "truth": 1.5
+        },
+        {
+            "text": "fake binoculars",
+            "truth": 3.5
+        },
+        {
+            "text": "building some sort of model",
+            "truth": 1.3
+        },
+        {
+            "text": "to kill somebody with",
+            "truth": 1.0
+        },
+        {
+            "text": "toss the game like toss the balloon",
+            "truth": 1.4
+        },
+        {
+            "text": "Build a sidewalk or road.",
+            "truth": 1.0
+        },
+        {
+            "text": "sharpen a knife with it",
+            "truth": 2.2
+        },
+        {
+            "text": "using it as a weapon",
+            "truth": 1.4
+        },
+        {
+            "text": "use as a level to make sure something is straight",
+            "truth": 2.2
+        },
+        {
+            "text": "make a dog house",
+            "truth": 1.0
+        },
+        {
+            "text": "car jack",
+            "truth": 2.0
+        },
+        {
+            "text": "as a target at shooting range",
+            "truth": 1.8
+        },
+        {
+            "text": "painting - put paint on brick and sponge on wall (to make brick wall)",
+            "truth": 2.3
+        },
+        {
+            "text": "try to make the float on water",
+            "truth": 1.8
+        },
+        {
+            "text": "decorative purposes",
+            "truth": 1.5
+        },
+        {
+            "text": "desk",
+            "truth": 1.6
+        },
+        {
+            "text": "Build a chimney",
+            "truth": 1.4
+        },
+        {
+            "text": "to feed birds (out of the little holes on the brick)",
+            "truth": 3.0
+        },
+        {
+            "text": "grind up and use as color",
+            "truth": 3.3
+        },
+        {
+            "text": "you can use it as a boarder",
+            "truth": 1.0
+        },
+        {
+            "text": "Build a wall",
+            "truth": 1.1
+        },
+        {
+            "text": "an arm support (for typing)",
+            "truth": 3.0
+        },
+        {
+            "text": "dumbbell",
+            "truth": 1.8
+        },
+        {
+            "text": "book case",
+            "truth": 1.7
+        },
+        {
+            "text": "the color can be used to do drawings",
+            "truth": 2.6
+        },
+        {
+            "text": "chalk",
+            "truth": 2.6
+        },
+        {
+            "text": "You can use for clothes they will just be heavy.",
+            "truth": 2.2
+        },
+        {
+            "text": "use to make a road/way in most underdeveloped countries",
+            "truth": 1.0
+        },
+        {
+            "text": "book ends",
+            "truth": 2.3
+        },
+        {
+            "text": "chair",
+            "truth": 1.5
+        },
+        {
+            "text": "murals",
+            "truth": 2.3
+        },
+        {
+            "text": "build a campfire with them placed in a circle",
+            "truth": 1.0
+        },
+        {
+            "text": "cooking",
+            "truth": 1.8
+        },
+        {
+            "text": "window opener (break glass)",
+            "truth": 1.3
+        },
+        {
+            "text": "throw it at somebody",
+            "truth": 1.8
+        },
+        {
+            "text": "To stand on during pictures to make yourself taller",
+            "truth": 1.8
+        },
+        {
+            "text": "Prop for unstable table",
+            "truth": 2.3
+        },
+        {
+            "text": "Anchor for small boat",
+            "truth": 1.8
+        },
+        {
+            "text": "a canvas for a picture",
+            "truth": 3.0
+        },
+        {
+            "text": "make letters",
+            "truth": 2.2
+        },
+        {
+            "text": "defend",
+            "truth": 1.7
+        },
+        {
+            "text": "arm strength",
+            "truth": 1.4
+        },
+        {
+            "text": "weigh down objects",
+            "truth": 1.0
+        },
+        {
+            "text": "hold up window",
+            "truth": 2.7
+        },
+        {
+            "text": "paint a face on it and call it a pet",
+            "truth": 4.0
+        },
+        {
+            "text": "make a path to walk on",
+            "truth": 1.0
+        },
+        {
+            "text": "hold down paper on a desk",
+            "truth": 1.7
+        },
+        {
+            "text": "and bury someone under a pile of them. You've got anything from building to creating smaller things like grills out of bricks.",
+            "truth": 2.3
+        },
+        {
+            "text": "a weight (for exercising)",
+            "truth": 1.5
+        },
+        {
+            "text": "to throw through a window, or to break something",
+            "truth": 1.3
+        },
+        {
+            "text": "pen and pencil holder",
+            "truth": 3.0
+        },
+        {
+            "text": "art canvas",
+            "truth": 2.8
+        },
+        {
+            "text": "use as a base for a heavy object",
+            "truth": 2.2
+        },
+        {
+            "text": "to make sidewalks",
+            "truth": 1.0
+        },
+        {
+            "text": "use it in place of a rolling pin",
+            "truth": 3.0
+        },
+        {
+            "text": "pound meat",
+            "truth": 2.7
+        },
+        {
+            "text": "building a chimney",
+            "truth": 1.3
+        },
+        {
+            "text": "missile",
+            "truth": 3.0
+        },
+        {
+            "text": "use many bricks for a walkway",
+            "truth": 1.0
+        },
+        {
+            "text": "using to contain a fire by building a little wall around the fire",
+            "truth": 1.4
+        },
+        {
+            "text": "toss a",
+            "truth": 1.4
+        },
+        {
+            "text": "supporting furniture",
+            "truth": 1.5
+        },
+        {
+            "text": "skates (ice)",
+            "truth": 2.7
+        },
+        {
+            "text": "put it under a car tire to keep the car from rolling back",
+            "truth": 1.2
+        },
+        {
+            "text": "to stunt your growth",
+            "truth": 1.8
+        },
+        {
+            "text": "ti use it to hold the A/c in place",
+            "truth": 3.0
+        },
+        {
+            "text": "a slingshot pellet for a big slingshot",
+            "truth": 3.7
+        },
+        {
+            "text": "using as a weapon",
+            "truth": 1.7
+        },
+        {
+            "text": "Leave on gas pedal  cruise control no longer broken...",
+            "truth": 2.2
+        },
+        {
+            "text": "for art",
+            "truth": 2.1
+        }
+    ]
+}

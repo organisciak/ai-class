@@ -1,5 +1,4 @@
 import type { ClassifyRequest, ClassifyResponse } from './types';
-import { splitIntoBatches, createBatchRequest, delay } from './validation';
 
 /**
  * Makes the actual API request to the server endpoint
