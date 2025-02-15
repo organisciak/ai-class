@@ -15,7 +15,7 @@ RESPONSE:
 */
 
 export async function POST({ request }: RequestEvent) {
-    const DEBUG = false;  // Debug flag - set to true to enable logging
+    const DEBUG = true;  // Debug flag - set to true to enable logging
     
     // Parse the incoming request body
     const data: ClassifyRequest = await request.json();
@@ -40,6 +40,7 @@ ${data.examples.map(ex => `- ${ex.text}`).join('\n')}
 
 `;
 
+        if (DEBUG) console.log("fullPrompt", fullPrompt);
         const messages = [
             {
                 role: 'system',
@@ -55,13 +56,17 @@ ${data.examples.map(ex => `- ${ex.text}`).join('\n')}
         const results = await client.chat.completions.create({
                     messages: messages,
                     model: 'gpt-4o-mini',
-                    temperature: 0,
+                    temperature: 0.01,
+                    max_completion_tokens: 2048,
+                    top_p: 0.01,
+                    frequency_penalty: 0,
+                    presence_penalty: 0
                 });
 
-        if (DEBUG) console.log(results.choices[0]);
+        //if (DEBUG) console.log(results.choices[0]);
 
         const content = results.choices[0].message?.content || '';
-        if (DEBUG) console.log("content", content);
+        //if (DEBUG) console.log("content", content);
         
         // Extract content between triple backticks
         const match = content.match(/```(?:csv)?\s*([\s\S]*?)```/);

@@ -81,7 +81,7 @@
 
         try {
             // Generate example texts based on mode
-            const batchSize = 10;
+            const batchSize = 5;
             const batches = [];
             
             // Split examples into batches using the mode-specific examples
