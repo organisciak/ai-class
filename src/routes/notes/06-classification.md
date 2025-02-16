@@ -324,6 +324,19 @@ Example: "I absolutely hate UrbanThreads! Their clothes fell apart after one was
 
 ---
 
+## Temperature and Stochasticity
+
+- Even at temperature = 0:
+  - Internal processes have some randomness
+  - Results may vary slightly between runs
+  - Newer models still show variation
+
+- Think of it as:
+  - Temperature = intentionally added randomness
+  - Base randomness = inherent to model's processes
+
+---
+
 ## Structured Data Outputs
 
 Language models like structure. Be explicit.
