@@ -1,5 +1,6 @@
 {
     "description": "This dataset contains responses to the question, 'What is a surprising use for a brick?'. It is sourced from multiple studies, with different participant groups and different experimental conditions. The responses are scores by human judges on a scale of 1-5, with 1 being the least original and 5 being the most original. The ground truth is an average of multiple judges, rounded to one decimal point.",
+    "test_data_url": "https://github.com/organisciak/ai-class/tree/main/static/datasets/aut_brick_analysis.md",
     "examples": [
         {
             "text": "use it to draw on a sidewalk",

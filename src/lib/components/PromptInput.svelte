@@ -4,7 +4,7 @@
     import { Send, PlayCircle } from "lucide-svelte";
 
     let inputText = $state("");
-    let maxLength = 1000;
+    let maxLength = 4000;
     let showAppendedText = $state(false);
 
     // Use $props() instead of export let

@@ -56,7 +56,7 @@
     let selectedDataset = $state(Object.keys(datasets)[0] || '');
     let currentExamples = $derived(datasets[selectedDataset]?.examples || [] as LabeledExample[]);
     let description = $derived(datasets[selectedDataset]?.description || '');
-    let examples = $derived(currentExamples);
+    let testDataUrl = $derived(datasets[selectedDataset]?.test_data_url || '');
 
     // For the Select component
     let selected = $derived({
@@ -193,6 +193,11 @@
                             </Select.Content>
                         </Select.Root>
                     {/if}
+                    {#if testDataUrl}
+                        <a href={testDataUrl} target="_blank" class="text-xs text-muted-foreground hover:underline">
+                            View test data (you can peek at this in writing your prompt) →
+                        </a>
+                    {/if}
 
                     {#if description}
                         <Collapsible.Root class="mt-4">
@@ -208,18 +213,7 @@
                                 <div class="dataset-description">
                                     <p class="text-xs">{description}</p>
                                     
-                                    {#if currentExamples.length > 0}
-                                        <div class="mt-2">
-                                            <p class="text-sm font-semibold">Examples</p>
-                                            {#each currentExamples.slice(0, 3) as example}
-                                                <hr class="my-2" />
-                                                <div class="text-xs mt-1">
-                                                    Text: {example.text}<br>
-                                                    Truth: {example.truth}
-                                                </div>
-                                            {/each}
-                                        </div>
-                                    {/if}
+                                    
                                 </div>
                             </Collapsible.Content>
                         </Collapsible.Root>
@@ -237,6 +231,22 @@
                         on:classify={handleClassify} 
                         disabledButtons={!!selectedDataset}
                     />
+                </CardContent>
+            </Card>
+
+            <!-- Classification Details Card -->
+            <Card>
+                <CardHeader>
+                    <CardTitle class="josefin-sans-gfont">Classification Setup Details</CardTitle>
+                    <CardDescription>Important information about the classification process</CardDescription>
+                </CardHeader>
+                <CardContent>
+                    <ul class="text-sm space-y-2">
+                        <li>Examples are processed in batches of 5</li>
+                        <li>Classification uses the `gpt-4o-mini` model</li>
+                        <li>Each batch has a 30-second timeout</li>
+                        <li class="text-muted-foreground text-xs mt-2">Note: Prompts requesting very long outputs may result in timeout errors</li>
+                    </ul>
                 </CardContent>
             </Card>
         </div>
