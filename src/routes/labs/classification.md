@@ -33,6 +33,28 @@ Your goal:
 
 Since you’re iterating after seeing the results, this might be considered ‘training’ data. To prevent over-fixating on certain data, a typical classification process is compared at the end against a held-out test dataset. You don’t need to worry about that here.
 
+### Some Extra Detail about the System and Clasification in General
+
+#### Model and Batches
+
+The model used for classification is `gpt-4o-mini`. It's one of the smaller models, fairly cheap, but it won't perform as well as some other models. However, that gives you a lot to work with because its baseline (i.e. how it works out of the box) is lower.
+
+The batch size is set to 5. When you write a prompt, how many items do you classify with that prompt? One item, two items, five items, ten items? All of that is the batch size. A bigger batch size is quicker because you're classifying more in response, but it's more likely to go down a garden path, get affected by it's other responses (for better or worse) or get confused.
+
+#### Temperature and Stochasticity
+
+The system is set to temperature=0. While setting the temperature to zero reduces randomness as much as possible, these models are inherently random (or 'stochastic'), and especially with the newer models, there is variation even with `temperature=0`. So you'll see that with GPT-4o-mini, if you rerun your classifications, you might get slightly different results.
+
+You can think of it this way. The temperature affects *intentionally introduced* randomness, where having the temperature set to zero leaves only the randomness that comes from the internal processes.
+
+#### Training Data
+
+I put up examples of training data, which are linked to when you select a dataset. Training data is data that you can look at in preparing your prompt. Want to know what the dataset looks like? It's not cheating to look at this data, since the evaluation is against other responses.
+
+E.g. [aut_brick_analysis.md](https://github.com/organisciak/ai-class/blob/main/static/datasets/aut_brick_analysis.md)
+
+Remember few-shot - you can use some of these as examples for your prompt. Just note that a prompt that's too long might lead to the model getting confused, especially a smaller model like the one used here.
+
 ### Completion Details
 
 Share your best results on the forum - but *without* the prompt. Keep the prompt - we’ll share our prompts in class.
