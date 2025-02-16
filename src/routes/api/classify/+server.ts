@@ -55,10 +55,10 @@ ${data.examples.map(ex => `- ${ex.text}`).join('\n')}
 
         const results = await client.chat.completions.create({
                     messages: messages,
+                    seed: 1234567890,
                     model: 'gpt-4o-mini',
-                    temperature: 0.01,
+                    temperature: 0,
                     max_completion_tokens: 2048,
-                    top_p: 0.01,
                     frequency_penalty: 0,
                     presence_penalty: 0
                 });

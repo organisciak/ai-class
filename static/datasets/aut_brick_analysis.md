@@ -27,7 +27,7 @@
 | fake baby                      |       4 |
 | as pillow                      |       4 |
 
-## All Test Examples
+## All Train Examples
 
 ```csv
 response,score

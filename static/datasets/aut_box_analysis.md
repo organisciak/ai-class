@@ -27,7 +27,7 @@
 | Holding for a Halloween costume because you're outside the |     3.6 |
 | put it over an area to kill the plant growth               |     3.6 |
 
-## All Test Examples
+## All Train Examples
 
 ```csv
 response,score

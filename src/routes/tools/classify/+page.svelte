@@ -56,7 +56,7 @@
     let selectedDataset = $state(Object.keys(datasets)[0] || '');
     let currentExamples = $derived(datasets[selectedDataset]?.examples || [] as LabeledExample[]);
     let description = $derived(datasets[selectedDataset]?.description || '');
-    let testDataUrl = $derived(datasets[selectedDataset]?.test_data_url || '');
+    let trainDataUrl = $derived(datasets[selectedDataset]?.train_data_url || '');
 
     // For the Select component
     let selected = $derived({
@@ -193,9 +193,9 @@
                             </Select.Content>
                         </Select.Root>
                     {/if}
-                    {#if testDataUrl}
-                        <a href={testDataUrl} target="_blank" class="text-xs text-muted-foreground hover:underline">
-                            View test data (you can peek at this in writing your prompt) →
+                    {#if trainDataUrl}
+                        <a href={trainDataUrl} target="_blank" class="text-xs text-muted-foreground hover:underline">
+                            View train data (you can peek at this in writing your prompt) →
                         </a>
                     {/if}
 

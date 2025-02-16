@@ -27,7 +27,7 @@
 | making jail bars and walls out of knives |     3.2 |
 | strum an instrument with                 |     3.2 |
 
-## All Test Examples
+## All Train Examples
 
 ```csv
 response,score
