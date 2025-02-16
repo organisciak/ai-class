@@ -15,7 +15,7 @@ RESPONSE:
 */
 
 export async function POST({ request }: RequestEvent) {
-    const DEBUG = true;  // Debug flag - set to true to enable logging
+    const DEBUG = false;  // Debug flag - set to true to enable logging
     
     // Parse the incoming request body
     const data: ClassifyRequest = await request.json();
