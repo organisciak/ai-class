@@ -34,16 +34,18 @@
 
     onMount(async () => {
         try {
-            const [aut_brick, aut_box, aut_knife] = await Promise.all([
+            const [aut_brick, aut_box, aut_knife, reddit_toxicity] = await Promise.all([
                 loadDataset('aut_brick'),
                 loadDataset('aut_box'),
-                loadDataset('aut_knife')
+                loadDataset('aut_knife'),
+                loadDataset('reddit_toxicity')
             ]);
             
             datasets = {
                 "Alternate Uses Task: Brick": aut_brick,
                 "Alternate Uses Task: Box": aut_box,
-                "Alternate Uses Task: Knife": aut_knife
+                "Alternate Uses Task: Knife": aut_knife,
+                "Reddit Toxicity": reddit_toxicity
             };
         } catch (error) {
             console.error('Failed to load datasets:', error);

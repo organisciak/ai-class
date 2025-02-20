@@ -1,0 +1,406 @@
+{
+    "description": "This dataset contains Reddit comments scored for their toxicity. Scores range from -1 (most supportive) to 1 (most toxic) - rounded to 2 decimal places. CONTENT WARNING: Some comments are inappropriate or offensive. The ground truth scores were determined through human annotation. From Hada et al. 2021: <https://aclanthology.org/2021.acl-long.210v2.pdf>",
+    "train_data_url": "https://github.com/organisciak/ai-class/tree/main/static/datasets/reddit_toxicity_analysis.md",
+    "examples": [
+        {
+            "text": "So like, a leper colony, but with antivaxxers",
+            "truth": 0.17
+        },
+        {
+            "text": "You\u2019re an idiot. None of what you said is factual. Shut the fuck up you ignorant degenerate!",
+            "truth": 0.77
+        },
+        {
+            "text": "Most underrated clarification of the decade",
+            "truth": -0.35
+        },
+        {
+            "text": "An airline offering muslim-free trips would instantly draw the attention of national news outlets. The news would shortly go international about 50 times faster than that Chinese detergent ad. Any muslim extremists interested in bombing or hijacking a plane would make one of those flights their next target, as it would be a direct affront to their religion. \n\nIt wouldn't be too hard for a terrorist organization to recruit a muslim without a social media presence that makes their religion obvious, and have them pay for the flight with a credit card registered under a white-sounding name. \n\nRegardless of all of the issues associated with racism and intolerance, I also can't think of a better way for an airline to make themselves a target for an attack.",
+            "truth": 0.31
+        },
+        {
+            "text": "Seems about right. My interactions online would lead me to believe that both the right and the left are filled with blood thirsty extreme it\u2019s, while my irl interactions are far more tame. \n\nOf course I doubt I\u2019m the perfect person to have a conversation with online. ",
+            "truth": 0.02
+        },
+        {
+            "text": "My best ks 6:39\n..gonna go in and start at 9 and hold it as long as I can then try to go up...hoping to beat 6:39!  You are amazing",
+            "truth": -0.48
+        },
+        {
+            "text": "Dude's so unclear of what 'Supreme Court of Canada\" means I'd be surprised if he could point the country out on a map.. ",
+            "truth": 0.27
+        },
+        {
+            "text": "Imagine being Amish and being forced to go to a city and entering a place you believe to be absolutely evil. Then you watch someone you despise stab your child with a needle and inject pure evil inside of them. \n\n And if you don't do that and your kids get sick, they will come with guns and arrest you and put you in a cage potentially for the rest of your life. Anyone who resists will be killed. ",
+            "truth": 0.28
+        },
+        {
+            "text": ">And how do you think that will change if some people in the group aren't boys?\n\nThe interactions won't be the same. The roughness in the play that the boys were always ok with will be \"toned down\" to accommodate the girls.",
+            "truth": -0.1
+        },
+        {
+            "text": "Typically it\u2019s a hot beef injection #prayzejebuz",
+            "truth": -0.1
+        },
+        {
+            "text": "You know OP, the only way to *really* change your view is to challenge your beliefs. I think you should go up against a wild dog and fight it. If you lose, then your view will successfully have been changed. :-)",
+            "truth": -0.13
+        },
+        {
+            "text": "Porn is a beautiful thing with beautiful people.  I support sex workers 100%",
+            "truth": 0.02
+        },
+        {
+            "text": "I am crazy and don't consider 0 a number.",
+            "truth": -0.44
+        },
+        {
+            "text": "Don\u2019t forget, Hillary sold 20% of our Uranium to Russia. This is all very scary. ",
+            "truth": 0.1
+        },
+        {
+            "text": "Folks if you're tasting pennies, step to your nearest mirror to check for red wings.",
+            "truth": -0.19
+        },
+        {
+            "text": "Can we ask whether you or your sister were sexually abused as child by someone else in your family?  Because it seems like boundaries were broken long ago.",
+            "truth": 0.21
+        },
+        {
+            "text": "It's shocking how little UFC fighters make in comparison to what the suits make. And they take away his sponsors and fans still shit on them. Just bonkers. ... And the hotel room thing has nothing to do with this.",
+            "truth": 0.35
+        },
+        {
+            "text": "They want to nuke everyone and take over with their bull shit oppressive religion.  ",
+            "truth": 0.42
+        },
+        {
+            "text": ">Children as young as 14 stripped naked, shackled, strapped to chairs, their heads encased in bags, left for days or longer in solitary confinement, and in some cases beaten or bruised.\n\n>These things are taking place in America.\n\n>Routinely administered psychotic drugs -- administered routinely in the morning and at night. \n\n>Denied water as a means of punishment.",
+            "truth": 0.48
+        },
+        {
+            "text": "But there are problematic power dynamics in ordinary relationships. I'm not sure we necessarily want to go too far down that path... ",
+            "truth": -0.08
+        },
+        {
+            "text": "this is what all the citizens of usa should be doing aswell. RIGHT FUCKING NOW",
+            "truth": 0.67
+        },
+        {
+            "text": "Everytime I see this guy, I have to remind myself that I'm not watching The Sopranos.",
+            "truth": -0.27
+        },
+        {
+            "text": "Don't give up skeleton. I'm the same.",
+            "truth": -0.58
+        },
+        {
+            "text": "Never thought that I'd see an unironic \"fucking normies reeeee\", but here we have it.",
+            "truth": 0.77
+        },
+        {
+            "text": "vegetarianism. atheism. any other -ism where the person claiming it won't shut up about it\n\nmultiple divorces, probably, although that depends on the circumstances. murder convictions, stuff like that. \n\nthe main thing i look for is intelligence and a sense of humor, i can work around most anything else but total loony tunes stuff like the above would be hard to deal with. \n\n",
+            "truth": 0.1
+        },
+        {
+            "text": "YOURE UNDER CITIZEN'S ARREST",
+            "truth": -0.08
+        },
+        {
+            "text": "You are painting in crazy broad strokes.",
+            "truth": -0.38
+        },
+        {
+            "text": "I'm sure they'd censor it if it were a non-menstruating female, or if it were a similarly-drawn male.  It's drawn at about the same skill level as \"fuuuuuu guy,\" for fuck's sake.",
+            "truth": 0.73
+        },
+        {
+            "text": "Best of both worlds use fluff",
+            "truth": -0.46
+        },
+        {
+            "text": "I just made a donation.  Hope its not too late to help",
+            "truth": -0.73
+        },
+        {
+            "text": "I'll agree with you that dragonflies are more awesome.\n\nWhile spiders are more chill and can bro out in your living room and not bother anyone, dragonflies will buzz around all over the places, catching any and all flying insects, then eating them alive while still hunting for other, lesser bugs.\n\nPlus, larval dragonflies also eat basically any living thing it can catch. Small fish? Lunch. Tadpoles and small frogs? Dinner and dessert. Mosquito larvae? Light snack before lunch.\n\nWhile Dragonflies might not be as dope, they are %100 more metal.\n\nAlso a fun Dragonfly fact: they are some of the most effective active predators in the world, catching nearly all (>%95) prey items they pursue.",
+            "truth": -0.25
+        },
+        {
+            "text": "I know German politics: They have no clue what they are doing when it comes to these matters.",
+            "truth": -0.08
+        },
+        {
+            "text": "\n- Most of you believe that anything that can further human population is good and/or moral, even when it Is detrimental to the rest of earth.\n\n- There is a split among you about how we should treat animals. The line is blurry for most everyone in the thread.\n\n- Weirdo dog breeding has made some really disturbing traits in dogs and cats. Animals suffer and live awful lives because \"cute\". I'm not an animal rights guy, but how this get a overlooked all the time is bizarre to me.\n\n- This thread has delved into some great discussions and I've appreciated that.\n\n\n",
+            "truth": 0.06
+        },
+        {
+            "text": "It's sad but it's true... ",
+            "truth": -0.46
+        },
+        {
+            "text": "**Budge**t - $60  \n**Source** - Bluetooth from Iphone 4s  \n**Requirements for Isolation** - Not sure. Will use in outdoor gym, maybe for running. Maybe..  \n**Will you be using these Headphones in Public?** Not really too much. Maybe running (maybe)  \n**Preferred Type of Headphone** - Full Sized\n**Preferred tonal balance** - Balanced  \n**Past headphones** - N/A\n**Preferred Music** - Probably workout music, so I guess more like metal, but I actually love Nujabes too so.  \n**What would you like to improve on from your set-up** - Just over ear, good for working out, no whistles/bells.   ",
+            "truth": -0.33
+        },
+        {
+            "text": "i hate you. i mean i want you to wear what you want to wear and be happy but wtf dude",
+            "truth": 0.38
+        },
+        {
+            "text": ">You cant have loyal happy workers if you treat and pay em like shit. They will just leave. \n\nThey will only leave if they have somewhere better to go and the resources to get there. \n\nAnd it also assumes that you need \"workers\" at all. Robots don't complain.\n",
+            "truth": 0.17
+        },
+        {
+            "text": "It's the hardcore fans who know about the hotel room trashing. Not the casuals. ",
+            "truth": -0.27
+        },
+        {
+            "text": "You'd do well in prison. most would a pack maybe two for 10 minutes some with you.",
+            "truth": 0.0
+        },
+        {
+            "text": "Ah, but letting trans people use the bathrooms of the gender they identify with is wrong - because bathrooms are not gender segregated. They're *sex segregated*. And if this is ignored, then it's misused by human filth. I could name 6 incidents off the top of my head in which a male went into the female bathrooms, and stayed there for hours either jacking off or peeping. 4 of those involved kids. So, basically - fuck no. You could create a third, gender neutral bathroom for them. But keep bathrooms as they are - **sex segregated, not gender segregated.**",
+            "truth": 0.83
+        },
+        {
+            "text": "I know your joking, it really is better described in comic book/video game logic though.  Theirs a main boss, you keep chasing him down thinking you got him this time and he keeps sends low level bosses to confront you, you destroy them and somehow they reappear later in the story.\n   It's all distraction to keep you from fighting the main boss, the more time you spend worrying about what these scum are doing and how obvious they are the more time he has to complete his objective. ",
+            "truth": -0.1
+        },
+        {
+            "text": "Yet, all they have to do is yell \"Abortion!\" and \"They'll take your guns\" and the idiots will still vote for them.",
+            "truth": 0.48
+        },
+        {
+            "text": "Would they rather support me with public assistance or let me get a job?  There don't seem to be any men clambering to support me...",
+            "truth": -0.15
+        },
+        {
+            "text": "My last relationship was a open relationship, so this sounds fkn awesome.",
+            "truth": -0.15
+        },
+        {
+            "text": "Read dog as dad... thoroughly confused and questioned the nursing home for a second there...",
+            "truth": -0.19
+        },
+        {
+            "text": "Lions     Poachers\n\n    4                 0\n\nAWESOME.",
+            "truth": -0.35
+        },
+        {
+            "text": "This is coming from the guy hanging with russian mafiosis ? hahahahahahahha\n\nHypocrisy has plenty of names, and one of those is probably \"Nigel Farage\".",
+            "truth": 0.31
+        },
+        {
+            "text": "Being spiteful, cruel, and/or nasty and not in a sexual way.",
+            "truth": 0.04
+        },
+        {
+            "text": "Those threads are awesome.  People hug and cry together.  That's where I learned about the Swedish flag.  Hilarious.  I also love the Weekly Rant.",
+            "truth": -0.42
+        },
+        {
+            "text": "> they used every loophole in the contracts to not deliver and kept all the money\n\nThis is what pisses me off the most. ",
+            "truth": 0.15
+        },
+        {
+            "text": "I'm not making a straw man, but I'm going to base my argument assuming that atheists make an argument that they don't make. \n\nDo you know what a straw man argument actually is?\n\n",
+            "truth": 0.16
+        },
+        {
+            "text": ">Do you respect sex work as a profession? If not why not?\n\nNo because I think it loses its value if you have to pay or charge for it. It becomes, to me at least, worthless.\n\n&#x200B;",
+            "truth": 0.25
+        },
+        {
+            "text": "Being able to just disappear for a little bit.\n\nIn the 90s, when you weren't at home or the office you generally could not be contacted. People just had to wait until you could check your voicemails or whatever. \n\nNow people expect me to be reachable within seconds, anywhere in the world, day or night. If they really want to be pushy they can even get your exact location by GPS.",
+            "truth": -0.11
+        },
+        {
+            "text": "* Marshmallows are disgusting.\n* Whipped cream is consistent with the base of the hot chocolate so it does not change the core of the drink when added.  (Hot chocolate is made with milk as is whipped cream).\n* Marshmallows add a texture that is not necessary for the enjoyment of hot chocolate whereas whipped cream more seamlessly blends in.\n* Marshmallows are really disgusting.\n\nedit: \"not\"",
+            "truth": -0.27
+        },
+        {
+            "text": "Agreed go no contact, get a lawyer, hit the gym, and find a hobby.",
+            "truth": -0.52
+        },
+        {
+            "text": "We may be onto something here!",
+            "truth": -0.79
+        },
+        {
+            "text": "I just want to go back to the Obama era Reddit I fell in love with",
+            "truth": -0.4
+        },
+        {
+            "text": "Screw hope anyways, it's a fickle thing. Duty and purpose should be our drivers.",
+            "truth": 0.1
+        },
+        {
+            "text": "But that's the thing, anti-vaxxers are usually fine because they got their vaccinations when they were young. It's their kids, who had no say in the matter, that are suffering. ",
+            "truth": 0.1
+        },
+        {
+            "text": "Am I eligible for enlistment into the Army under an Option 40 Contract if I admit to having been a social smoker of marijuana in the past? I am currently 26 and I smoked socially with friends on an irregular basis between the ages of 18 and 23 - no criminal record involving marijuana and never consumed other illegal drugs. I do have a misdemeanor Minor in Consumption of Alcohol which took place at the age of 16 (roughly 9 1/2 years ago).\n\n I haven't smoked in 3 years, hold a B.S. degree, and am in good physical shape with a clean bill of health. What are my odds of being able to enlist under Option 40 at this time?  ",
+            "truth": -0.15
+        },
+        {
+            "text": "Merely having studied it doesn't mean one has to adhere to it's principles.",
+            "truth": -0.23
+        },
+        {
+            "text": "My wife had to go to Mexico for an abortion in 1962. We\njust had twins b/g, which was a big surprise financially and\nemotionally. I was doing my dissertation and she was an\nObGyn nurse. We have moments every so often when\nthere is sadness. She had 2 miscarriages, so that is nature's\nway. Anyway you look at it, life has these moments. There are\nchoices and consequences to experience. We made a little\nspot in our gardens where we sit and talk to our angels.",
+            "truth": -0.02
+        },
+        {
+            "text": "Kids. Also I don't date girls my friends have had sex with.",
+            "truth": 0.15
+        },
+        {
+            "text": "I lack a vagina so it's all secondhand knowledge.",
+            "truth": 0.48
+        },
+        {
+            "text": "They are all about punishing women, end of story",
+            "truth": 0.13
+        },
+        {
+            "text": "Try to learn their language. Imagine being a translator for another word entirely. Hella cool!",
+            "truth": -0.52
+        },
+        {
+            "text": "My sisters aunt used to be a nun. She said that the nuns were made to sleep with the priests/bishops/cardinals when they all got together for what I guess would be holy conventions or something like that. She said she got out after she got an std and couldn\u2019t do it anymore. She said they were passed around like it was a brothel, and orgies were also common. At the time, I didn\u2019t give her story a second chance until I saw that Law & Order episode that had an almost identical story line. ",
+            "truth": 0.06
+        },
+        {
+            "text": "Damn, you shut him the fuck down with that witty comeback!",
+            "truth": 0.72
+        },
+        {
+            "text": "do you not watch playoff basketball? he put out a historical run dragging yet another lottery team to the finals..",
+            "truth": -0.21
+        },
+        {
+            "text": "Do you think they keep the pee on it the whole time until they show the father?  They probably wipe it off.",
+            "truth": 0.32
+        },
+        {
+            "text": "It's like, just wait a few more years and when Elizabeth Warren runs, take the easy win",
+            "truth": -0.31
+        },
+        {
+            "text": "Would it be impossible to prove? Schools have on record which kids are and are not vaccinated and they know which kids are immune compromised. There was a story not long ago about a mother who's child had a compromised immune system from cancer. That child was never able to attend public school in their early years and when the child was in remission, but still could not get vaccinated, the parents wanted nothing more than to give their child a little bit of normality by attending public school. When the mother found out that one set of parents did not vaccinate their children, they had to decide if they would risk it or not for their own child. \n\n",
+            "truth": 0.04
+        },
+        {
+            "text": "One time, I gave a a girl a candy cane. ",
+            "truth": -0.4
+        },
+        {
+            "text": ">  From a modding perspective,\n\nLol. You are clearly not actually a very active mod. Most mods are pissed about them gutting CSS. Even now, every sub looks better with CSS than without it.",
+            "truth": 0.12
+        },
+        {
+            "text": "This is some one else\u2019s, there is a code for this",
+            "truth": -0.31
+        },
+        {
+            "text": "\"yeah uh, you see that really great black dusty material you're burning to produce a shit ton of energy? yeah, well, you're making a deal with the devil. the world will slowly turn into hell because of how much God got mad at you\"\n\ntechnically it's factually accurate but it still gets the point across, and places an emphasis on religion, since that was really, **REALLY** common back then.",
+            "truth": 0.48
+        },
+        {
+            "text": "In what way is this world politics",
+            "truth": -0.33
+        },
+        {
+            "text": "Don't worry, she's going to be fine.",
+            "truth": -0.75
+        },
+        {
+            "text": "Did this PM just cheekily call May weak? No arms no legs she has lost and she is just taking the punches? Like holy hell that wasn't coy at all.  I mean he does give May an out siting British politics, but damn I see why Cameron got out of town so fast. ",
+            "truth": 0.06
+        },
+        {
+            "text": "B-but what will I liquidate when I'm in dire financial straits?",
+            "truth": -0.35
+        },
+        {
+            "text": "Yeah, if a woman seriously began hindering a guys social life and became controlling, I'd hope that guy would be able to think for himself and put his foot down. That sort of thing is scary. ",
+            "truth": -0.1
+        },
+        {
+            "text": "These things are fucking stupid. ",
+            "truth": 0.65
+        },
+        {
+            "text": "How the fuck does anyone not notice that she was working those shifts? That's an insane level of incompetence  on her employers part.",
+            "truth": 0.71
+        },
+        {
+            "text": "I can imagine being the girl in that situation.\n\n\"Cute guy tried to hug me and I just gave him an awkward handshake instead. How do I kill myself?\" ",
+            "truth": 0.26
+        },
+        {
+            "text": "So proud of her! Teens fighting the good fight and not putting up with their parents bullshit \ud83d\udc4d",
+            "truth": -0.15
+        },
+        {
+            "text": "Fuck that's sad. Fuck antivaxers!\nI hope the respondant mother (of the child who passed away) finds peace.",
+            "truth": 0.83
+        },
+        {
+            "text": "knowing that your name and face will become the main story for a few weeks could be enough for someone who is already deranged and fallen.",
+            "truth": -0.17
+        },
+        {
+            "text": "Could say the same about Cripps ;)",
+            "truth": -0.13
+        },
+        {
+            "text": "Not really. Since in Muslim flights they would kill mostly Muslims, it would help since these segregated flights help cool off the tensions between the religions and cultures. If a 100 Europeans die, Europeans would be angrier at Muslims than if a 100 Muslims die. \n\nSometimes separations are the right thing. Chehzs and Slovaks are in a good relationship since Czechoslovakia got divided. \n\n",
+            "truth": 0.25
+        },
+        {
+            "text": "I love kurzgesagt their an awesome channel",
+            "truth": -0.62
+        },
+        {
+            "text": "The news channels need to because they aren't in it to inform the public but to make money. They get their money from viewers and the viewers choose to go to the news channels that give them the information they want. If channel A is talking about the shooting but not giving a name, and channel B is giving the name, it tells the viewer they should be watching B to get the fuller story. Im not going to go to a channel that explicitly tells me they will not give all the information for any reason.",
+            "truth": 0.21
+        },
+        {
+            "text": "Honestly feel like this sort of revelation leads to getting disappeared due to a convenient accident...",
+            "truth": -0.21
+        },
+        {
+            "text": "If you are a teacher reading this, I highly recommend getting basic suicide intervention training. Depending where you live you can try to google which organizations offer it. The common one used in my area is ASIST.\n\nI appreciate how most teachers have good intentions but sometimes the wrong approaches may scare off or further isolate your students.",
+            "truth": -0.06
+        },
+        {
+            "text": "> Both parties suck.\n\nI've been done with the equal-but-opposite pretense since 2008, but thanks.",
+            "truth": 0.3
+        },
+        {
+            "text": "Wait how many reddit admins are there...",
+            "truth": -0.51
+        },
+        {
+            "text": "[deleted]",
+            "truth": -0.23
+        },
+        {
+            "text": "you see you said a male not a transgender woman. good point those men should be held accountable.\n\nMen like your example don't need a trans rights policy to go in the bathroom and do what you discussed.",
+            "truth": 0.27
+        },
+        {
+            "text": "I don't really know what your talking about. I play on xbox and it's very rarely that I don't see anyone else at a PE. Maybe on IO, but pretty populated on Xbox, for me.",
+            "truth": -0.29
+        },
+        {
+            "text": "I moved to Helsinki about 1.5 years ago from the US to be with my Finnish husband. And now we also have a 3 month old Finnish/American daughter too :) Learning Finnish is the biggest challenge I have ever accepted. I wish i could say I'm getting any  better",
+            "truth": -0.23
+        },
+        {
+            "text": "If someone says \"no\" in most contexts, it should be respected no matter the reason. If you offer someone a drink, this is fine, but if they say \"no\" and you continue to pressure them into saying \"yes,\" you are doing a huge injustice. You are coercing them into doing something they said \"no\" to and this is morally wrong.",
+            "truth": -0.12
+        }
+    ]
+}
