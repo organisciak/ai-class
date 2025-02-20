@@ -28,10 +28,10 @@ Your goal:
 - Choose a dataset
 - Develop prompts to classify originality in creativity test responses
 - Test prompts against provided validation dataset with immediate feedback
-    - Start with the ‘Quick’ run, which only tests 20 responses. Use full when you feel confident in your data.
+    - Start with the 'Quick' run, which only tests 20 responses. Use full when you feel confident in your data.
 - Iterate your prompt.
 
-Since you’re iterating after seeing the results, this might be considered ‘training’ data. To prevent over-fixating on certain data, a typical classification process is compared at the end against a held-out test dataset. You don’t need to worry about that here.
+Since you're iterating after seeing the results, this might be considered 'training' data. To prevent over-fixating on certain data, a typical classification process is compared at the end against a held-out test dataset. You don't need to worry about that here.
 
 ### Some Extra Detail about the System and Clasification in General
 
@@ -69,6 +69,19 @@ If including in portfolio:
 
 - Share the ‘Copy to Clipboard’ results string for three different datasets, using the 'full' run.
 
-For grading, your prompt will be run against a hidden test dataset (as measured by RMSE) and compared to some bad, okay, and good prompts that I will write. A good grade will perform similarly to my good prompts, or better.
+For grading, your prompt will be run against a hidden test dataset and compared to some bad, okay, and good prompts that I will write. A good grade will perform similarly to my good prompts, or better.
 
 The *target* metrics for how well your prompts have to perform will be posted the week of the class where we share our results.
+
+**Target metrics**
+
+| Dataset | Bottom-end RMSE (equal or worse is 50% of pts) | Top-end RMSE (equal or better is 100% of pts) |
+|---------|----------------------|--------------------|
+| AUT Brick | 1.450 | 0.900 |
+| AUT Box | 1.680 | 0.690 |
+| AUT Knife | 1.640 | 0.620 |
+| Reddit Toxicity | 0.670 | 0.420 |
+
+In-between - your grade will be interpolated between the bottom-end and top-end.
+
+If my 'top end' proves to be too challenging, I reserve the right to adjust the target metrics (only to make them easier, not harder)
