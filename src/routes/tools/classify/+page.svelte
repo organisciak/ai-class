@@ -1,9 +1,7 @@
 <script lang="ts">
-    import { Button } from "$lib/components/ui/button";
     import SimpleHeader from '$lib/interface/SimpleHeader.svelte';
     import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "$lib/components/ui/card";
-    import { Separator } from "$lib/components/ui/separator";
-    import { Brain, History, CheckCircle2, XCircle } from "lucide-svelte";
+    import { Brain, History } from "lucide-svelte";
     import { classifyBatch } from "$lib/api";
     import { calculateMetrics } from "$lib/metrics";
     import { createPromptStore } from "$lib/storage.svelte";

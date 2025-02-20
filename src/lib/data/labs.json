@@ -9,7 +9,8 @@
             "Critical Analysis, Fluency, and Evaluation",
             "Technical Understanding",
             "Skilling and Productivity"
-        ]
+        ],
+        "pts": 1
     },
     {
         "original": "bot-dont-kill-my-vibe.md",
@@ -20,7 +21,8 @@
         "coreCompetencies": [
             "Critical Analysis, Fluency, and Evaluation",
             "Skilling and Productivity"
-        ]
+        ],
+        "pts": 1
     },
     {
         "original": "make-it-more.md",
@@ -32,7 +34,8 @@
             "Skilling and Productivity",
             "Art and Creativity",
             "Critical Analysis"
-        ]
+        ],
+        "pts": 1
     },
     {
         "original": "ai-in-the-wild.md",
@@ -43,7 +46,8 @@
         "coreCompetencies": [
             "Society, Ethics and Policy",
             "Critical Analysis, Fluency, and Evaluation"
-        ]
+        ],
+        "pts": 1
     },
     {
         "original": "new-hobby.md",
@@ -55,7 +59,8 @@
             "Art and Creativity",
             "Skilling and Productivity",
             "Technical Understanding"
-        ]
+        ],
+        "pts": 2
     },
     {
         "original": "prompt-and-circumstance.md",
@@ -66,7 +71,8 @@
         "coreCompetencies": [
             "Art and Creativity",
             "Skilling and Productivity"
-        ]
+        ],
+        "pts": 2
     },
     {
         "original": "classification.md",
@@ -78,7 +84,8 @@
             "Technical Understanding",
             "Critical Analysis, Fluency, and Evaluation",
             "Skilling and Productivity"
-        ]
+        ],
+        "pts": 2
     },
     {
         "original": "bias-analysis.md",
@@ -89,6 +96,7 @@
         "coreCompetencies": [
         "Society, Ethics and Policy",
         "Critical Analysis, Fluency, and Evaluation"
-        ]
+        ],
+        "pts": 2
     }
 ] 
