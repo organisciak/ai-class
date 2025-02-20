@@ -79,5 +79,16 @@
             "Critical Analysis, Fluency, and Evaluation",
             "Skilling and Productivity"
         ]
+    },
+    {
+        "original": "bias-analysis.md",
+        "title": "Bias Analysis",
+        "description": "Explore and analyze bias in language models through counterfactual prompting, role reversal, and synthetic data generation exercises.",
+        "docPath": "/labs/bias-analysis",
+        "week": 7,
+        "coreCompetencies": [
+        "Society, Ethics and Policy",
+        "Critical Analysis, Fluency, and Evaluation"
+        ]
     }
 ] 
