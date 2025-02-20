@@ -1,5 +1,7 @@
 # References
 
+Ahmad, L., Agarwal, S., Lampe, M., & Mishkin, P. OpenAI’s Approach to External Red Teaming for AI Models and Systems. Technical report, OpenAI, November 2024. URL https://cdn.openai.com/papers/openais-approach-to-externalred-teaming. pdf. Accessed: 2024-11-26.
+
 Bender, E. M., Gebru, T., McMillan-Major, A., & Shmitchell, S. (2021). On the dangers of stochastic parrots: Can language models be too big?🦜. *Proceedings of the 2021 ACM FAT Conference*, 610-623.
 
 Bick, A., Blandin, A., & Deming, D. J. (2024). *The Rapid Adoption of Generative AI* (Working Paper 32966). National Bureau of Economic Research.
@@ -24,7 +26,11 @@ Hoffmann, J., Borgeaud, S., Mensch, A., Buchatskaya, E., Cai, T., Rutherford, E.
 
 Kaplan, J., McCandlish, S., Henighan, T., Brown, T. B., Chess, B., Child, R., Gray, S., Radford, A., Wu, J., & Amodei, D. (2020). Scaling Laws for Neural Language Models (arXiv:2001.08361). arXiv. https://doi.org/10.48550/arXiv.2001.08361
 
+Koo, R., Lee, M., Raheja, V., Park, J. I., Kim, Z. M., & Kang, D. (2023). Benchmarking cognitive biases in large language models as evaluators. https://arxiv.org/pdf/2309.17012.
+
 Long, D., & Magerko, B. (2020). What is AI Literacy? Competencies and Design Considerations. *Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems*, 1–16. https://doi.org/10.1145/3313831.3376727
+
+Lum, K., & Isaac, W. (2016). To predict and serve?. Significance, 13(5), 14-19.
 
 Miao, F., Shiohira, K., & UNESCO. (2024). *AI competency framework for students*. UNESCO Digital Library.
 
@@ -45,6 +51,8 @@ Raffel, C., Shazeer, N., Roberts, A., Lee, K., Narang, S., Matena, M., Zhou, Y.,
 Rafner, J., Beaty, R. E., Kaufman, J. C., Lubart, T., & Sherson, J. (2023). Creativity in the age of generative AI. Nature Human Behaviour, 7(11), 1836-1838. doi:https://doi.org/10.1038/s41562-023-01751-1
 
 Salton, G., Wong, A., & Yang, C. S. (1975). A vector space model for automatic indexing. *Communications of the ACM*, 18(11), 613–620. https://doi.org/10.1145/361219.361220
+
+Sweeney, L. (2013). Discrimination in online ad delivery. Communications of the ACM, 56(5), 44-54.
 
 Wang, B., Rau, P. P., & Yuan, T. (2022). Measuring user competence in using artificial intelligence. *Behavior & Information Technology*, *42*(3), 1-14.
 
