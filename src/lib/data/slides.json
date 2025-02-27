@@ -48,7 +48,7 @@
     "backgroundImage": "slides/images/06/sentiment-distribution.png"
   },
   {
-    "title": "Ethics and Bias in AI Systems, Environmental Impact",
+    "title": "Ethics and Bias in AI Systems, Safety Considerations",
     "filename": "07-ethics-and-bias.html",
     "slidePath": "/slides/07-ethics-and-bias.html",
     "docPath": "/notes/07-ethics-and-bias",
@@ -56,11 +56,12 @@
     "backgroundImage": "slides/images/07/image-of-pope.png"
   },
   {
-    "title": "Policy and Regulatory Frameworks",
+    "title": "AI in Society; Policy and Regulatory Frameworks",
     "filename": "08-policy.html",
     "slidePath": "/slides/08-policy.html",
     "docPath": "/notes/08-policy",
-    "original": "08-policy.md"
+    "original": "08-policy.md",
+    "backgroundImage": "slides/images/08/income-inequality-piketty.png"
   },
   {
     "title": "Advanced and Emerging Topics 1",

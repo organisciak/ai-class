@@ -44,11 +44,13 @@ Organisciak, P., Acar, S., Dumas, D., & Berthiaume, K. (2023). Beyond semantic d
 
 Pennington, J., Socher, R., & Manning, C. (2014). Glove: Global vectors for word representation. *Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing (EMNLP)*, 1532–1543.
 
-Regulation 2024/1689. *Regulation (EU) 2024/1689 on harmonised rules on artificial intelligence*.
+Piketty, T. (2014). Capital in the twenty-first century (A. Goldhammer, Trans.). Belknap Press.
 
 Raffel, C., Shazeer, N., Roberts, A., Lee, K., Narang, S., Matena, M., Zhou, Y., Li, W., & Liu, P. J. (2020). Exploring the limits of transfer learning with a unified text-to-text transformer. *Journal of Machine Learning Research*, 21(140), 1–67.
 
 Rafner, J., Beaty, R. E., Kaufman, J. C., Lubart, T., & Sherson, J. (2023). Creativity in the age of generative AI. Nature Human Behaviour, 7(11), 1836-1838. doi:https://doi.org/10.1038/s41562-023-01751-1
+
+Regulation 2024/1689. *Regulation (EU) 2024/1689 on harmonised rules on artificial intelligence*.
 
 Salton, G., Wong, A., & Yang, C. S. (1975). A vector space model for automatic indexing. *Communications of the ACM*, 18(11), 613–620. https://doi.org/10.1145/361219.361220
 

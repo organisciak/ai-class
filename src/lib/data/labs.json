@@ -98,5 +98,18 @@
         "Critical Analysis, Fluency, and Evaluation"
         ],
         "pts": 2
+    },
+    {
+        "original": "policy-framework.md",
+        "title": "AI Policy Framework",
+        "description": "Develop guidelines for AI use in a specific organizational context, addressing ethical considerations and practical implementation.",
+        "docPath": "/labs/policy-framework",
+        "week": 8,
+        "coreCompetencies": [
+            "Society, Ethics and Policy",
+            "Critical Analysis, Fluency, and Evaluation",
+            "Technical Understanding"
+        ],
+        "pts": 1
     }
 ] 
