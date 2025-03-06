@@ -111,5 +111,16 @@
             "Technical Understanding"
         ],
         "pts": 1
+    },
+    {
+        "original": "ai-art-exhibition.md",
+        "title": "AI Art Exhibition and Critique",
+        "description": "Create AI-generated images and provide curator statements for others' work in a virtual gallery setting.",
+        "docPath": "/labs/ai-art-exhibition",
+        "week": 9,
+        "coreCompetencies": [
+            "Art and Creativity"
+        ],
+        "pts": 1
     }
 ] 

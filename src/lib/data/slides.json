@@ -64,11 +64,12 @@
     "backgroundImage": "slides/images/08/income-inequality-piketty.png"
   },
   {
-    "title": "Advanced and Emerging Topics 1",
+    "title": "Multimodal Models",
     "filename": "09-advanced1.html",
     "slidePath": "/slides/09-advanced1.html",
     "docPath": "/notes/09-advanced1",
-    "original": "09-advanced1.md"
+    "original": "09-advanced1.md",
+    "backgroundImage": "slides/images/09/latentscape.png"
   },
   {
     "title": "Advanced and Emerging Topics 2",

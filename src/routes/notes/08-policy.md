@@ -344,6 +344,12 @@ Special provisions for general-purpose AI models (GPAIs):
 - What are the potential concerns the EU AI Act?
 - Who benefits? Who is harmed?
 
+----
+
+## Lab: AI Policy Framework
+
+[Lab Details](https://ai.porg.dev/labs/policy-framework)
+
 ---
 
 [References](https://ai.porg.dev/notes/references)
