@@ -72,10 +72,11 @@
     "backgroundImage": "slides/images/09/latentscape.png"
   },
   {
-    "title": "Advanced and Emerging Topics 2",
+    "title": "Agents",
     "filename": "10-advanced2.html",
     "slidePath": "/slides/10-advanced2.html",
     "docPath": "/notes/10-advanced2",
-    "original": "10-advanced2.md"
+    "original": "10-advanced2.md",
+    "backgroundImage": "slides/images/10/computer-use.png"
   }
 ]
