@@ -6,6 +6,7 @@
     import MisalignedH1 from '$lib/components/ui/misalignedText/MisalignedH1.svelte';
     import { Button } from "$lib/components/ui/button";
     import { MetaTags } from 'svelte-meta-tags';
+    import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "$lib/components/ui/collapsible";
 
     let debug = $state(false);
     let showBackToTop = $state(false);
@@ -82,6 +83,11 @@
     <MisalignedH1 class_name="workbench-gfont mb-8 scroll-m-20 text-3xl font-extrabold tracking-tight lg:text-4xl">
         AI/IA - Artificial Intelligence in the Information Age
     </MisalignedH1>
+
+    <!-- Syllabus Section -->
+    <div class="mb-8 josefin-sans-gfont">
+        An AI Literacy class for information professionals, at the University of Denver. See the <a href="/syllabus" class="underline">Syllabus</a>.
+    </div>
 
     <!-- Table of Contents - only visible on smaller screens -->
     <div class="lg:hidden mb-8">
@@ -221,6 +227,26 @@
                     <CardContent>
                         <p class="text-sm">
                             Part of <a href="/labs/classification" class="underline">Lab: Classification Prompt Battle</a>
+                        </p>
+                    </CardContent>
+                </Card>
+                <Card>
+                    <CardHeader>
+                        <CardTitle class="text-md group">
+                            <a href="https://aivote.streamlit.app" class="flex items-center gap-2 hover:underline">
+                                AI Ethics Voting Tool
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="opacity-40 group-hover:opacity-100 transition-opacity">
+                                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                                </svg>
+                            </a>
+                        </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <p class="text-sm">
+                            An exercise for determining normative opinions on the line for ethical uses of AI, where the group generates appropriate, inappropriate, and borderline uses for AI, then ranks them.
                         </p>
                     </CardContent>
                 </Card>
