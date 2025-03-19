@@ -257,7 +257,9 @@
             </h2>
 
             <p class="text-muted-foreground text-sm mb-6">
-                Labs are ungraded. At the end of the course, there is a Portfolio element where you submit your best labs for assessment.
+                Labs are ungraded by default, but there is a Portfolio where you submit your best labs for assessment.
+                Portfolio details are in the <a href="/syllabus" class="underline">Syllabus</a> 
+                and there is a <a href="/portfolio" class="underline">Portfolio planning</a> page.
             </p>
 
             <div class="grid gap-6 md:grid-cols-2">

@@ -10,7 +10,8 @@
             "Technical Understanding",
             "Skilling and Productivity"
         ],
-        "pts": 1
+        "pts": 1,
+        "gradingCriteria": "Grading focus will be on: whether the submission demonstrates thoughtful comparison and critical analysis of the AI tools tested; demonstration of fluency in interpreting AI results; understanding of different tools."
     },
     {
         "original": "bot-dont-kill-my-vibe.md",
@@ -22,7 +23,8 @@
             "Critical Analysis, Fluency, and Evaluation",
             "Skilling and Productivity"
         ],
-        "pts": 1
+        "pts": 1,
+        "gradingCriteria": "Grading will focus on: quality of analysis and reflection in your lab submission; depth of critical thinking in analyzing AI feedback; clear articulation of which feedback approaches were most/least effective; thoughtful reflection on the overall experience of using AI as a critic."
     },
     {
         "original": "make-it-more.md",
@@ -35,7 +37,8 @@
             "Art and Creativity",
             "Critical Analysis"
         ],
-        "pts": 1
+        "pts": 1,
+        "gradingCriteria": "Grading will focus on: demonstrated understanding of iterative refinement techniques; creative application of different transformation approaches; thoughtful analysis of how the content evolved through iterations."
     },
     {
         "original": "ai-in-the-wild.md",
@@ -47,7 +50,8 @@
             "Society, Ethics and Policy",
             "Critical Analysis, Fluency, and Evaluation"
         ],
-        "pts": 1
+        "pts": 1,
+        "gradingCriteria": "Grading will be based on the quality and depth of analysis in your posts, as well as your engagement with the implications of the AI uses you document. Strong posts will demonstrate critical thinking and connect observations to broader course themes."
     },
     {
         "original": "new-hobby.md",
@@ -60,7 +64,8 @@
             "Skilling and Productivity",
             "Technical Understanding"
         ],
-        "pts": 2
+        "pts": 2,
+        "gradingCriteria": "Grading will focus on: an interesting learning-based use case that benefits from the strategy;  demonstration of thoughtful process in exploring new skills; clear documentation of AI's role in supporting the learning journey"
     },
     {
         "original": "prompt-and-circumstance.md",
@@ -72,7 +77,8 @@
             "Art and Creativity",
             "Skilling and Productivity"
         ],
-        "pts": 2
+        "pts": 2,
+        "gradingCriteria": "Grading will focus on the effectiveness and creativity of your interactive experience design. Does it maintain interest and flow well? How well does it handle different inputs and edge cases? How creative or useful is the concept and execution? How clear and detailed is your prompt."
     },
     {
         "original": "classification.md",
@@ -85,7 +91,8 @@
             "Critical Analysis, Fluency, and Evaluation",
             "Skilling and Productivity"
         ],
-        "pts": 2
+        "pts": 2,
+        "gradingCriteria": "For grading, your prompt will be run against a hidden test dataset and compared to some bad, okay, and good prompts that I will write. A good grade will perform similarly to my good prompts, or better."
     },
     {
         "original": "bias-analysis.md",
@@ -97,7 +104,8 @@
         "Society, Ethics and Policy",
         "Critical Analysis, Fluency, and Evaluation"
         ],
-        "pts": 2
+        "pts": 2,
+        "gradingCriteria": "Grading will focus on the clarity of documentation, quality of analysis, and demonstrated understanding of bias detection methodologies"
     },
     {
         "original": "policy-framework.md",
@@ -110,17 +118,33 @@
             "Critical Analysis, Fluency, and Evaluation",
             "Technical Understanding"
         ],
-        "pts": 1
+        "pts": 1,
+        "gradingCriteria": "Grading will focus on the clarity and appropriateness of your ideas and approach; the practical applicability of recommendation; and the evidence of understanding relevant AI principles"
     },
     {
         "original": "ai-art-exhibition.md",
         "title": "AI Art Exhibition and Critique",
         "description": "Create AI-generated images and provide curator statements for others' work in a virtual gallery setting.",
+        "gradingCriteria": "Grading will focus on creativity in the prompting process, sophistication of generated images (avoiding generic/cliched outputs), and thoughtful iteration based on results.",
         "docPath": "/labs/ai-art-exhibition",
         "week": 9,
         "coreCompetencies": [
             "Art and Creativity"
         ],
         "pts": 1
+    },
+    {
+        "original": "big-quiz.md",
+        "title": "The Big Quiz",
+        "description": "A comprehensive quiz covering the full range of course concepts, designed to demonstrate mastery of AI literacy fundamentals.",
+        "docPath": "/labs/big-quiz",
+        "week": 10,
+        "coreCompetencies": [
+            "Critical Analysis, Fluency, and Evaluation",
+            "Technical Understanding", 
+            "Society, Ethics and Policy"
+        ],
+        "pts": 1,
+        "gradingCriteria": "The grade on this component of your portfolio will simply be your grade on the quiz."
     }
 ] 

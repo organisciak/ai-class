@@ -335,7 +335,6 @@ Special provisions for general-purpose AI models (GPAIs):
 
 *"Free and open licence GPAI model providers only need to comply with copyright and publish the training data summary, unless they present a systemic risk."*
 
-
 ----
 
 ## Discussion

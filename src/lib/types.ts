@@ -21,6 +21,35 @@ export interface Classification {
     score: number | null;
 }
 
+export interface Lab {
+    original: string;
+    title: string;
+    description: string;
+    pts: number;
+    coreCompetencies: string[];
+    gradingCriteria: string;
+    docPath?: string;
+    week?: number;
+}
+
+export interface LabGrade {
+    grade?: number;
+    comments?: string;
+    directPercentage?: number;
+    
+    // Classification specific fields
+    brickRMSE?: number | null;
+    brickPercent?: number | null;
+    boxRMSE?: number | null;
+    boxPercent?: number | null;
+    knifeRMSE?: number | null;
+    knifePercent?: number | null;
+    toxicRMSE?: number | null;
+    toxicPercent?: number | null;
+}
+
+export type Grades = Record<string, LabGrade>;
+
 export interface LabeledExample {
     text: string;
     truth: string;
@@ -64,4 +93,31 @@ export interface PromptRun {
     rawResponse: string | null;
     metrics: PromptMetrics;
     results: PromptRunResultVsTruth[];
+}
+
+export interface GradeEvent {
+    labId: string;
+    grade: number;
+}
+
+export interface QuizGradeEvent {
+    labId: string;
+    directPercentage: number;
+    grade: number;
+}
+
+export interface ClassificationUpdate {
+    brickRMSE?: number | null;
+    brickPercent?: number | null;
+    boxRMSE?: number | null;
+    boxPercent?: number | null;
+    knifeRMSE?: number | null;
+    knifePercent?: number | null;
+    toxicRMSE?: number | null;
+    toxicPercent?: number | null;
+}
+
+export interface LabSelectionEvent {
+    labId: string;
+    selected: boolean;
 }

@@ -41,4 +41,4 @@ You can also choose what types of comparisons you want to make. Different compan
 
 **Grading**
 
-Grading focus will be on: whether the submission demonstrates thoughtful comparison and critical analysis of the AI tools tested; demonstration of fluency in interpreting AI results; understanding of different
+Grading focus will be on: whether the submission demonstrates thoughtful comparison and critical analysis of the AI tools tested; demonstration of fluency in interpreting AI results; understanding of different tools.
