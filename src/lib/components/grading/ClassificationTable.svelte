@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { calculateRMSEPercentage } from '$lib/utils/gradeCalculations';
     // Props
     export let labId: string;
     export let values: any = {
@@ -11,19 +12,6 @@
     // Event dispatcher
     import { createEventDispatcher } from 'svelte';
     const dispatch = createEventDispatcher();
-    
-    // Calculate percentage based on RMSE value
-    function calculateRMSEPercentage(value: number, bottomEnd: number, topEnd: number): number {
-        // If worse than bottom end, cap at 50%
-        if (value >= bottomEnd) return 50;
-        // If better than top end, cap at 100%
-        if (value <= topEnd) return 100;
-        
-        // Linear scale between bottom (50%) and top (100%)
-        const range = bottomEnd - topEnd;
-        const improvement = bottomEnd - value;
-        return 50 + (improvement / range) * 50;
-    }
     
     // Handle input for a specific dataset
     function handleDatasetInput(dataset: string, value: number | null, bottomEnd: number, topEnd: number) {

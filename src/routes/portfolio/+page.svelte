@@ -17,166 +17,18 @@
     import LabCard from '$lib/components/portfolio/LabCard.svelte';
     import CompetencyChart from '$lib/components/portfolio/CompetencyChart.svelte';
     import PointsSummary from '$lib/components/portfolio/PointsSummary.svelte';
-    import type { Grades } from '$lib/types';
     import { Button } from "$lib/components/ui/button";
-    const selectedLabs = writable<string[]>([]);
+    import { derived } from 'svelte/store';
     let chart: Chart | null = null;
     let isGradingMode = false;
-    
-    // Store for grades and comments
-    const labGrades = writable<Grades>({});
+    import { totalPoints, labGrades, selectedLabs, updateClassificationGrade, 
+        updateComments, updateQuizGrade, updateLabGrade, selectLab,
+        maxScore,
+        generateGradingText, totalScore } from '$lib/utils/gradeStore';
 
-    function calculateCompetencyScores() {
-        const scores = Object.fromEntries(
-            CORE_COMPETENCIES.map(comp => [comp, 0])
-        );
-
-        $selectedLabs.forEach(labId => {
-            const lab = labs.find(l => l.original === labId);
-            if (!lab) return;
-
-            lab.coreCompetencies.forEach((comp, index) => {
-                // First competency counts double
-                scores[comp] += index === 0 ? 2 : 1;
-            });
-        });
-
-        return scores;
-    }
-
-    function calculateTotalPoints(selected: string[]) {
-        return selected.reduce((total, labId) => {
-            const lab = labs.find(l => l.original === labId);
-            return total + (lab?.pts || 0);
-        }, 0);
-    }
-    // Calculate the weighted total score for grading
-    function calculateTotalScore(grades: Grades) {
-        let totalWeightedScore = 0;
-        let totalPossibleWeightedScore = 0;
-        
-        $selectedLabs.forEach(labId => {
-            const lab = labs.find(l => l.original === labId);
-            if (!lab) return;
-            
-            let gradePercentage;
-            if (lab.original === "big-quiz.md") {
-                // For Big Quiz, use the direct percentage
-                gradePercentage = (grades[labId]?.directPercentage || 0) / 100;
-            } else if (lab.original === "classification.md") {
-                // For Classification, use the calculated average percentage
-                gradePercentage = calculateClassificationScore(grades[labId]) / 100;
-            } else {
-                // For other labs, calculate from inverted grade
-                const grade = 20 - (grades[labId]?.grade || 0);
-                gradePercentage = grade / 20;
-            }
-            
-            const weight = lab.pts;
-            
-            totalWeightedScore += gradePercentage * weight;
-            totalPossibleWeightedScore += weight;
-        });
-        
-        // Ensure minimum denominator of 9 points
-        totalPossibleWeightedScore = Math.max(totalPossibleWeightedScore, 9);
-        
-        // Calculate weighted percentage and multiply by 650
-        const weightedPercentage = totalWeightedScore / totalPossibleWeightedScore;
-        
-        return Math.round(weightedPercentage * 650);
-    }
-    
-    // Get percentage grade for a numeric grade
-    function getPercentageGrade(grade: number): number {
-        return Math.round((grade / 20) * 100);
-    }
-    
-    // Generate copy-pasteable grading text
-    function generateGradingText() {
-        let text = "# Grading Rubric\n\n";
-        
-        $selectedLabs.forEach(labId => {
-            const lab = labs.find(l => l.original === labId);
-            if (!lab) return;
-            
-            let percentage;
-            if (lab.original === "big-quiz.md") {
-                // For Big Quiz, use the direct percentage
-                percentage = $labGrades[labId]?.directPercentage || 0;
-            } else if (lab.original === "classification.md") {
-                // For Classification, include detailed RMSE metrics
-                percentage = Math.round(calculateClassificationScore($labGrades[labId]));
-                
-                text += `## ${lab.title} (${lab.pts} pt${lab.pts > 1 ? 's' : ''})\n`;
-                text += `Criteria: "${lab.gradingCriteria}"\n\n`;
-                text += `Dataset metrics:\n`;
-                
-                if ($labGrades[labId]?.brickRMSE !== undefined && $labGrades[labId]?.brickRMSE !== null) {
-                    const brickRMSE = $labGrades[labId]?.brickRMSE;
-                    const brickPercent = Math.round($labGrades[labId]?.brickPercent || 50);
-                    text += `- AUT Brick: RMSE ${brickRMSE} (${brickPercent}%)\n`;
-                }
-                
-                if ($labGrades[labId]?.boxRMSE !== undefined && $labGrades[labId]?.boxRMSE !== null) {
-                    const boxRMSE = $labGrades[labId]?.boxRMSE;
-                    const boxPercent = Math.round($labGrades[labId]?.boxPercent || 50);
-                    text += `- AUT Box: RMSE ${boxRMSE} (${boxPercent}%)\n`;
-                }
-                
-                if ($labGrades[labId]?.knifeRMSE !== undefined && $labGrades[labId]?.knifeRMSE !== null) {
-                    const knifeRMSE = $labGrades[labId]?.knifeRMSE;
-                    const knifePercent = Math.round($labGrades[labId]?.knifePercent || 50);
-                    text += `- AUT Knife: RMSE ${knifeRMSE} (${knifePercent}%)\n`;
-                }
-                
-                if ($labGrades[labId]?.toxicRMSE !== undefined && $labGrades[labId]?.toxicRMSE !== null) {
-                    const toxicRMSE = $labGrades[labId]?.toxicRMSE;
-                    const toxicPercent = Math.round($labGrades[labId]?.toxicPercent || 50);
-                    text += `- Reddit Toxicity: RMSE ${toxicRMSE} (${toxicPercent}%)\n`;
-                }
-                
-                text += `\nOverall Grade: ${percentage}%\n`;
-                
-                const comments = $labGrades[labId]?.comments || '';
-                if (comments) {
-                    text += `Comments: ${comments}\n\n`;
-                }
-                
-                return; // Skip the standard output below
-            } else {
-                // For other labs, calculate percentage from inverted grade
-                const grade = 20 - ($labGrades[labId]?.grade || 0);
-                percentage = getPercentageGrade(grade);
-            }
-            
-            // Standard format for other labs
-            const comments = $labGrades[labId]?.comments || '';
-            
-            text += `## ${lab.title} (${lab.pts} pt${lab.pts > 1 ? 's' : ''})\n`;
-            text += `Criteria: "${lab.gradingCriteria}"\n`;
-            text += `Grade: ${percentage}%\n`;
-            if (comments) {
-                text += `Comments: ${comments}\n\n`;
-            }
-        });
-        
-        text += `## Total Score: ${calculateTotalScore($labGrades)}/650\n`;
-        
-        return text;
-    }
-
-    $: totalPoints = calculateTotalPoints($selectedLabs);
-    $: isValidPointRange = totalPoints >= 9 && totalPoints <= 11;
-    $: totalScore = calculateTotalScore($labGrades);
-
-    function updateChart() {
-        if (!chart) return;
-        
-        const scores = calculateCompetencyScores();
-        chart.data.datasets[0].data = CORE_COMPETENCIES.map(comp => scores[comp]);
-        chart.update();
-    }
+    const gradingReportText = derived([labGrades, selectedLabs], () => {
+        return generateGradingText(labs);
+    });
 
     onMount(() => {
         // Check for grading mode in URL params
@@ -214,129 +66,6 @@
         });
     });
 
-    // Calculate percentage based on RMSE value
-    function calculateRMSEPercentage(value: number, bottomEnd: number, topEnd: number): number {
-        // If worse than bottom end, cap at 50%
-        if (value >= bottomEnd) return 50;
-        // If better than top end, cap at 100%
-        if (value <= topEnd) return 100;
-        
-        // Linear scale between bottom (50%) and top (100%)
-        const range = bottomEnd - topEnd;
-        const improvement = bottomEnd - value;
-        return 50 + (improvement / range) * 50;
-    }
-    
-    // Calculate overall classification score from submitted datasets only
-    function calculateClassificationScore(grades: any): number {
-        if (!grades) return 50;
-        
-        let totalScore = 0;
-        let datasetCount = 0;
-        
-        // Only count datasets that have been filled in
-        if (grades.brickRMSE !== undefined && grades.brickRMSE !== null) {
-            totalScore += grades.brickPercent || 50;
-            datasetCount++;
-        }
-        
-        if (grades.boxRMSE !== undefined && grades.boxRMSE !== null) {
-            totalScore += grades.boxPercent || 50;
-            datasetCount++;
-        }
-        
-        if (grades.knifeRMSE !== undefined && grades.knifeRMSE !== null) {
-            totalScore += grades.knifePercent || 50;
-            datasetCount++;
-        }
-        
-        if (grades.toxicRMSE !== undefined && grades.toxicRMSE !== null) {
-            totalScore += grades.toxicPercent || 50;
-            datasetCount++;
-        }
-        
-        // Require at least 3 datasets
-        if (datasetCount < 3) {
-            return 50; // Default score if fewer than 3 datasets
-        }
-        
-        return totalScore / datasetCount;
-    }
-    
-    // Update classification grades
-    function updateClassificationGrades(labId: string, updates: any) {
-        labGrades.update(grades => {
-            const current = grades[labId] || { 
-                comments: '',
-                brickRMSE: null, brickPercent: null,
-                boxRMSE: null, boxPercent: null,
-                knifeRMSE: null, knifePercent: null,
-                toxicRMSE: null, toxicPercent: null
-            };
-            
-            const updated = { ...current, ...updates };
-            
-            // Calculate overall percentage and set the grade
-            const overallPercent = calculateClassificationScore(updated);
-            // Reverse the grade (0-20 scale, 0 = 100%, 20 = 0%)
-            updated.grade = Math.round(20 - (overallPercent / 100 * 20));
-            updated.directPercentage = Math.round(overallPercent);
-            
-            return { ...grades, [labId]: updated };
-        });
-    }
-
-    // Handle grade change from StandardGradeSlider
-    function handleGradeChange(event) {
-        const { labId, grade } = event.detail;
-        labGrades.update(grades => ({
-            ...grades,
-            [labId]: {
-                grade: grade,
-                comments: grades[labId]?.comments || '',
-                directPercentage: grades[labId]?.directPercentage
-            }
-        }));
-    }
-
-    // Handle quiz grade changes from QuizGradeInput
-    function handleQuizGradeChange(event) {
-        const { labId, directPercentage, grade } = event.detail;
-        labGrades.update(grades => ({
-            ...grades,
-            [labId]: {
-                grade,
-                directPercentage,
-                comments: grades[labId]?.comments || ''
-            }
-        }));
-    }
-
-    // Handle comments updates
-    function handleCommentsChange(labId: string, comments: string) {
-        labGrades.update(grades => ({
-            ...grades,
-            [labId]: {
-                grade: grades[labId]?.grade || 0,
-                directPercentage: grades[labId]?.directPercentage,
-                comments: comments
-            }
-        }));
-    }
-
-    // Handle lab selection/deselection
-    function handleLabSelection(event) {
-        const { labId, selected } = event.detail;
-        
-        selectedLabs.update(labs => {
-            if (selected) {
-                return [...labs, labId];
-            } else {
-                return labs.filter(id => id !== labId);
-            }
-        });
-    }
-
     function toggleGradingMode() {
         isGradingMode = !isGradingMode;
         const url = new URL(window.location.href);
@@ -369,7 +98,7 @@
             <h3 class="text-lg font-semibold josefin-sans-gfont">Select Labs</h3>
 
             <PointsSummary 
-                points={totalPoints} 
+                points={$totalPoints} 
                 minPoints={9} 
                 maxPoints={11} 
             />
@@ -379,7 +108,7 @@
                     <LabCard 
                         {lab} 
                         selected={$selectedLabs.includes(lab.original)}
-                        on:select={handleLabSelection}
+                        on:select={ (e) => selectLab( e.detail.labId, e.detail.selected)}
                     />
                 {/each}
             </div>
@@ -421,26 +150,26 @@
                                     <QuizGradeInput
                                         labId={labId}
                                         value={$labGrades[labId]?.directPercentage || 0}
-                                        on:change={handleQuizGradeChange}
+                                        on:change={(e) => updateQuizGrade(labId, e.detail.directPercentage, e.detail.grade)}
                                     />
                                 {:else if lab.original === "classification.md"}
                                     <ClassificationTable
                                         labId={labId}
                                         values={$labGrades[labId] || {}}
-                                        on:change={(e) => updateClassificationGrades(labId, e.detail)}
+                                        on:change={(e) => updateClassificationGrade(labId, e.detail)}
                                     />
                                 {:else}
                                     <StandardGradeSlider
                                         labId={labId}
                                         value={$labGrades[labId]?.grade || 0}
-                                        on:change={handleGradeChange}
+                                        on:change={(event) => updateLabGrade(event.detail.labId, event.detail.grade)}
                                     />
                                 {/if}
                                 
                                 <CommentsInput
                                     labId={labId}
                                     value={$labGrades[labId]?.comments || ''}
-                                    on:change={(e) => handleCommentsChange(labId, e.detail)}
+                                    on:change={(e) => updateComments(labId, e.detail)}
                                 />
                             </CardContent>
                         </Card>
@@ -449,9 +178,9 @@
             </div>
             
             <GradeSummary
-                score={totalScore}
-                totalPoints={totalPoints}
-                maxScore={650}
+                score={$totalScore}
+                totalPoints={$totalPoints}
+                maxScore={maxScore}
             />
             
             <div class="mt-8">
@@ -459,7 +188,7 @@
                 <textarea
                     class="w-full h-64 font-mono text-sm p-4 border rounded"
                     readonly
-                    value={generateGradingText()}
+                    value={$gradingReportText}
                 ></textarea>
             </div>
         </div>

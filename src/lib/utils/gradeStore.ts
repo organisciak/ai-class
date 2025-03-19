@@ -1,12 +1,13 @@
 // src/lib/utils/gradeStore.ts
 import { writable, derived } from 'svelte/store';
-import type { Grades, LabGrade, Lab } from '$lib/types';
+import type { Grades, Lab } from '$lib/types';
 import labs from '$lib/data/labs.json';
 import { calculateClassificationScore } from './gradeCalculations';
 
 // Main stores
 export const selectedLabs = writable<string[]>([]);
 export const labGrades = writable<Grades>({});
+export const maxScore = 625;
 
 // Derived store for total points based on selected labs
 export const totalPoints = derived(selectedLabs, ($labs) => {
@@ -52,10 +53,8 @@ export const totalScore = derived([selectedLabs, labGrades], ([$labs, $grades]) 
   // Ensure minimum denominator of 9 points
   totalPossibleWeightedScore = Math.max(totalPossibleWeightedScore, 9);
   
-  // Calculate weighted percentage and multiply by 650
   const weightedPercentage = totalWeightedScore / totalPossibleWeightedScore;
-  
-  return Math.round(weightedPercentage * 650);
+  return Math.round(weightedPercentage * maxScore);
 });
 
 // Update regular lab grade and comments
@@ -217,7 +216,7 @@ export function generateGradingText(allLabs: Lab[]) {
   
   let finalScore = 0;
   totalScore.subscribe(value => { finalScore = value; })();
-  text += `\n## Total Score: ${finalScore}/650\n`;
+  text += `\n## Total Score: ${finalScore}/${maxScore}\n`;
   
-  return text.strip();
+  return text;
 }

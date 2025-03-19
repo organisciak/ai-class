@@ -2,7 +2,7 @@
     // Props
     export let score: number = 0;
     export let totalPoints: number = 0;
-    export let maxScore: number = 650;
+    export let maxScore: number = 625;
     
     // Calculate percentage of max score
     $: percentage = Math.round((score / maxScore) * 100);
