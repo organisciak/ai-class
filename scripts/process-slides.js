@@ -90,8 +90,17 @@ async function processSlides() {
     // Extract metadata from content
     const headerMatch = content.match(/header:\s*"([^"]+)"/);
     const footerMatch = content.match(/footer:\s*"([^"]+)"/);
+    const backgroundImageMatch = content.match(/backgroundImage:\s*"?([^"\n]+)"?/);
     const header = headerMatch ? headerMatch[1] : '';
     const footer = footerMatch ? footerMatch[1] : '';
+    
+    // Transform background image path if it exists
+    let backgroundImage = '';
+    if (backgroundImageMatch) {
+      backgroundImage = backgroundImageMatch[1]
+        .replace(/^images\//, '/slides/images/')
+        .replace(/^\.\/images\//, '/slides/images/');
+    }
     
     // Build description from header/footer if available
     const description = [header, footer].filter(Boolean).join(' - ');
@@ -119,7 +128,8 @@ async function processSlides() {
       filename: outputName,
       slidePath: `/slides/${outputName}`,
       docPath: `/notes/${slug}`,
-      original: file
+      original: file,
+      backgroundImage: backgroundImage || undefined  // Only include if exists
     })
   }
 

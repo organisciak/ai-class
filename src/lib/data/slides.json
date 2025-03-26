@@ -5,7 +5,7 @@
     "slidePath": "/slides/01-intro-to-ai.html",
     "docPath": "/notes/01-intro-to-ai",
     "original": "01-intro-to-ai.md",
-    "backgroundImage": "slides/images/01/alphafold.png"
+    "backgroundImage": "/slides/images/01/alphafold.png"
   },
   {
     "title": "Technical Foundations of Modern AI",
@@ -13,7 +13,7 @@
     "slidePath": "/slides/02-technical-foundations.html",
     "docPath": "/notes/02-technical-foundations",
     "original": "02-technical-foundations.md",
-    "backgroundImage": "slides/images/02/byte-mag.jpg"
+    "backgroundImage": "/slides/images/02/byte-mag.jpg"
   },
   {
     "title": "How to Talk to Chat Bots",
@@ -21,7 +21,7 @@
     "slidePath": "/slides/03-talking-to-bots.html",
     "docPath": "/notes/03-talking-to-bots",
     "original": "03-talking-to-bots.md",
-    "backgroundImage": "slides/images/03/log-probabilities.png"
+    "backgroundImage": "/slides/images/03/log-probabilities.png"
   },
   {
     "title": "Co-Creativity and Professional Practice",
@@ -29,7 +29,7 @@
     "slidePath": "/slides/04-ai-co-creativity.html",
     "docPath": "/notes/04-ai-co-creativity",
     "original": "04-ai-co-creativity.md",
-    "backgroundImage": "slides/images/04/rad-waves.png"
+    "backgroundImage": "/slides/images/04/rad-waves.png"
   },
   {
     "title": "AI in Information Behavior",
@@ -45,7 +45,7 @@
     "slidePath": "/slides/06-classification.html",
     "docPath": "/notes/06-classification",
     "original": "06-classification.md",
-    "backgroundImage": "slides/images/06/sentiment-distribution.png"
+    "backgroundImage": "/slides/images/06/sentiment-distribution.png"
   },
   {
     "title": "Bias and Risks in AI Systems, Safety Considerations",
@@ -53,7 +53,7 @@
     "slidePath": "/slides/07-ethics-and-bias.html",
     "docPath": "/notes/07-ethics-and-bias",
     "original": "07-ethics-and-bias.md",
-    "backgroundImage": "slides/images/07/image-of-pope.png"
+    "backgroundImage": "/slides/images/07/image-of-pope.png"
   },
   {
     "title": "AI in Society",
@@ -61,7 +61,7 @@
     "slidePath": "/slides/08-1-use.html",
     "docPath": "/notes/08-1-use",
     "original": "08-1-use.md",
-    "backgroundImage": "slides/images/08/income-inequality-piketty.png"
+    "backgroundImage": "/slides/images/08/income-inequality-piketty.png"
   },
   {
     "title": "Policy and Regulatory Frameworks",
@@ -72,18 +72,18 @@
   },
   {
     "title": "Multimodal Models",
-    "filename": "09-advanced1.html",
-    "slidePath": "/slides/09-advanced1.html",
-    "docPath": "/notes/09-advanced1",
-    "original": "09-advanced1.md",
-    "backgroundImage": "slides/images/09/latentscape.png"
+    "filename": "09-multimodal.html",
+    "slidePath": "/slides/09-multimodal.html",
+    "docPath": "/notes/09-multimodal",
+    "original": "09-multimodal.md",
+    "backgroundImage": "/slides/images/09/latentscape.png"
   },
   {
     "title": "Agents",
-    "filename": "10-advanced2.html",
-    "slidePath": "/slides/10-advanced2.html",
-    "docPath": "/notes/10-advanced2",
-    "original": "10-advanced2.md",
-    "backgroundImage": "slides/images/10/computer-use.png"
+    "filename": "10-agents.html",
+    "slidePath": "/slides/10-agents.html",
+    "docPath": "/notes/10-agents",
+    "original": "10-agents.md",
+    "backgroundImage": "/slides/images/10/computer-use.png"
   }
 ]

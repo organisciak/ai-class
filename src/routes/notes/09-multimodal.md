@@ -4,6 +4,7 @@ theme: custom-theme
 paginate: true
 header: "AI/IA"
 footer: "Multimodal Models"
+backgroundImage: "images/09/latentscape.png"
 ---
 
 # Multimodal Models
@@ -270,3 +271,12 @@ Consider:
 -----
 
 [References](https://ai.porg.dev/notes/references)
+
+-----
+
+# Updates
+
+*Updates since I last taught the class are here. They are not formatted as slides, so refer to the 'Notes' version of the deck <https://ai.porg.dev>*
+
+- Native Image-Generation
+  - March 2025: gpt-4o can finally create images -> overcomes many problems of earlier image generators.

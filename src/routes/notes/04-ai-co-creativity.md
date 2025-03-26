@@ -4,6 +4,7 @@ theme: custom-theme
 paginate: true
 header: "AI/IA"
 footer: "Co-Creativity and Professional Practice"
+backgroundImage: "images/04/rad-waves.png"
 ---
 
 # Co-Creativity and Professional Practice

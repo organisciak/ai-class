@@ -4,6 +4,7 @@ theme: custom-theme
 paginate: true
 header: "AI/IA"
 footer: "Agents"
+backgroundImage: "images/10/computer-use.png"
 ---
 
 # Agents
@@ -249,3 +250,33 @@ Exercise: In pairs, try some of the following 'write and run code' tasks with Ch
 ## The Big Quiz
 
 See Canvas. We'll do the quiz in pairs. Remember - it's just review, *unless* you include in your Portfolio.
+
+----
+
+# Updates
+
+*Updates since I last taught the class are here. They are not formatted as slides, so refer to the 'Notes' version of the deck <https://ai.porg.dev>*
+
+## MCP
+
+Model Context Protocol is a standard for providing context to tools to LLMs.
+
+https://modelcontextprotocol.io/
+
+e.g. You can make a database or a filesystem available to a coding app, or a chat app, etc., without writing a custom tool for each
+
+(Mar 2025 - OpenAI is introducing MCP support: https://openai.github.io/openai-agents-python/mcp)
+
+----
+
+## Playwright-MCP
+
+- Playwright is a browser-testing tool, it's what Browser Use uses
+- with this server, you can give a command to an MCP LLM (e.g. Claude on your computer) and it can use a browser (in image-based-mode or all text-based)
+
+![](/slides/images/10/playwright.png)
+
+(Simon Willison summarizes the tool and how to use it in Claude: https://simonwillison.net/2025/Mar/25/playwright-mcp/)
+
+---
+

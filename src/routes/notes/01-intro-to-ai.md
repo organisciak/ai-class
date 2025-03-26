@@ -4,6 +4,7 @@ theme: custom-theme
 paginate: true
 header: "[AI/IA](https://ai.porg.dev)"
 footer: "Introduction to AI In Society"
+backgroundImage: "images/01/alphafold.png"
 
 ---
 

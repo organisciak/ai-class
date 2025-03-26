@@ -4,6 +4,8 @@ theme: custom-theme
 paginate: true
 header: "AI/IA"
 footer: "Bias and Risks in AI Systems, Safety Considerations"
+backgroundImage: "images/07/image-of-pope.png"
+
 ---
 
 # Bias and Risks in AI Systems, Safety Considerations

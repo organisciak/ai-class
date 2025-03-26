@@ -4,6 +4,7 @@ theme: custom-theme
 paginate: true
 header: "[AI/IA](https://ai.porg.dev)"
 footer: "Technical Foundations of Modern AI"
+backgroundImage: "images/02/byte-mag.jpg"
 ---
 
 # Technical Foundations of Modern AI

@@ -5,7 +5,7 @@ theme: custom-theme
 paginate: true
 header: "AI/IA"
 footer: "AI in Information Behavior"
-
+backgroundImage: "slides/images/05/librariesofthefuture.png"
 ---
 
 

@@ -4,6 +4,7 @@ theme: custom-theme
 paginate: true
 header: "AI/IA"
 footer: "Classification and Subject Access; Information Organization"
+backgroundImage: "images/06/sentiment-distribution.png"
 ---
 
 # Classification and Subject Access, Information Organization

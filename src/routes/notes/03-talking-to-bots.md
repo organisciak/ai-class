@@ -4,7 +4,7 @@ theme: custom-theme
 paginate: true
 header: "[AI/IA](https://ai.porg.dev)"
 footer: "Talking to Bots"
-
+backgroundImage: "images/03/log-probabilities.png"
 ----
 
 # How to Talk to Chat Bots
