@@ -3,10 +3,10 @@ marp: true
 theme: custom-theme
 paginate: true
 header: "AI/IA"
-footer: "Advanced and Emerging Topics"
+footer: "Multimodal Models"
 ---
 
-# Advanced and Emerging Topics 1: Multimodal Models
+# Multimodal Models
 
 ---
 

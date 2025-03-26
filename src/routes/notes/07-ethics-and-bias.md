@@ -3,10 +3,10 @@ marp: true
 theme: custom-theme
 paginate: true
 header: "AI/IA"
-footer: "Ethics and Bias in AI Systems, Safety Considerations"
+footer: "Bias and Risks in AI Systems, Safety Considerations"
 ---
 
-# Ethics and Bias in AI Systems, Safety Considerations
+# Bias and Risks in AI Systems, Safety Considerations
 
 ----
 
@@ -20,7 +20,10 @@ footer: "Ethics and Bias in AI Systems, Safety Considerations"
 
 # In, Out, and About
 
-Helpful to consider challenges *in* the models (e.g. bias, error), *out* - i.e. their use, and *about* - the external impacts of AI adoption
+Helpful to consider challenges:
+  - *in* the models (e.g. bias, error)
+  - *out* - their use (e.g. ethics), and
+  - *about* - policy and regulation
 
 ----
 
