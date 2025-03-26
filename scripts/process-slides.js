@@ -25,7 +25,26 @@ async function processSlides() {
 
   // Get all .md files
   const files = await fs.readdir(slidesSourceDir)
-  const mdFiles = files.filter(file => file.endsWith('.md'))
+  const mdFiles = files
+    .filter(file => file.endsWith('.md'))
+    .sort((a, b) => {
+      // Extract week numbers and parts (if any)
+      const parseFileName = (filename) => {
+        const match = filename.match(/^(\d+)(?:-(\d+))?/)
+        if (!match) return { week: Infinity, part: 0 }
+        return {
+          week: parseInt(match[1]),
+          part: match[2] ? parseInt(match[2]) : 0
+        }
+      }
+      
+      const fileA = parseFileName(a)
+      const fileB = parseFileName(b)
+      
+      // Sort by week first, then by part
+      if (fileA.week !== fileB.week) return fileA.week - fileB.week
+      return fileA.part - fileB.part
+    })
 
   const slideRefs = []
 

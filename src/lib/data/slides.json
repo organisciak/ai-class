@@ -48,7 +48,7 @@
     "backgroundImage": "slides/images/06/sentiment-distribution.png"
   },
   {
-    "title": "Ethics and Bias in AI Systems, Safety Considerations",
+    "title": "Bias and Risks in AI Systems, Safety Considerations",
     "filename": "07-ethics-and-bias.html",
     "slidePath": "/slides/07-ethics-and-bias.html",
     "docPath": "/notes/07-ethics-and-bias",
@@ -56,12 +56,19 @@
     "backgroundImage": "slides/images/07/image-of-pope.png"
   },
   {
-    "title": "AI in Society; Policy and Regulatory Frameworks",
-    "filename": "08-policy.html",
-    "slidePath": "/slides/08-policy.html",
-    "docPath": "/notes/08-policy",
-    "original": "08-policy.md",
+    "title": "AI in Society",
+    "filename": "08-1-use.html",
+    "slidePath": "/slides/08-1-use.html",
+    "docPath": "/notes/08-1-use",
+    "original": "08-1-use.md",
     "backgroundImage": "slides/images/08/income-inequality-piketty.png"
+  },
+  {
+    "title": "Policy and Regulatory Frameworks",
+    "filename": "08-2-policy.html",
+    "slidePath": "/slides/08-2-policy.html",
+    "docPath": "/notes/08-2-policy",
+    "original": "08-2-policy.md"
   },
   {
     "title": "Multimodal Models",
