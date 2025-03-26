@@ -2,7 +2,7 @@
 import { writable, derived } from 'svelte/store';
 import type { Grades, Lab } from '$lib/types';
 import labs from '$lib/data/labs.json';
-import { calculateClassificationScore } from './gradeCalculations';
+import { calculateClassificationScore } from '$lib/utils/gradeCalculations';
 
 // Main stores
 export const selectedLabs = writable<string[]>([]);
