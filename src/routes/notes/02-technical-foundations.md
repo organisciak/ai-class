@@ -464,7 +464,7 @@ so we can find them easily, especially in big places like libraries or on the in
 
 In this lab, you'll learn to use AI systems as a constructive critic to identify potential problems, weaknesses, or overlooked issues in your work. By having AI tools take an adversarial stance, you'll practice extracting valuable feedback while learning to evaluate and filter AI critiques.
 
-[Link to Details](labs/bot-dont-kill-my-vibe)
+[Link to Details](/labs/bot-dont-kill-my-vibe)
 
 Post your entry on Canvas
 
