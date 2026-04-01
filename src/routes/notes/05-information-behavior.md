@@ -13,15 +13,13 @@ backgroundImage: "slides/images/05/librariesofthefuture.png"
 
 ----
 
-## In the News
+## What's Happening in AI?
 
-- o3-mini, o3-mini-high -> Reasoning models getting cheaper and more efficient
-- OpenAI releases a deep research model -> cool, doesn't anybody want it?
-- S1 paper (Muennighoff et al. 2025):
-![bg:right:30% width:500px](/slides/images/05/s1.png)
+*Student presentation — Week 5*
 
-Will 2025 be the year of improving smaller models?
+After the presentation, consider:
 
+- How does this week's development connect to information behavior, search, or how people find and use knowledge?
 
 ----
 
@@ -126,8 +124,13 @@ Here I aim to be constructive. We'll cover challenges, and tips to work around.
 
 ## Coding Assistance
 
-Because of the logical structure of that form of writing, generative AI is particularly effective at helping you write code
-- Github Copilot and Cursor, are good implementations of an LLM coding assistant
+Because of the logical structure of code and structured formats, generative AI is particularly effective at helping you write and understand them.
+
+- **GitHub Copilot** (2021) popularized AI code autocomplete — completing lines as you type
+- **Cursor** brought full-file chat and multi-file edits to an AI-native IDE
+- **Claude Code, Aider, Windsurf** (2025) extended this to *agentic* coding — reading your whole project, running commands, and iterating autonomously
+
+*We'll go much deeper on coding agents in Week 6 — this is one of the most rapidly changing areas in AI.*
 
 ---
 

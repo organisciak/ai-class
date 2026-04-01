@@ -13,7 +13,7 @@ backgroundImage: "images/10/computer-use.png"
 
 ## What's Happening in AI?
 
-*Student presentation — Week 10*
+*Student presentation — Week 6*
 
 ----
 
@@ -290,9 +290,10 @@ This is not science fiction — it is what Claude Code, Cursor, and Aider do in 
 
 | Tool | Type | Key Feature | Approx. Market Position |
 |------|------|-------------|-------------------------|
-| **GitHub Copilot** | IDE plugin | Autocomplete + chat; 90% of Fortune 100 | ~20M users; 42% market share |
-| **Cursor** | AI-native IDE | Full codebase context; multi-file edits | $2B annual recurringARR; 1M+ daily active users |
+| **GitHub Copilot** | IDE plugin | Autocomplete + chat; 90% of Fortune 500 | ~20M users; 42% market share |
+| **Cursor** | AI-native IDE | Full codebase context; multi-file edits | $2B ARR; 1M+ daily active users |
 | **Claude Code** | Terminal / CLI agent | Reads whole repo, runs commands, autonomous | $1B+ ARR; 46% "most loved" by devs |
+| **OpenAI Codex** | Cloud agent | Async cloud tasks; parallel execution; delegates like a junior engineer | GA June 2025; ChatGPT Plus |
 | **Aider** | CLI agent | Open-source; pairs with any LLM | Active open-source community |
 | **Windsurf** | Agentic IDE | Full-repo Cascade agent; acquired by Cognition/Devin | Growing enterprise use |
 | **Devin** | Autonomous agent | Designed for fully autonomous coding tasks | First "AI software engineer" |
@@ -395,6 +396,38 @@ Claude Code's quality is tied to the underlying model:
 
 ----
 
+## OpenAI Codex: Cloud-Based Autonomous Coding
+
+**Codex** (OpenAI, May 2025 preview / June 2025 GA) — a coding agent built into ChatGPT:
+
+- **Cloud-based**: runs in OpenAI-managed sandboxes — no local setup required
+- **Asynchronous**: assign a task, come back when it's done — like delegating to a junior engineer
+- **Parallel**: multiple tasks can run simultaneously in separate sandboxes
+- **GitHub-native**: reads your repo, writes code, proposes pull requests
+
+> The key contrast with Claude Code: Claude Code reasons with you in real-time in your terminal; Codex works silently in the background and surfaces results.
+
+<p class="footnote"><a href="https://openai.com/index/introducing-codex/">OpenAI: Introducing Codex</a>, May 2025</p>
+
+----
+
+## Claude Cowork: Agents for Everyone
+
+**Claude Cowork** (Anthropic, January 2026) — agentic AI without a terminal:
+
+- **Desktop agent**: built into the Claude macOS app — no coding knowledge required
+- **Folder sandbox**: designate a folder; Claude reads, creates, and edits files there
+- **Plain-language tasks**: describe what you want; Claude plans and executes autonomously
+- **Computer use** (March 2026): can open apps, navigate browsers, fill in forms directly on your Mac
+
+Example tasks: *"Organize my downloads folder by type and date", "Make a spreadsheet from these receipts", "Draft a report from these scattered notes"*
+
+> Claude Code is for developers. Cowork brings the same agentic loop to information professionals — including LIS students.
+
+<p class="footnote"><a href="https://claude.com/blog/cowork-research-preview">Anthropic: Introducing Cowork</a>, January 2026</p>
+
+----
+
 ## Coding Agents for Information Professionals
 
 *You don't have to be a software engineer to benefit*
@@ -431,13 +464,13 @@ LIS-relevant use cases where coding agents reduce friction:
 
 ----
 
-## Connection: Week 5 → Week 10
+## Connection: Week 5 → Week 6
 
 In Week 5, we saw coding assistance as a form of structured-language help for professionals who aren't programmers.
 
 **What's changed since then:**
 
-| Week 5 framing (2023–2024) | Week 10 reality (2025–2026) |
+| Week 5 framing (2023–2024) | Week 6 reality (2025–2026) |
 |---------------------------|------------------------------|
 | Suggest the next line of code | Read and edit your entire project |
 | One-file autocomplete | Multi-file agentic execution |
@@ -459,13 +492,36 @@ The shift is real — but it amplifies both capability *and* risk.
 
 1. **Claude Code or Cursor** — If you have a code project (even a small one), install Claude Code or try Cursor's free tier. Ask it to add a feature or fix a bug. Note what it does autonomously vs. what it asks you about.
 
-2. **Vibe coding a small tool** — Use Claude.ai or ChatGPT to iteratively build a tiny script: a text file analyzer, a CSV cleaner, a simple vocabulary quiz. No installation needed. Describe what you want; iterate until it works.
+2. **Claude Cowork or OpenAI Codex** — No coding project? Use Cowork to tackle a real file/productivity task (organize a folder, draft from notes), or use Codex via ChatGPT to assign a background task. No terminal or setup required.
 
-3. **LIS task simulation** — Give an AI model a messy dataset (e.g., a list of ISBNs, a sample MARC export, a circulation CSV). Ask it to write and explain code that does something useful with it. Evaluate: did the output work? Did you understand it? What would you change?
+3. **Vibe coding a small tool** — Use Claude.ai or ChatGPT to iteratively build a tiny script: a text file analyzer, a CSV cleaner, a simple vocabulary quiz. No installation needed. Describe what you want; iterate until it works.
+
+4. **LIS task simulation** — Give an AI model a messy dataset (e.g., a list of ISBNs, a sample MARC export, a circulation CSV). Ask it to write and explain code that does something useful with it. Evaluate: did the output work? Did you understand it? What would you change?
 
 **Reflect:** What did the agent do well? Where did it need correction? What knowledge did *you* still need to guide it?
 
 </div>
+
+----
+
+## Exercise: Ask an Agent About This Course
+
+A live demo of agents as document-understanding tools — using AI to explore the course itself.
+
+<div class="text-sm">
+
+1. **Get the course materials**: Clone or download from the course GitHub repository (link on Canvas)
+2. **Open with an agent**: Claude Code, Cursor, or upload the files to ChatGPT
+3. **Ask questions of the corpus**:
+   - "What topics are covered each week?"
+   - "List all the labs — which are portfolio-eligible?"
+   - "Find every slide that mentions RAG"
+   - "What ethical concerns does this course raise about AI?"
+4. **Reflect**: How well did the agent navigate a set of documents? What did it get wrong?
+
+</div>
+
+*This is RAG + agents in action: the agent reads the corpus to answer questions, rather than guessing from training memory. This is exactly how enterprise document search and library knowledge systems are being built.*
 
 ----
 

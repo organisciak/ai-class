@@ -13,6 +13,12 @@ backgroundImage: "images/04/rad-waves.png"
 
 ----
 
+## What's Happening in AI?
+
+*Student presentation*
+
+----
+
 ## Skill Check 
 
 - What is the role of temperature in generative models?
@@ -30,43 +36,53 @@ backgroundImage: "images/04/rad-waves.png"
 
 ----
 
-### Current Issues: DeepSeek R1
+### Case Study: The DeepSeek Moment
 
-The reasoning model from last week, DeepSeek R1, has been in the news this week for a supposed (and belated; and slightly misdirected) existential crisis to US tech companies, and a Wall Street Tech drop.
+In January 2025 — right around when this class was first running — a single AI release shook the industry. DeepSeek R1, from a Chinese startup, matched OpenAI's best reasoning model on key benchmarks. Nvidia lost ~$600 billion in market cap in a single day.
 
-Let's discuss it.
+Let's look at what happened, what people predicted, and what actually followed.
 
 ---
 
 DeepSeek: https://chat.deepseek.com
 
-1. What's clever about it? What are the challenges with it?
-2. What's the problem for tech companies?
-3. What's the takeaway?
-4. What does this change?
+**What made it remarkable:**
+- Trained for under $6 million (vs. billions for US frontier models)
+- Used restricted H800 chips, not top-of-the-line Nvidia H100s
+- Released fully open-weight — anyone could download and run it
+- Proved reasoning capability doesn't require massive proprietary budgets
 
 ---
 
-The evolution of AI has been interesting. Even during the rapid commercialization, companies have competed through development, marketing and applications, not patent lawsuits. Most models have similar architectures, and the difference is in the data and training.
+**Discuss:**
 
-Big companies are trying to differentiate through *perceptions* of scale (we trained with sooooo many GPUs, so no one can beat us) and money (e.g. pushing copyright maximalist arguments) and recruiting (e.g. we have the best engineers, so no one can beat us).
+1. What's clever about it technically? (Think: distillation, reinforcement learning, Mixture of Experts)
+2. Why did it panic US tech companies and investors?
+3. What did people predict would happen next?
+4. Now that it's been over a year — what actually followed?
 
-While it seems like there are *many* companies that are training models, most of the energy is on *applications* - few care to compete with big US companies on training models, and the impression has been that the future will be scaffolded by a few
+---
+
+**What actually happened (retrospective):**
+
+- US companies responded with more efficient models and open-weight releases
+- Efficiency improved across the board — the "compute moat" narrative took significant damage
+- DeepSeek released R1-0528 (May 2025), now published in *Nature*
+- US frontier models (GPT-5, Claude 4) continue to lead on benchmarks
+- Chinese open-source models (Qwen 2.5) now surpass Meta's Llama in downloads
+
+*The "end of US AI dominance" didn't happen — but the assumption that scale = moat definitely got challenged.*
 
 ----
 
-This story touches on a numerous class themes: technical, sociotechnical, and geopolitical.
+This story touches on numerous class themes: technical, sociotechnical, and geopolitical.
 
-Ask me anything! e.g. 
+Dig deeper:
 
-- Additional technological grounding beyond our week 2 foundations and last week's reasoning model talk:
-  - What's *distillation*?
-  - What's *reinforcement learning*? What's *RLHF*?
-  - What's Mixture of Experts (MoE)?
+- What's *distillation*? What's *reinforcement learning*? What's *RLHF*? What's Mixture of Experts (MoE)?
 - Does this recontextualize *The Bitter Lesson*?
-- Why was the reaction so late? Why R1, when the news seems to react more to an older model?
-- Was the cost truly that much less than US?
-- policy edge notes: geopolitical implications; chip ban; open access
+- Was the cost truly that much less than US models? What does "training cost" even include?
+- Policy: geopolitical implications; chip export bans; open access vs. national security
 
 ----
 

@@ -12,7 +12,7 @@ footer: "Policy and Regulatory Frameworks"
 
 ## What's Happening in AI?
 
-*Student presentation — Week 8 (Policy)*
+*Student presentation — Week 9 (Policy)*
 
 After the presentation, consider:
 

@@ -14,7 +14,7 @@ backgroundImage: "images/07/image-of-pope.png"
 
 ## What's Happening in AI?
 
-*Student presentation*
+*Student presentation — Week 8*
 
 ----
 

@@ -1,6 +1,10 @@
 # References
 
-Ahmad, L., Agarwal, S., Lampe, M., & Mishkin, P. OpenAI’s Approach to External Red Teaming for AI Models and Systems. Technical report, OpenAI, November 2024. URL https://cdn.openai.com/papers/openais-approach-to-externalred-teaming. pdf. Accessed: 2024-11-26.
+Ahmad, L., Agarwal, S., Lampe, M., & Mishkin, P. OpenAI's Approach to External Red Teaming for AI Models and Systems. Technical report, OpenAI, November 2024. URL https://cdn.openai.com/papers/openais-approach-to-externalred-teaming. pdf. Accessed: 2024-11-26.
+
+Artists Rights Alliance. (2025). *Survey on AI and professional visual artist income*.
+
+Bartz v. Anthropic PBC (settlement announced June 2025, ~$1.5 billion).
 
 Bender, E. M., Gebru, T., McMillan-Major, A., & Shmitchell, S. (2021). On the dangers of stochastic parrots: Can language models be too big?🦜. *Proceedings of the 2021 ACM FAT Conference*, 610-623.
 
@@ -10,11 +14,15 @@ Brown, T., Mann, B., Ryder, N., Subbiah, M., Kaplan, J. D., Dhariwal, P., Neelak
 
 Brynjolfsson, E., Li, D., & Raymond, L. R. (2023). *Generative AI at Work* (Working Paper 31161). National Bureau of Economic Research.
 
+Colorado General Assembly. (2024). *SB 24-205: Consumer Protections for Artificial Intelligence*. https://leg.colorado.gov/bills/sb24-205
+
+Colorado General Assembly. (2025). *SB 25B-004: Increase Transparency for Algorithmic Systems Act* [amending SB 24-205, delaying effective date to June 30, 2026].
+
 Cox, A. (2024). Algorithmic Literacy, AI Literacy and Responsible Generative AI Literacy. *Journal of Web Librarianship*, 1–18.
 
-Dell'Acqua, F., et al. (2023). Navigating the jagged technological frontier: Field experimental evidence of the effects of AI on knowledge worker productivity and quality. *Harvard Business School Working Paper*.
-
 Deerwester, S., Dumais, S. T., Furnas, G. W., Landauer, T. K., & Harshman, R. (1990). Indexing by latent semantic analysis. *Journal of the American Society for Information Science*, 41(6), 391–407. https://doi.org/10/db4ft5
+
+Dell'Acqua, F., et al. (2023). Navigating the jagged technological frontier: Field experimental evidence of the effects of AI on knowledge worker productivity and quality. *Harvard Business School Working Paper*.
 
 Devlin, J., Chang, M.-W., Lee, K., & Toutanova, K. (2018). BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding. *arXiv preprint arXiv:1810.04805*.
 
@@ -22,13 +30,19 @@ Doshi, A. R., & Hauser, O. (2023). Generative artificial intelligence enhances c
 
 Dosovitskiy, A., Beyer, L., Kolesnikov, A., Weissenborn, D., Zhai, X., Unterthiner, T., ... & Houlsby, N. (2020). An image is worth 16x16 words: Transformers for image recognition at scale. arXiv preprint arXiv:2010.11929.
 
+Executive Order No. 14148, 90 Fed. Reg. 8353 (Jan. 20, 2025). *Rescinding Certain Executive Orders and Presidential Actions*.
+
+Executive Order No. 14179, 90 Fed. Reg. 8741 (Jan. 23, 2025). *Removing Barriers to American Leadership in Artificial Intelligence*. https://www.federalregister.gov/documents/2025/01/31/2025-02172/removing-barriers-to-american-leadership-in-artificial-intelligence
+
+Executive Order, *Ensuring a National Policy Framework for Artificial Intelligence* (Dec. 11, 2025). The White House. https://www.whitehouse.gov/presidential-actions/2025/12/eliminating-state-law-obstruction-of-national-artificial-intelligence-policy/
+
 Furnas, G. W., Landauer, T. K., Gomez, L. M., & Dumais, S. T. (1987). The vocabulary problem in human-system communication. Communications of the ACM, 30(11), 964-971.
 
 Goodfellow, I., Pouget-Abadie, J., Mirza, M., Xu, B., Warde-Farley, D., Ozair, S., ... & Bengio, Y. (2020). Generative adversarial networks. Communications of the ACM, 63(11), 139-144
 
 Hoffmann, J., Borgeaud, S., Mensch, A., Buchatskaya, E., Cai, T., Rutherford, E., Casas, D. de L., Hendricks, L. A., Welbl, J., Clark, A., Hennigan, T., Noland, E., Millican, K., Driessche, G. van den, Damoc, B., Guy, A., Osindero, S., Simonyan, K., Elsen, E., … Sifre, L. (2022). Training Compute-Optimal Large Language Models (arXiv:2203.15556). arXiv. https://doi.org/10.48550/arXiv.2203.15556
 
-Huyen, C. (2025, January 7). Agents. https://huyenchip.com/2025/01/07/agents.html
+Kadrey v. Meta Platforms Inc. (N.D. Cal. June 2025).
 
 Kaplan, J., McCandlish, S., Henighan, T., Brown, T. B., Chess, B., Child, R., Gray, S., Radford, A., Wu, J., & Amodei, D. (2020). Scaling Laws for Neural Language Models (arXiv:2001.08361). arXiv. https://doi.org/10.48550/arXiv.2001.08361
 
@@ -58,17 +72,22 @@ Raffel, C., Shazeer, N., Roberts, A., Lee, K., Narang, S., Matena, M., Zhou, Y.,
 
 Rafner, J., Beaty, R. E., Kaufman, J. C., Lubart, T., & Sherson, J. (2023). Creativity in the age of generative AI. Nature Human Behaviour, 7(11), 1836-1838. doi:https://doi.org/10.1038/s41562-023-01751-1
 
-Regulation 2024/1689. *Regulation (EU) 2024/1689 on harmonised rules on artificial intelligence*.
+Regulation 2024/1689. *Regulation (EU) 2024/1689 of the European Parliament and of the Council of 13 June 2024 laying down harmonised rules on artificial intelligence (Artificial Intelligence Act)*. Official Journal of the European Union, L 1689. https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689
 
 Salton, G., Wong, A., & Yang, C. S. (1975). A vector space model for automatic indexing. *Communications of the ACM*, 18(11), 613–620. https://doi.org/10.1145/361219.361220
 
 Sweeney, L. (2013). Discrimination in online ad delivery. Communications of the ACM, 56(5), 44-54.
 
+Thomson Reuters Enterprise Centre GmbH v. ROSS Intelligence Inc., No. 1:20-cv-00613 (D. Del. Feb. 11, 2025).
+
+U.S. Copyright Office. (2025, May). *Copyright and Artificial Intelligence, Part 3: Generative AI Training*. Library of Congress.
+
+Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, L., & Polosukhin, I. (2017). Attention Is All You Need. *arXiv preprint arXiv:1706.03762*. https://doi.org/10.48550/arXiv.1706.03762
+
 Wang, B., Rau, P. P., & Yuan, T. (2022). Measuring user competence in using artificial intelligence. *Behavior & Information Technology*, *42*(3), 1-14.
 
 Wei, J., Wang, X., Schuurmans, D., Bosma, M., Ichter, B., Xia, F., Chi, E., Le, Q., & Zhou, D. (2023). Chain-of-Thought Prompting Elicits Reasoning in Large Language Models (arXiv:2201.11903). arXiv. https://doi.org/10.48550/arXiv.2201.11903
 
+White House Office of Science and Technology Policy. (2025, July 31). *Winning the Race: America's AI Action Plan*. https://www.whitehouse.gov/wp-content/uploads/2025/07/Americas-AI-Action-Plan.pdf
+
 Williamson, S. M., & Prybutok, V. (2024). The Era of Artificial Intelligence Deception: Unraveling the Complexities of False Realities. *Information*, *15*(6), 299.
-
-Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, L., & Polosukhin, I. (2017). Attention Is All You Need. *arXiv preprint arXiv:1706.03762*. https://doi.org/10.48550/arXiv.1706.03762
-

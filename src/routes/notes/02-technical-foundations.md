@@ -14,6 +14,12 @@ backgroundImage: "images/02/byte-mag.jpg"
 
 ---
 
+## What's Happening in AI?
+
+*Student presentation*
+
+---
+
 # Agenda
 
 1. Our AI Toolbelt: Getting to Know the Tools
@@ -46,11 +52,10 @@ backgroundImage: "images/02/byte-mag.jpg"
 ![ChatGPT bg right:45%](/slides/images/02/chatgpt-mnight.png)
 
 ## ChatGPT (OpenAI)
-  - Different models: GPT-4, GPT-4o, o1
-  - Strong general capabilities
-  - GPT-4 was state of the art for over a year
-  - Integration with DALL-E for images, has a multi-modal models that use voice and video
-  - extra features: custom GPTs, code interpreter, web search
+  - Current models: GPT-5.3 (default), GPT-5.4 (latest flagship, March 2026)
+  - Strong general capabilities; GPT-5 and later unify fast and reasoning modes in one model
+  - Native image generation (no longer requires a separate DALL-E call); voice and video
+  - Extra features: custom GPTs, code interpreter, web search, deep research
 
 Basic: https://chat.openai.com / Advanced: https://platform.openai.com/playground
 
@@ -58,7 +63,8 @@ Basic: https://chat.openai.com / Advanced: https://platform.openai.com/playgroun
 
 ## Claude (Anthropic)
   - Known for longer context, detailed analysis
-  - Different "personalities": Haiku, Sonnet, Opus
+  - Model tiers: Haiku (fast/cheap), Sonnet (balanced), Opus (most capable) — current generation: Claude Sonnet 4.6
+  - Supports **extended thinking**: toggle deeper reasoning on/off in the same model
   - Strong coding and technical capabilities
   - Extra features: projects, artifacts
 
@@ -68,9 +74,9 @@ Basic: https://claude.ai / Advanced: https://console.anthropic.com
 
 ## Gemini (Google)
 
-  - Multiple versions
+  - Multiple versions: **Gemini 2.5 Pro** is the current flagship
   - Particularly affordable for dev use
-  - Supports video and audio
+  - Supports video and audio; "Deep Think" reasoning mode built in
 
 
 Basic: https://gemini.google.com / Advanced: https://aistudio.google.com
@@ -79,9 +85,9 @@ Basic: https://gemini.google.com / Advanced: https://aistudio.google.com
 
 ## LLaMA (Meta)
 
-- Open source
-- Different sizes, flexible
-- Various tools for running - you can run (smaller) versions of this model on your own computer with Ollama (<https://ollama.com>)
+- Open source — **LLaMA 4** (released April 2025) is the current generation
+- Natively multimodal (text and images); mixture-of-experts architecture
+- Various tools for running — you can run (smaller) versions on your own computer with Ollama (<https://ollama.com>)
 
 ---
 

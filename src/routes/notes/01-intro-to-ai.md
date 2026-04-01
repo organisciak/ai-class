@@ -71,19 +71,19 @@ backgroundImage: "images/01/alphafold.png"
 ---
 
 ## Current Adoption & Impact
-- 39% of U.S. population (18-64) use generative AI
-- 24% of workers use it weekly
-- Nearly 1 in 9 workers use it daily
-(Bick et al., 2024)
+- ~54.6% of U.S. workers used generative AI in the prior 12 months
+- (Up from ~39% of U.S. population 18-64 using it as of early 2024)
+(Bick et al., 2024; St. Louis Fed, 2025)
 
-- OpenAI: 300 million weekly active users ([Dec 2024](https://www.cnbc.com/2024/12/04/openais-active-user-count-soars-to-300-million-people-per-week.html))
+- OpenAI: ~900 million weekly active users ([Feb 2026](https://www.demandsage.com/chatgpt-statistics/)) — tripled in 14 months
+- 92% of Fortune 500 companies using ChatGPT
 
 ---
 
 ## Why Now?
 
-- Rapid workplace adoption showing significant productivity gains (Dell'Acqua et al., 2023, Brynjolfsson et al., 2023), though a 'jagged technological frontier' with uneven benefits
-- New regulatory requirements emerging globally (EU AI Act, 2024)
+- Rapid workplace adoption showing significant productivity gains (Dell'Acqua et al., 2025, Brynjolfsson et al., 2025), though a 'jagged technological frontier' with uneven benefits
+- New regulatory requirements emerging globally (EU AI Act now partially in force, 2025)
 - Rising concerns about AI-generated misinformation (Williamson & Prybutok, 2024)
 - Growing digital divides in AI capabilities
 - Increasing workplace expectations for AI competency
@@ -92,8 +92,9 @@ backgroundImage: "images/01/alphafold.png"
 
 ## Productivity Implications
 
-- 34% improvement for novice and unskilled workers (Brynjolfsson et al., 2023)
+- 15% average productivity increase for customer support workers, with larger gains for less experienced workers (Brynjolfsson et al., 2025)
 - 18% increase in writing quality with 40% time savings, and increased satisfaction with work (Noy & Zhang, 2023)
+- Workers using AI save ~5.4% of work hours per week on average — gains are real but uneven (St. Louis Fed, 2025)
 
 ---
 
@@ -188,6 +189,18 @@ When we reconvene we'll do a quick set of full-class introductions.
 
 ---
 
+## About the Labs
+
+Labs are hands-on experiments and projects — the core of this course.
+
+- **Some labs are in-class**: we start (and often finish) them together during class time
+- **Some are homework**: you complete them on your own before the next session
+- Each lab's page specifies when to complete it and how to submit
+
+Not every lab goes in your portfolio — check the lab description for whether it's portfolio-eligible or completion-only.
+
+---
+
 ## I want a system to do my laundry
 
 ![Tweet: You know what the biggest problem with pushing all-things-AI is? Wrong direction. I want AI to do my laundry and dishes so that I can do art and writing, not for AI to do my art and writing so that I can do my laundry and dishes.](/slides/images/01/2025-01-08-15-54-42.png)
@@ -211,6 +224,15 @@ Goals of this class
 
 ---
 
+## Baseline AI Etiquette: The Effort Rule
+
+![bg right:45% 90%](/slides/images/01/neurotica-slop.png)
+
+- Using AI to *help* you create something is fine. Handing people unreviewed AI output is not.
+- If you publish it, you own it — stake your name on what you share
+- "Sharing unreviewed AI-generated content with other people is rude" — [Willison, 2024](https://simonwillison.net/2024/May/8/slop/)
+---
+
 # Tools We'll Use
 
 --- 
@@ -221,7 +243,40 @@ Goals of this class
 - [Google AI Studio - https://aistudio.google.com](https://aistudio.google.com/)
 - [Google Gemini - https://gemini.google.com](https://gemini.google.com/)
 
----- 
+----
+
+## What's Free vs. Paid?
+
+<div class="text-sm">
+
+| Tool | Free tier | Paid entry | Student deal |
+|------|-----------|------------|--------------|
+| **Claude** | Sonnet 4.6, low rate limits | Pro $20/mo | API credits for students; university partnerships |
+| **ChatGPT** | GPT-5.3, ~10 msgs/5hrs, ads | Plus $20/mo | $100 Codex credits (US/Canada) |
+| **Gemini** | 2.5 Flash, generous limits | AI Pro $20/mo | 1yr free offer (enrollment closed Mar 2026) |
+| **Claude Code** | ✗ Not available | Pro $20/mo or API | Same as Claude above |
+| **Codex (OpenAI)** | Very limited | Plus $20/mo | $100 credits (US/Canada) |
+| **Claude Cowork** | ✗ Not available | Pro $20/mo | Same as Claude above |
+| **Cursor** | 50 AI reqs/mo | Pro $20/mo | **1 yr Pro free with .edu email** |
+| **Aider** | Free (open source) | API costs only | Use budget models (DeepSeek) |
+
+</div>
+
+**Bottom line:** For chatting, Gemini's free tier is most generous. For agentic/coding tools, most require a paid subscription — **Cursor's .edu student program is the standout free option.**
+
+----
+
+## Comparing Models: Chatbot Arena
+
+[arena.ai](https://arena.ai) lets you compare models **side by side, blind** — you rate before knowing which model produced each response.
+
+![Chatbot Arena side-by-side comparison](/slides/images/01/arena-screenshot.png)
+
+- Community votes drive the [Elo leaderboard](https://lmarena.ai/leaderboard) — a crowd-sourced model ranking
+- Useful for building intuition about model differences without marketing spin
+- *Try it: enter any prompt and vote for the better response*
+
+----
 
 ## Optional Local Tools
 
@@ -246,6 +301,39 @@ Goals of this class
 2. Help out others if it's their first time
 3. Begin exploring AI tools
 4. Complete **[Lab: Tool Evaluation Journal](/labs/ai-tool-evaluation)**
+
+---
+
+# "What's Happening in AI?" — Weekly Current Events
+
+Starting Week 2, each class opens with a **3–5 minute student-led update** on a recent AI development.
+
+- Rotating sign-up: one student (or pair) per week
+- Sign up during Week 1
+- Add to your calendar to remember!
+
+(part of participation grade)
+
+---
+
+## What to Cover
+
+1. **A significant development** from the past week or two
+2. **Why it matters** — for a field, for society, or for your area of interest
+3. **One discussion question** for the class to briefly consider
+
+Keep it focused: one story, clearly explained, with a prompt for us to react to.
+
+---
+
+## Where to Find AI News
+
+Wherever you want! Some sources:
+
+- [Simon Willison's Weblog](https://simonwillison.net) — thoughtful, technical, frequent
+- [MIT Technology Review](https://www.technologyreview.com/topic/artificial-intelligence/) — in-depth reporting
+- [The Verge — AI](https://www.theverge.com/ai-artificial-intelligence) — fast, accessible coverage
+- [Axios AI+](https://www.axios.com/technology/ai) — concise daily briefings
 
 ---
 

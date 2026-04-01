@@ -13,7 +13,7 @@ backgroundImage: "images/09/latentscape.png"
 
 ## What's Happening in AI?
 
-*Student presentation — Week 9*
+*Student presentation — Week 10*
 
 After the presentation, consider:
 

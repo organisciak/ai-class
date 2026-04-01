@@ -40,50 +40,50 @@
     "backgroundImage": "slides/images/05/librariesofthefuture.png"
   },
   {
+    "title": "Agents",
+    "filename": "06-agents.html",
+    "slidePath": "/slides/06-agents.html",
+    "docPath": "/notes/06-agents",
+    "original": "06-agents.md",
+    "backgroundImage": "/slides/images/10/computer-use.png"
+  },
+  {
     "title": "Classification and Subject Access, Information Organization",
-    "filename": "06-classification.html",
-    "slidePath": "/slides/06-classification.html",
-    "docPath": "/notes/06-classification",
-    "original": "06-classification.md",
+    "filename": "07-classification.html",
+    "slidePath": "/slides/07-classification.html",
+    "docPath": "/notes/07-classification",
+    "original": "07-classification.md",
     "backgroundImage": "/slides/images/06/sentiment-distribution.png"
   },
   {
     "title": "Bias and Risks in AI Systems, Safety Considerations",
-    "filename": "07-ethics-and-bias.html",
-    "slidePath": "/slides/07-ethics-and-bias.html",
-    "docPath": "/notes/07-ethics-and-bias",
-    "original": "07-ethics-and-bias.md",
+    "filename": "08-ethics-and-bias.html",
+    "slidePath": "/slides/08-ethics-and-bias.html",
+    "docPath": "/notes/08-ethics-and-bias",
+    "original": "08-ethics-and-bias.md",
     "backgroundImage": "/slides/images/07/image-of-pope.png"
   },
   {
     "title": "AI in Society",
-    "filename": "08-1-use.html",
-    "slidePath": "/slides/08-1-use.html",
-    "docPath": "/notes/08-1-use",
-    "original": "08-1-use.md",
+    "filename": "09-1-use.html",
+    "slidePath": "/slides/09-1-use.html",
+    "docPath": "/notes/09-1-use",
+    "original": "09-1-use.md",
     "backgroundImage": "/slides/images/08/income-inequality-piketty.png"
   },
   {
     "title": "Policy and Regulatory Frameworks",
-    "filename": "08-2-policy.html",
-    "slidePath": "/slides/08-2-policy.html",
-    "docPath": "/notes/08-2-policy",
-    "original": "08-2-policy.md"
+    "filename": "09-2-policy.html",
+    "slidePath": "/slides/09-2-policy.html",
+    "docPath": "/notes/09-2-policy",
+    "original": "09-2-policy.md"
   },
   {
     "title": "Multimodal Models",
-    "filename": "09-multimodal.html",
-    "slidePath": "/slides/09-multimodal.html",
-    "docPath": "/notes/09-multimodal",
-    "original": "09-multimodal.md",
+    "filename": "10-multimodal.html",
+    "slidePath": "/slides/10-multimodal.html",
+    "docPath": "/notes/10-multimodal",
+    "original": "10-multimodal.md",
     "backgroundImage": "/slides/images/09/latentscape.png"
-  },
-  {
-    "title": "Agents",
-    "filename": "10-agents.html",
-    "slidePath": "/slides/10-agents.html",
-    "docPath": "/notes/10-agents",
-    "original": "10-agents.md",
-    "backgroundImage": "/slides/images/10/computer-use.png"
   }
 ]

@@ -14,6 +14,12 @@ backgroundImage: "images/03/log-probabilities.png"
 
 ----
 
+## What's Happening in AI?
+
+*Student presentation*
+
+----
+
 ## Skill Check
 
 Take turns asking each other:
@@ -177,30 +183,79 @@ Each step makes more thinking explicit
 
 ---
 
-## Tip: Use Reasoning Models Models When You Need Them
+## Tip: Use Thinking/Reasoning Mode When You Need It
 
-- `o1`/`o1-mini` (OpenAI), `DeepSeek-R1` (DeepSeek), `Gemini 2.0 Flash Thinking Experimental` (Google - hot off the press!)
+Most modern models can "think" more carefully when asked — producing more reliable answers on complex tasks.
 
-- These models are designed to take more time to think through the problem, and then give a more thoughtful response
+| Model | Provider | Notes |
+|-------|----------|-------|
+| `GPT-5` / `GPT-5.4` | OpenAI | Unified: routes between fast and reasoning mode automatically |
+| `Claude Sonnet 4.6` | Anthropic | Toggle "extended thinking" on/off in the same model |
+| `Gemini 2.5 Pro` | Google | "Deep Think" mode built-in |
+| `DeepSeek R1` | DeepSeek | Open-weight; published in *Nature* (2025); can run locally |
+
+**Practical advice:** Use thinking/reasoning mode in your preferred model rather than seeking out a specific model name — this capability is now standard across major providers.
 
 ----
 
 [!['Thought for 27 Seconds' width:800px](/slides/images/03/o1-example.png)](https://chatgpt.com/share/66feb239-02d8-8001-aa46-4871d370799d)
 
-The `o1-preview` feature demonstrates how more advanced AI models can take time to process and formulate responses, following the Chain of Thought paradigm
+An early example (o1, 2024) of how reasoning models show their thinking process. The interface has changed, but the concept is the same.
 
 ----
 
-*Gemini 2.0 Flash Thinking*
-Thought for 7.3s
-
-![bg right:60%](/slides/images/03/flash-thinking-example.png)
+**The big shift:** Reasoning is no longer a separate model family — it's becoming a toggle or built-in mode in standard models. The distinction between "regular" and "reasoning" models is dissolving.
 
 -----
 
-Reasoning models are **slow**, but can be helpful for reasoning tasks that require more steps of thought.
+## How "Thinking" Evolved: A Short History
 
-They can also be great for preparing training examples or few-shot examples for training other models or crafting prompts
+This capability didn't arrive all at once — it went through three distinct phases in about a year.
+
+----
+
+## Phase 1 — OpenAI o1: A Separate Thinking Model (Sept 2024)
+
+OpenAI introduced the **o1** model family as a *separate product* from GPT-4o.
+
+- Thinking happened internally before the response; users saw a brief **"Thought for X seconds"** summary
+- You had to **choose** which model to use: fast (GPT-4o) or thinking (o1)
+- Stronger on math, logic, multi-step reasoning — but slower and more expensive
+- The tradeoff was explicit: pick the right tool for the job
+
+> This was the first time a major frontier lab shipped "thinking" as a user-visible feature.
+
+----
+
+## Phase 2 — Claude 3.7 Sonnet: The Toggle (Feb 2025)
+
+Anthropic took a different approach with **Claude 3.7 Sonnet** (February 25, 2025):
+
+- **Same model**, but extended thinking could be **switched on or off**
+- Developers could set a **thinking budget** — controlling how long the model "thinks" (and how much it costs)
+- Thinking was more transparent: the full reasoning trace was visible, not just a summary
+- The model itself was a *hybrid* — capable of both quick and deep responses
+
+> The key insight: reasoning didn't require a separate model. It was a mode.
+
+----
+
+## Phase 3 — GPT-5: The Unified Approach (Aug 2025)
+
+GPT-5 (August 2025) took the synthesis further:
+
+- **No toggle required** — the model automatically detects when a prompt needs deeper reasoning and allocates compute accordingly
+- Fast and thinking modes are **the same model**, routing dynamically based on query complexity
+- Later GPT-5.x versions followed the same pattern
+- The distinction between "regular" and "reasoning" models essentially dissolved
+
+> The trajectory: separate model → user-controlled toggle → automatic routing. The capability is now ambient.
+
+----
+
+Thinking/reasoning mode is **slower and more expensive**, but helpful for tasks that require many steps of thought.
+
+It can also be great for preparing training examples, few-shot examples, or crafting prompts
 
 ----
 
@@ -221,7 +276,7 @@ This is useful sometimes for fun and creative uses, but a problem for informatio
   - Human: Doublecheck and confirm!
   - System: Give the LLM access to traditional information retrieval tools (retrieval augmented generation), or other tools 
 
-(We'll discuss this more in week 5, and week 10)
+(We'll discuss this more in week 5, and week 6)
 
 ----
 

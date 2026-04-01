@@ -3,6 +3,9 @@ import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
 	plugins: [sveltekit()],
+	server: {
+		port: 4141
+	},
 	test: {
 		include: ['tests/**/*.{test,spec}.{js,ts}'],
 		environment: 'jsdom'
