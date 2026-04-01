@@ -139,6 +139,27 @@ async function processSlides() {
     JSON.stringify(slideRefs, null, 2)
   )
 
+  // Clean up stale output files (e.g. from renamed or deleted source slides)
+  const expectedHtmlFiles = new Set(slideRefs.map(r => r.filename))
+  const expectedNoteFiles = new Set(slideRefs.map(r => r.original.replace('.md', '') + '.md'))
+  expectedNoteFiles.add('references.md') // always keep
+
+  const existingHtmlFiles = (await fs.readdir(slidesOutputDir)).filter(f => f.endsWith('.html'))
+  for (const htmlFile of existingHtmlFiles) {
+    if (!expectedHtmlFiles.has(htmlFile)) {
+      await fs.unlink(path.join(slidesOutputDir, htmlFile))
+      console.log(`Deleted stale slide: ${htmlFile}`)
+    }
+  }
+
+  const existingNoteFiles = (await fs.readdir(markdownOutputDir)).filter(f => f.endsWith('.md'))
+  for (const noteFile of existingNoteFiles) {
+    if (!expectedNoteFiles.has(noteFile)) {
+      await fs.unlink(path.join(markdownOutputDir, noteFile))
+      console.log(`Deleted stale note: ${noteFile}`)
+    }
+  }
+
   // Rsync images with --delete flag to remove files that no longer exist in source
   try {
     await execAsync(`rsync -av --delete "${imagesSourceDir}/" "${imagesOutputDir}/"`)
