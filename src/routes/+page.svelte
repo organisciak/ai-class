@@ -21,8 +21,8 @@
         });
     });
 
-    // Calculate which lectures have happened (first class Jan 9, 2024, weekly on Thursday)
-    const startDate = new Date('2025-01-09');
+    // Calculate which lectures have happened (first class Jan 9, 2026, weekly on Thursday)
+    const startDate = new Date('2026-04-01');
     const now = new Date();
 
     let isLectureAvailable = $derived((slideNumber: string) => {
@@ -125,7 +125,7 @@
                     {@const slideNumber = slide.original.split('-')[0]}
                     {@const available = isLectureAvailable(slideNumber)}
 
-                    <Card class={!available ? 'opacity-50 relative overflow-hidden' : 'relative overflow-hidden'}>
+                    <Card class={!available ? 'opacity-25 relative overflow-hidden pointer-events-none' : 'relative overflow-hidden'}>
                         {#if slide.backgroundImage}
                             {@const scanline1 = getRandomScanlineOffset()}
                             {@const scanline2 = getRandomScanlineOffset()}
@@ -267,7 +267,7 @@
                     {@const labNumber = lab.original.split('-')[0]}
                     {@const available = isLabAvailable(lab.week)}
 
-                    <Card class={!available ? 'opacity-50' : ''}>
+                    <Card class={!available ? 'opacity-25 pointer-events-none' : ''}>
                         <CardHeader>
                             {#if available}
                                 <CardTitle class="text-lg group">
