@@ -245,27 +245,6 @@ Goals of this class
 
 ----
 
-## What's Free vs. Paid?
-
-<div class="text-sm">
-
-| Tool | Free tier | Paid entry | Student deal |
-|------|-----------|------------|--------------|
-| **Claude** | Sonnet 4.6, low rate limits | Pro $20/mo | API credits for students; university partnerships |
-| **ChatGPT** | GPT-5.3, ~10 msgs/5hrs, ads | Plus $20/mo | $100 Codex credits (US/Canada) |
-| **Gemini** | 2.5 Flash, generous limits | AI Pro $20/mo | 1yr free offer (enrollment closed Mar 2026) |
-| **Claude Code** | ✗ Not available | Pro $20/mo or API | Same as Claude above |
-| **Codex (OpenAI)** | Very limited | Plus $20/mo | $100 credits (US/Canada) |
-| **Claude Cowork** | ✗ Not available | Pro $20/mo | Same as Claude above |
-| **Cursor** | 50 AI reqs/mo | Pro $20/mo | **1 yr Pro free with .edu email** |
-| **Aider** | Free (open source) | API costs only | Use budget models (DeepSeek) |
-
-</div>
-
-**Bottom line:** For chatting, Gemini's free tier is most generous. For agentic/coding tools, most require a paid subscription — **Cursor's .edu student program is the standout free option.**
-
-----
-
 ## Comparing Models: Chatbot Arena
 
 [arena.ai](https://arena.ai) lets you compare models **side by side, blind** — you rate before knowing which model produced each response.
@@ -330,7 +309,7 @@ Keep it focused: one story, clearly explained, with a prompt for us to react to.
 
 Wherever you want! Some sources:
 
-- [Simon Willison's Weblog](https://simonwillison.net) — thoughtful, technical, frequent
+- [Simon Willison's Weblog](https://simonwillison.net) —- thoughtful, technical, frequent
 - [MIT Technology Review](https://www.technologyreview.com/topic/artificial-intelligence/) — in-depth reporting
 - [The Verge — AI](https://www.theverge.com/ai-artificial-intelligence) — fast, accessible coverage
 - [Axios AI+](https://www.axios.com/technology/ai) — concise daily briefings

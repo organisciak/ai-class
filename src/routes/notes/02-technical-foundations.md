@@ -132,7 +132,7 @@ Take turns asking each other:
 
 # The Evolution of Text Understanding
 
-Today's class tracks the evolution of Large Language Models from the *natural language processing (NLP) side*. Concurrently, there was a rich history in machine learning and artificial intelligence, that eventually intersects with the text handling. See the [https://www.nature.com/articles/nature14539](Deep Learning) article for a good overview.
+Today's class tracks the evolution of Large Language Models from the *natural language processing (NLP) side*. Concurrently, there was a rich history in machine learning and artificial intelligence, that eventually intersects with the text handling. See the [Deep Learning](https://www.nature.com/articles/nature14539) article for a good overview.
 
 ---
 
@@ -162,19 +162,35 @@ Today's class tracks the evolution of Large Language Models from the *natural la
 
 ---
 
-| Document | cat | dog | pet | food | bowl |
-|----------|-----|-----|-----|------|------|
-| doc1.txt | 2   | 0   | 1   | 1    | 1    |
-| doc2.txt | 0   | 3   | 1   | 2    | 1    |
-| doc3.txt | 1   | 1   | 2   | 0    | 0    |
-| doc4.txt | 2   | 3   | 2   | 0    | 0    |
+## In-class exercise: Build a vector space
+
+We'll tape a 3D grid on the floor, count words in some short documents, and plot them as points in space. Then normalize and re-plot.
+
+**Handout:** [ai.porg.dev/exercises/vector-space-model](https://ai.porg.dev/exercises/vector-space-model)
+
+<span class="footnote">The next two slides are backup — use them if there isn't time for the exercise.</span>
 
 ---
+
+<!-- BACKUP SLIDE -->
+
+| Document            | data | people | library |
+|---------------------|------|--------|---------|
+| doc1 Reading Room   | 0    | 1      | 3       |
+| doc2 Census         | 5    | 3      | 0       |
+| doc3 Digital Lib    | 5    | 1      | 3       |
+| doc4 Protest        | 0    | 6      | 0       |
+| doc5 ML Intro       | 6    | 0      | 0       |
+| doc6 Librarian      | 1    | 2      | 2       |
+
+---
+
+<!-- BACKUP SLIDE -->
 
 ![bg contain](/slides/images/02/cosine.png)
 
 <span class="footnote">
-Caveat: this is a simplified example. In reality, 1) we're comparing across *all* dimensions, not just cat/dog, and 2) we're using cosine distance, so these are scaled to unit vectors
+* Caveat: this is a simplified example. In reality, 1) we're comparing across *all* dimensions, not just data/people, and 2) we're using cosine distance, so these are scaled to unit vectors.
 </span>
 
 ---
@@ -213,6 +229,8 @@ Caveat: this is a simplified example. In reality, 1) we're comparing across *all
 
   - Finding hidden patterns
   - Reducing complexity
+
+**In-class exercise:** [ai.porg.dev/exercises/latent-semantic-analysis](https://ai.porg.dev/exercises/latent-semantic-analysis) — re-plot the same documents using *topic* axes instead of word axes, and add three new docs that share meaning but not vocabulary.
 
 ----
 
