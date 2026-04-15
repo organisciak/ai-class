@@ -6,7 +6,22 @@ import { promisify } from 'util'
 
 const execAsync = promisify(exec)
 
+async function checkForTodos(slidesSourceDir, mdFiles) {
+  const findings = []
+  for (const file of mdFiles) {
+    const content = await fs.readFile(path.join(slidesSourceDir, file), 'utf-8')
+    const lines = content.split('\n')
+    lines.forEach((line, i) => {
+      if (/TODO/.test(line)) {
+        findings.push({ file, line: i + 1, text: line.trim() })
+      }
+    })
+  }
+  return findings
+}
+
 async function processSlides() {
+  const force = process.argv.includes('--force')
   const rootDir = process.cwd()
   const slidesSourceDir = path.join(rootDir, '..', 'class-materials', 'slides')
   const slidesOutputDir = path.join(rootDir, 'static', 'slides')
@@ -45,6 +60,25 @@ async function processSlides() {
       if (fileA.week !== fileB.week) return fileA.week - fileB.week
       return fileA.part - fileB.part
     })
+
+  // Abort on TODOs unless --force
+  const todos = await checkForTodos(slidesSourceDir, mdFiles)
+  if (todos.length > 0) {
+    if (!force) {
+      console.error(`\nFound ${todos.length} TODO${todos.length === 1 ? '' : 's'} in slides. Resolve them or re-run with --force:\n`)
+      for (const t of todos) {
+        console.error(`  ${t.file}:${t.line}  ${t.text}`)
+      }
+      console.error('')
+      process.exit(1)
+    } else {
+      console.warn(`\nWarning: ${todos.length} TODO${todos.length === 1 ? '' : 's'} present, continuing due to --force:\n`)
+      for (const t of todos) {
+        console.warn(`  ${t.file}:${t.line}  ${t.text}`)
+      }
+      console.warn('')
+    }
+  }
 
   const slideRefs = []
 
