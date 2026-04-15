@@ -20,6 +20,21 @@ backgroundImage: "images/03/log-probabilities.png"
 
 ----
 
+## Last Week's Lab: Bot Don't Kill My Vibe
+
+*Discussion*
+
+- What did you have the bot critique?
+- Which prompt framing got the most useful feedback? Which flopped?
+- Anything the bot said that you *pushed back on* — and what happened?
+- Where did the critique feel hollow vs. genuinely sharpening?
+
+<p class="footnote">
+We'll come back to the "eager to please" and sycophancy angle later today.
+</p>
+
+----
+
 ## Skill Check
 
 Take turns asking each other:
@@ -50,7 +65,7 @@ Grounding some language that we've danced around in the previous two weeks. Note
 
 ## Caveat Emptor: Rapid Pace of Improvement
 
-- Discussion of what LLMs are poor at is doomed to be out of date
+- Discussion of what 'LLMs are poor at' is doomed to be out of date
 - Important not to extrapolate 'poor now' to 'poor forever'
 
 ----
@@ -75,7 +90,9 @@ The `temperature` setting adjusts how much the selection of next token deviates 
 - GenAI is stochastic, with the `temperature` setting determining how much the selection of next token deviates from the most likely
 - this makes them feel more 'human', but for some tasks, you want the 'best' answer, not a random sampling
 - setting temperature to zero makes a model near-deterministic
-- It can only be set in the API, or in advanced playgrounds like Google AI Studio (https://aistudio.google.com/), Anthropic Console (https://console.anthropic.com/), or the OpenAI Playground (https://platform.openai.com/playground/)
+- It can only be set in the API or in advanced playgrounds — most consumer chat interfaces (chat.openai.com, claude.ai) hide it
+- The most accessible place to play with it today is **[Google AI Studio](https://aistudio.google.com/)** — free, no API key required for the default model. (Anthropic Console and the OpenAI Playground expose it too, but both require an API key with credit)
+- Note: for reasoning models, temperature is often *locked* or ignored — the thinking process does its own sampling
 
 ----
 
@@ -179,7 +196,7 @@ vs.
 
 > "Write the plot summary of a new scifi story about a universe where people have feet for hands" > "Write 10 worldbuilding snippets from the story" > "Write a SparkNotes-style character summary" > "Write the first chapter of the story" (etc.)
 
-Each step makes more thinking explicit
+Each step makes more thinking explicit.
 
 ---
 
@@ -216,14 +233,12 @@ This capability didn't arrive all at once — it went through three distinct pha
 
 ## Phase 1 — OpenAI o1: A Separate Thinking Model (Sept 2024)
 
-OpenAI introduced the **o1** model family as a *separate product* from GPT-4o.
+OpenAI introduced **o1** model family as a *separate product* from GPT-4o.
 
-- Thinking happened internally before the response; users saw a brief **"Thought for X seconds"** summary
+- Thinking happened internally before the response
 - You had to **choose** which model to use: fast (GPT-4o) or thinking (o1)
 - Stronger on math, logic, multi-step reasoning — but slower and more expensive
-- The tradeoff was explicit: pick the right tool for the job
 
-> This was the first time a major frontier lab shipped "thinking" as a user-visible feature.
 
 ----
 
@@ -232,11 +247,7 @@ OpenAI introduced the **o1** model family as a *separate product* from GPT-4o.
 Anthropic took a different approach with **Claude 3.7 Sonnet** (February 25, 2025):
 
 - **Same model**, but extended thinking could be **switched on or off**
-- Developers could set a **thinking budget** — controlling how long the model "thinks" (and how much it costs)
-- Thinking was more transparent: the full reasoning trace was visible, not just a summary
-- The model itself was a *hybrid* — capable of both quick and deep responses
-
-> The key insight: reasoning didn't require a separate model. It was a mode.
+- Developers/users could set a **thinking budget** — controlling how long the model "thinks" (and how much it costs)
 
 ----
 
@@ -253,9 +264,11 @@ GPT-5 (August 2025) took the synthesis further:
 
 ----
 
-Thinking/reasoning mode is **slower and more expensive**, but helpful for tasks that require many steps of thought.
+Thinking/reasoning mode is **slower and more expensive**, but helpful for tasks that require many steps of thought. 
 
 It can also be great for preparing training examples, few-shot examples, or crafting prompts
+
+**In-class:** we'll peek at this hands-on in the [Studio Session lab](/labs/studio-session), comparing Minimal vs. High thinking on the same prompt in Google AI Studio.
 
 ----
 
@@ -289,7 +302,7 @@ Even if you don't trust the *information* that GenAI gave you, it often has give
 ## Bad: Low Perplexity
 
 - there's an appeal to having it write for you - but, even with 'temperature' up, often it's too predictable and dry
-- Good for code, but makes for boring writing
+- Good for code, but makes for boring writing (and worse - low-information, high-word writing > which seeps into the unethical for what it subjects the reader to)
 
 ----
 
@@ -335,10 +348,14 @@ They requires a new kind of learned literacy
 
 ## Labs
 
-- [Bot Don't Kill My Vibe](/labs/bot-dont-kill-my-vibe)
+In class (just conversation, but taking note can help prep for portfolio):
+- [Studio Session: Knobs, Dials, and Compare Mode](/labs/studio-session)
+
+By next week, post on discussion forum:
 - [Make it More](/labs/make-it-more)
 
-Both of today's Labs have a discussion forum. Work on the labs in-class and possibly at home, and post your work there before next week's class.
+
+Work on the labs in-class and possibly at home, and post your work there before next week's class.
 
 ----
 

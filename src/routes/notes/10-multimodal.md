@@ -124,8 +124,6 @@ Images: <a href="https://replicate.com/organisciak/rad-posters">an SDXL fine-tun
 
 ## GPT-4o: Native Image Generation
 
-<!-- TODO: add screenshot image here -->
-
 Launched **March 2025** — a new axis for thinking about image generators:
 
 - **Instruction-following**: follows complex, specific prompts with high fidelity
@@ -141,8 +139,6 @@ Two different tools for different creative goals.
 -----
 
 ## The Studio Ghibli Moment
-
-<!-- TODO: add screenshot image here -->
 
 **March 2025**: GPT-4o image generation launched → millions of users generated images in the style of Studio Ghibli
 
@@ -160,8 +156,6 @@ Became a cultural flashpoint about:
 
 ## Nano Banana: Google's Image Model Family
 
-<!-- TODO: add screenshot image here -->
-
 An unusual name for a powerful model family — the codename stuck:
 
 - **Nano Banana** *(Aug 2025)*: Debuted anonymously on Arena (chatbot benchmark platform); later revealed as a Google DeepMind model
@@ -173,8 +167,6 @@ The name itself is a good class moment: AI model naming is sometimes arbitrary �
 -----
 
 ## Video Generation
-
-<!-- TODO: add screenshot image here -->
 
 Video went from "impressive demo" to **production tool** in 2025:
 
