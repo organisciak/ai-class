@@ -125,7 +125,7 @@
                     {@const slideNumber = slide.original.split('-')[0]}
                     {@const available = isLectureAvailable(slideNumber)}
 
-                    <Card class={!available ? 'opacity-25 relative overflow-hidden pointer-events-none' : 'relative overflow-hidden'}>
+                    <Card class={!available ? 'opacity-25 relative overflow-hidden' : 'relative overflow-hidden'}>
                         {#if slide.backgroundImage}
                             {@const scanline1 = getRandomScanlineOffset()}
                             {@const scanline2 = getRandomScanlineOffset()}
@@ -170,10 +170,18 @@
                                     </a>
                                 </CardTitle>
                             {:else}
-                                <CardTitle class="text-lg">
-                                    {slide.title === slide.original.replace('.md', '')
-                                        ? `Lecture ${slideNumber}`
-                                        : slide.title}
+                                <CardTitle class="text-lg group">
+                                    <a href={slide.slidePath} class="flex items-center gap-2 hover:underline">
+                                        {slide.title === slide.original.replace('.md', '')
+                                            ? `Lecture ${slideNumber}`
+                                            : slide.title}
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        class="opacity-40 group-hover:opacity-100 transition-opacity">
+                                            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                                            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                                        </svg>
+                                    </a>
                                 </CardTitle>
                             {/if}
                             <CardDescription class="text-sm">
@@ -267,7 +275,7 @@
                     {@const labNumber = lab.original.split('-')[0]}
                     {@const available = isLabAvailable(lab.week)}
 
-                    <Card class={!available ? 'opacity-25 pointer-events-none' : ''}>
+                    <Card class={!available ? 'opacity-25' : ''}>
                         <CardHeader>
                             {#if available}
                                 <CardTitle class="text-lg group">
@@ -282,8 +290,16 @@
                                     </a>
                                 </CardTitle>
                             {:else}
-                                <CardTitle class="text-lg">
-                                    {lab.title}
+                                <CardTitle class="text-lg group">
+                                    <a href={lab.docPath} class="flex items-center gap-2 hover:underline">
+                                        {lab.title}
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        class="opacity-40 group-hover:opacity-100 transition-opacity">
+                                            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                                            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                                        </svg>
+                                    </a>
                                 </CardTitle>
                             {/if}
                             <CardDescription class="text-sm workbench-gfont">
