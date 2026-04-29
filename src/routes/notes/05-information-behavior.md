@@ -17,10 +17,6 @@ backgroundImage: "slides/images/05/librariesofthefuture.png"
 
 *Student presentation — Week 5*
 
-After the presentation, consider:
-
-- How does this week's development connect to information behavior, search, or how people find and use knowledge?
-
 ----
 
 ## Skill Check
@@ -357,6 +353,14 @@ Broadly, an example of an AGENT. (by one definition, an AGENT is a system that c
 *this information is usually abstracted away, but behind the scenes, RAG is really just a prompt*
 
 ![RAG Diagram bg left:62%](/slides/images/05/rag-diagram.svg)
+
+----
+
+## RAG in Practice: NotebookLM
+
+[notebooklm.google.com](https://notebooklm.google.com)
+
+*Live demo — upload a few docs, ask, watch the citations*
 
 ----
 
