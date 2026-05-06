@@ -13,7 +13,7 @@ backgroundImage: "images/10/computer-use.png"
 
 ## What's Happening in AI?
 
-*Student presentation — Week 6*
+*Student presentation — Week 7*
 
 ----
 
@@ -52,9 +52,9 @@ An agent is anything that can be viewed as perceiving its environment through se
 
 ---
 
-The terminology of 'agents' has been muddled in AI community - there are many things that people call agents
+The terminology of "agents" has been muddled in the AI community - there are many things that people call agents.
 
-We'll focus on large language models that can *plan* the necessarily actions to complete a task, have access to one or more tools to *execute* those actions, and summarize or *use* the outputs of those actions
+We'll focus on large language models that can *plan* the necessary actions to complete a task, have access to one or more tools to *execute* those actions, and summarize or *use* the outputs of those actions.
 
 ---
 
@@ -82,7 +82,7 @@ We'll focus on large language models that can *plan* the necessarily actions to 
 3. For each step, identify:
    - What information you need
    - What tools or actions would be involved
-   - What output you expect, and how you'd combined the prior parts
+   - What output you expect, and how you'd combine the prior parts
 4. Share your approach with another group (on Zoom, ping me when you're at this step)
 5. Discuss: How much of this can be approached by an AI Agent?
 
@@ -96,7 +96,7 @@ We'll focus on large language models that can *plan* the necessarily actions to 
 
 - **Environment**: Defines where the agent operates (web, code editor, game, etc.)
 - **Tools**: Extend the agent's capabilities
-  - Knowledge augmentation - add access to source documents, rather than relying on model's learned nowledge (e.g. retrieval augmented execution)
+  - Knowledge augmentation - add access to source documents, rather than relying on the model's learned knowledge (e.g. retrieval augmented execution)
   - Capability extension - the things that Language Models can't do themselves (e.g. calculator, code execution, image generation)
   - Write actions (file editing, sending emails)
 - **Planning**: The agent's ability to reason about how to accomplish tasks
@@ -111,7 +111,7 @@ We'll focus on large language models that can *plan* the necessarily actions to 
 
 - Retrieval-Augmented Generation -> Giving an LLM access to web search, or search over your own database
 - DALL-E -> Currently, GPT doesn't generate images itself - If you ask for an image, it generates a text-to-image prompt and sends that prompt to a separate image generation tool
-- Code Interpreter -> In our class about classification, we saw that you can visual your data at the end of a  (e.g. our 'sentiment classification' exercise). There, the LLM is *writing the code* to visualize the data, then sending that code to a separate tool to run, then returning and interpreting the result.
+- Code Interpreter -> In last week's classification class, we saw that you can visualize your data at the end of a workflow (e.g. our "sentiment classification" exercise). There, the LLM is *writing the code* to visualize the data, then sending that code to a separate tool to run, then returning and interpreting the result.
 
 ---
 
@@ -139,9 +139,9 @@ We'll focus on large language models that can *plan* the necessarily actions to 
 
 ----
 
-## Agents Need More Powerful Models 
+## Agents Need More Powerful Models
 
-- **Compound mistakes**: Errors multiply across multiple steps, so agents need 
+- **Compound mistakes**: Errors multiply across multiple steps
   - 95% accuracy per step → 60% accuracy over 10 steps
 - **Higher stakes**: With tools, agents can perform more impactful tasks
   - You likely don't want to give access to your email or bank to any machine, but *especially* not to a poor, error-prone model
@@ -464,13 +464,13 @@ LIS-relevant use cases where coding agents reduce friction:
 
 ----
 
-## Connection: Week 5 → Week 6
+## Connection: Week 5 → Week 7
 
 In Week 5, we saw coding assistance as a form of structured-language help for professionals who aren't programmers.
 
 **What's changed since then:**
 
-| Week 5 framing (2023–2024) | Week 6 reality (2025–2026) |
+| Week 5 framing (2023–2024) | Week 7 reality (2025–2026) |
 |---------------------------|------------------------------|
 | Suggest the next line of code | Read and edit your entire project |
 | One-file autocomplete | Multi-file agentic execution |
@@ -581,4 +581,3 @@ e.g. You can make a database or a filesystem available to a coding app, or a cha
 (Simon Willison summarizes the tool and how to use it in Claude: https://simonwillison.net/2025/Mar/25/playwright-mcp/)
 
 ---
-

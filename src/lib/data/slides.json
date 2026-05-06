@@ -40,20 +40,20 @@
     "backgroundImage": "slides/images/05/librariesofthefuture.png"
   },
   {
-    "title": "Agents",
-    "filename": "06-agents.html",
-    "slidePath": "/slides/06-agents.html",
-    "docPath": "/notes/06-agents",
-    "original": "06-agents.md",
-    "backgroundImage": "/slides/images/10/computer-use.png"
+    "title": "Classification and Subject Access, Information Organization",
+    "filename": "06-classification.html",
+    "slidePath": "/slides/06-classification.html",
+    "docPath": "/notes/06-classification",
+    "original": "06-classification.md",
+    "backgroundImage": "/slides/images/06/sentiment-distribution.png"
   },
   {
-    "title": "Classification and Subject Access, Information Organization",
-    "filename": "07-classification.html",
-    "slidePath": "/slides/07-classification.html",
-    "docPath": "/notes/07-classification",
-    "original": "07-classification.md",
-    "backgroundImage": "/slides/images/06/sentiment-distribution.png"
+    "title": "Agents",
+    "filename": "07-agents.html",
+    "slidePath": "/slides/07-agents.html",
+    "docPath": "/notes/07-agents",
+    "original": "07-agents.md",
+    "backgroundImage": "/slides/images/10/computer-use.png"
   },
   {
     "title": "Bias and Risks in AI Systems, Safety Considerations",

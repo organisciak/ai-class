@@ -13,15 +13,36 @@ backgroundImage: "images/06/sentiment-distribution.png"
 
 ## What's Happening in AI?
 
-*Student presentation*
+*Student presentation — Week 6*
 
 ----
 
 ## Today
   - Classification: What is it?
   - Information Extraction: What is it?
+  - Subject access as a classification problem
   - How to apply them: Easy / Better / Better-er / Best
   - Coda: Data Analysis
+
+----
+
+## What's Happening in AI?
+
+----
+
+## AI in the News: Poisoning the Water
+
+Classification is showing up inside real evaluation systems:
+
+- Hiring screeners can favor resumes produced by the same model doing the screening; simulations found same-model applicants were **23% to 60% more likely** to be shortlisted than equally qualified human-written resumes ([Xu et al., 2026](https://doi.org/10.48550/arXiv.2509.00462)).
+- AI-generated peer review is becoming detectable at scale: one preprint estimates about **20% of ICLR reviews** and **12% of Nature Communications reviews** were AI-generated in 2025 ([Shen & Wang, 2026](https://doi.org/10.48550/arXiv.2602.00319)).
+
+----
+
+## AI in the News
+
+- Frequent AI writing users can be unusually strong human detectors of AI-generated text; five "expert" annotators missed **1 of 300** articles in one study ([Russell et al., 2025](https://aclanthology.org/2025.acl-long.267/)).
+- Gen Z AI use is steady but more skeptical: **51%** report daily or weekly use, while excitement fell from **36% to 22%** and anger rose to **31%** ([Gallup, 2026](https://news.gallup.com/poll/708224/gen-adoption-steady-skepticism-climbs.aspx)).
 
 ----
 
@@ -80,29 +101,36 @@ As we'll see, few shot prompting of large pretrained models is changing how we a
 ## Information Extraction
 
 - The process of extracting data from unstructured data
-- Classification *describes* the data (metadata), Information Extraction *extracts* the data in some standardized format(content)
+- Classification *describes* the data (metadata); Information Extraction *extracts* the data in some standardized format (content)
 
 ----
+
+<!-- _class: text-sm -->
 
 ## Some Use Cases
 
 ### Classification
 
-- Identifying spam/phishing emails
-- Sentiment analysis; e.g. customer feedback, book reviews
-- Customer feedback analysis – e.g. extracting themes from survey responses
 - Categorizing reference questions for service improvement
+- Assigning subject headings, call number ranges, or local collection tags
+- Classifying patron requests, chat transcripts, and ticket logs by service area, urgency, and referral pathway
+- Mapping born-digital files to records series, retention categories, or disposition workflows
+- Prioritizing digitization or preservation queues by demand, condition, rights complexity, and uniqueness
 
 -----
+
+<!-- _class: text-sm -->
 
 ## Some Use Cases
 
 ### Information Extraction
 
-- Meeting note action item extraction
-- Classifying library materials by subject headings or call numbers
+- Extracting names, dates, places, and rights statements from archival descriptions
 - Content analysis of research papers – e.g. extracting methodology types, research approaches, key findings, citations
-- Identifying themes in qualitative research data
+- OCR for scanned newspapers, forms, ledgers, letters, and other digitized images so they become searchable text
+- Pulling people, places, dates, events, and visual subjects from scanned photo captions, oral histories, finding aids, and accession records
+- Accessibility: Creating draft object descriptions or alt text for photos, posters, maps, and ephemera while separating observed evidence from inference
+- Converting legacy inventories and spreadsheets into structured fields for digital library or archives systems
 
 ---
 
@@ -237,7 +265,7 @@ A clear prompt is all you need for many 'good-enough' results.
 - What is the goal?
 - How do you want the output to be structured?
   - Classification: What are the labels? Is it categorical (discrete), ordinal (ranked), or continuous (numeric)?
-  - Data Extraction: What schema do you want to use? What properties do you want to extract? 
+  - Data Extraction: What schema do you want to use? What properties do you want to extract?
 
 ----
 
@@ -245,7 +273,7 @@ A clear prompt is all you need for many 'good-enough' results.
 
 **Example Data**
 
-- [Classifying tweets](https://claude.site/artifacts/a7c01cd4-a916-4a22-96f7-804c15269537?fullscreen=true) 
+- [Classifying tweets](https://claude.site/artifacts/a7c01cd4-a916-4a22-96f7-804c15269537?fullscreen=true)
 
 **Tasks**
 
@@ -265,7 +293,7 @@ A basic classification prompt:
 Prompt:
 
 ```
-Here's is a set of tweets about a clothing company. Tag them by sentiment:
+Here is a set of tweets about a clothing company. Tag them by sentiment:
 
 {tweets}
 ```
@@ -278,7 +306,7 @@ Here's is a set of tweets about a clothing company. Tag them by sentiment:
 Improve the prompt with more guidance:
 
 ```
-Here's is a set of tweets about a clothing company.
+Here is a set of tweets about a clothing company.
 Tag each one by sentiment on a scale of 1-5. 1 is negative, 3 is neutral, 5 is positive.
 
 {tweets}
@@ -292,7 +320,7 @@ Tag each one by sentiment on a scale of 1-5. 1 is negative, 3 is neutral, 5 is p
 Even more guidance on labeling *and* few-shot examples *and* guidance on output format:
 
 ```
-Here's is a set of tweets about a clothing company. Tag each one by sentiment on a scale of 1-5. 1 is negative, 3 is neutral, 5 is positive.
+Here is a set of tweets about a clothing company. Tag each one by sentiment on a scale of 1-5. 1 is negative, 3 is neutral, 5 is positive.
 
 # Coding Guidelines
 
@@ -325,7 +353,7 @@ Example: "I absolutely hate UrbanThreads! Their clothes fell apart after one was
 # How to use it: Better <!--fit-->
 
 - Provide examples!! Just because zero-shot is *good*, don't forget that few-shot is *better*
-- Reasoning models and Chain-of-Thought prompting: Advanced AI models (o1/o3, R1, etc.) that take time to "think" before responding
+- Reasoning models can help when the classification depends on policy interpretation or evidence weighing
 - Temperature (use the playground!)
 - Structured Data Outputs
 
@@ -336,8 +364,7 @@ Example: "I absolutely hate UrbanThreads! Their clothes fell apart after one was
 - Even at temperature = 0:
   - Internal processes have some randomness
   - Results may vary slightly between runs
-  - Newer models still show variation
-
+  - Newer models still show variation, and reasoning models are more likely to diverge since they use more tokens
 - Think of it as:
   - Temperature = intentionally added randomness
   - Base randomness = inherent to model's processes
@@ -374,7 +401,15 @@ In groups, extract key information from the resume. Have one person screen-share
 
 # How to use it: Better-er <!--fit-->
 
-Optimize prompts with DSPy! <https://github.com/stanfordnlp/dspy>
+## Prompt optimization
+
+- Stop optimizing by vibes; use a validation set and compare errors (we're going to do this in our Lab!)
+- Treat the prompt, few-shot examples, output schema, and model choice as one pipeline
+- Tools like [DSPy](https://github.com/stanfordnlp/dspy) can search over prompts/examples for repeated tasks
+- For one-off work: write clear instructions and inspect outputs
+- For repeated, high-stakes work: measure, hold out data, and iterate
+
+---
 
 ![](/slides/images/06/DSpy_example.png)
 
@@ -397,32 +432,47 @@ https://platform.openai.com/finetune
 
 ---
 
-# Coda: How do you get the data out?
+Buuuut... zero- and few- shot are so capable, that the benefits of fine-tuning only manifest for a) complex problems with lots of data to learn from, or b) making small (student) models that do something specific as well as a capable big (teacher) model
+
+---
+
+When do we want small AI models?
+
+---
+
+# Coda: How do you get the data out of your chat bot?
 
 <div class="columns">
 <div class="column-50 text-sm">
 
-**ChatGPT: Use Code Interpreter**
+**Small one-off: use the chatbot tools**
 - Request "Write the data to a CSV file with Python"
 - Python code will be generated and executed
-- Download the resulting CSV file
+- Inspect a few rows before trusting the file
 
 </div>
 <div class="column-25 text-sm">
 
-**Claude: Write as artifact**
-- If you ask Claude to write the output as a Markdown artifact, theres the button on the booton right that let's you copy the data easy.
+**Class lab: use the workbench**
+- It preserves prompts, results, scores, and raw model output
+- It makes iteration comparable
 
 </div>
 <div class="column-25 text-sm">
 
-**Manual Export**
-- Request "Write the data as a table"
-- Copy the formatted table
-- Paste directly into Excel/spreadsheet
+**Repeated work: use a pipeline**
+- API call
+- Structured output
+- Stored inputs and outputs
 
 </div>
 </div>
+
+# How do you get the data out, pt. 2
+
+For bigger jobs, don't rely on copying from a chat transcript. Use a workbench, an API, or an agent with files and logs.
+
+We'll cover agents next week.
 
 ---
 Example output from ChatGPT:
@@ -478,5 +528,3 @@ Lab Details:
 Use the following page for classification:
 
 <https://ai.porg.dev/tools/classify>
-
-
