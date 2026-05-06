@@ -4,6 +4,7 @@
     import { Brain, History } from "lucide-svelte";
     import { classifyBatch } from "$lib/api";
     import { calculateMetrics } from "$lib/metrics";
+    import type { ValidationStats } from "$lib/metrics";
     import { createPromptStore } from "$lib/storage.svelte";
     import { onMount } from 'svelte';
     import { loadDataset } from '$lib/data/datasetLoader';
@@ -11,7 +12,7 @@
     import PromptInput from "$lib/components/PromptInput.svelte";
     import ResultsDisplay from "$lib/components/ResultsDisplay.svelte";
     import HistoryDisplay from "$lib/components/HistoryDisplay.svelte";
-	import type { PromptRunResultVsTruth } from "$lib/types";
+	import type { Classification, LabeledExample, PromptRunResultVsTruth } from "$lib/types";
 
     import * as Select from "$lib/components/ui/select";
     import * as Collapsible from "$lib/components/ui/collapsible";
@@ -26,8 +27,15 @@
     let metrics: ValidationStats = $state({ rmse: null, pearsonR: null });
 
     const promptStore = createPromptStore();
+    const defaultClassificationModel = 'gpt-4.1-mini';
 
-    let datasets = $state({});
+    type ClassificationDataset = {
+        description: string;
+        train_data_url: string;
+        examples: LabeledExample[];
+    };
+
+    let datasets = $state<Record<string, ClassificationDataset>>({});
     let isLoading = $state(true);
 
     onMount(async () => {
@@ -39,12 +47,14 @@
                 loadDataset('reddit_toxicity')
             ]);
             
-            datasets = {
+            const loadedDatasets = {
                 "Alternate Uses Task: Brick": aut_brick,
                 "Alternate Uses Task: Box": aut_box,
                 "Alternate Uses Task: Knife": aut_knife,
                 "Reddit Toxicity": reddit_toxicity
             };
+            datasets = loadedDatasets;
+            selectedDataset = Object.keys(loadedDatasets)[0] || '';
         } catch (error) {
             console.error('Failed to load datasets:', error);
         } finally {
@@ -53,8 +63,8 @@
     });
 
     // Update the derived values to handle the loading state
-    let selectedDataset = $state(Object.keys(datasets)[0] || '');
-    let currentExamples = $derived(datasets[selectedDataset]?.examples || [] as LabeledExample[]);
+    let selectedDataset = $state('');
+    let currentExamples = $derived(datasets[selectedDataset]?.examples ?? []);
     let description = $derived(datasets[selectedDataset]?.description || '');
     let trainDataUrl = $derived(datasets[selectedDataset]?.train_data_url || '');
 
@@ -64,8 +74,8 @@
         label: selectedDataset
     });
 
-    async function handleClassify(event: CustomEvent<{ prompt: string; mode: 'quick' | 'full' }>) {
-        const { prompt, mode } = event.detail;
+    async function handleClassify(event: CustomEvent<{ prompt: string; note: string; mode: 'quick' | 'full' }>) {
+        const { prompt, note, mode } = event.detail;
         
         // Use the examples based on the mode that was clicked
         const selectedExamples = mode === 'quick' 
@@ -82,7 +92,7 @@
         try {
             // Generate example texts based on mode
             const batchSize = 5;
-            const batches = [];
+            const batches: LabeledExample[][] = [];
             
             // Split examples into batches using the mode-specific examples
             for (let i = 0; i < selectedExamples.length; i += batchSize) {
@@ -90,9 +100,9 @@
             }
             
             totalBatches = batches.length;
-            const allResults = [];
-            const predictions: number[] = [];
-            const actuals: number[] = [];
+            const allResults: Classification[] = [];
+            const predictions: Array<number | null> = [];
+            const actuals: Array<number | null> = [];
             const rawResponses: string[] = [];
 
             // Process each batch
@@ -108,8 +118,8 @@
                 
                 response.classifications.forEach((result, idx) => {
                     predictions.push(result.score);
-                    const actual = parseFloat(batches[i][idx].truth);
-                    actuals.push(actual);
+                    const actual = Number.parseFloat(String(batches[i][idx].truth));
+                    actuals.push(Number.isFinite(actual) ? actual : null);
                 });
                 
                 metrics = calculateMetrics(predictions, actuals);
@@ -128,6 +138,7 @@
             promptStore.saveRun({
                 id: crypto.randomUUID(),
                 prompt,
+                note: note.trim(),
                 mode,
                 dataset: selectedDataset,
                 metrics,
@@ -200,7 +211,7 @@
                     {/if}
 
                     {#if description}
-                        <Collapsible.Root class="mt-4">
+                        <Collapsible.Root class="mt-4" open={true}>
                             <div class="flex items-center space-x-2">
                                 <Collapsible.Trigger
                                     class="flex items-center gap-2 text-xs hover:underline"
@@ -243,9 +254,9 @@
                 <CardContent>
                     <ul class="text-sm space-y-2">
                         <li>Examples are processed in batches of 5</li>
-                        <li>Classification uses the `gpt-4o-mini` model</li>
-                        <li>Each batch has a 30-second timeout</li>
-                        <li class="text-muted-foreground text-xs mt-2">Note: Prompts requesting very long outputs may result in timeout errors</li>
+                        <li>Classification uses the site-configured OpenAI model; default: <code>{defaultClassificationModel}</code></li>
+                        <li>Examples are sent with stable IDs and parsed from an <code>id,score</code> CSV</li>
+                        <li class="text-muted-foreground text-xs mt-2">Note: prompts requesting long explanations can leave fewer tokens for final scores</li>
                     </ul>
                 </CardContent>
             </Card>
@@ -280,7 +291,7 @@
                     </div>
                 </CardHeader>
                 <CardContent>
-                    <HistoryDisplay />
+                    <HistoryDisplay availableDatasets={Object.keys(datasets)} />
                 </CardContent>
             </Card>
         </div>

@@ -1,11 +1,13 @@
-function validateInputs(predictions: number[], actuals: number[]): boolean {
+type MetricValue = number | null;
+
+function validateInputs(predictions: MetricValue[], actuals: MetricValue[]): boolean {
     if (!predictions?.length || !actuals?.length || predictions.length !== actuals.length) {
         return false;
     }
     return true;
 }
 
-function filterNullPairs(predictions: number[], actuals: number[]): [number, number][] {
+function filterNullPairs(predictions: MetricValue[], actuals: MetricValue[]): [number, number][] {
     return predictions.reduce((pairs, pred, i) => {
         if (pred != null && actuals[i] != null) {
             pairs.push([pred, actuals[i]]);
@@ -20,7 +22,7 @@ function filterNullPairs(predictions: number[], actuals: number[]): [number, num
  * @param actuals Array of actual (ground truth) values
  * @returns RMSE value or null if inputs are invalid
  */
-export function calculateRMSE(predictions: number[], actuals: number[]): number | null {
+export function calculateRMSE(predictions: MetricValue[], actuals: MetricValue[]): number | null {
     // Validate inputs
     if (!validateInputs(predictions, actuals)) {
         return null;
@@ -48,7 +50,7 @@ export function calculateRMSE(predictions: number[], actuals: number[]): number 
  * @param actuals Array of actual (ground truth) values
  * @returns Pearson r value or null if inputs are invalid
  */
-export function calculatePearsonR(predictions: number[], actuals: number[]): number | null {
+export function calculatePearsonR(predictions: MetricValue[], actuals: MetricValue[]): number | null {
     // Validate inputs
     if (!validateInputs(predictions, actuals)) {
         return null;
@@ -61,20 +63,20 @@ export function calculatePearsonR(predictions: number[], actuals: number[]): num
         return null;
     }
 
-    const n = predictions.length;
+    const n = validPairs.length;
     
     // Calculate means
-    const predMean = predictions.reduce((sum, val) => sum + val, 0) / n;
-    const actualMean = actuals.reduce((sum, val) => sum + val, 0) / n;
+    const predMean = validPairs.reduce((sum, [pred]) => sum + pred, 0) / n;
+    const actualMean = validPairs.reduce((sum, [, actual]) => sum + actual, 0) / n;
     
     // Calculate covariance and standard deviations
     let covariance = 0;
     let predSquaredDiff = 0;
     let actualSquaredDiff = 0;
     
-    for (let i = 0; i < n; i++) {
-        const predDiff = predictions[i] - predMean;
-        const actualDiff = actuals[i] - actualMean;
+    for (const [pred, actual] of validPairs) {
+        const predDiff = pred - predMean;
+        const actualDiff = actual - actualMean;
         
         covariance += predDiff * actualDiff;
         predSquaredDiff += predDiff * predDiff;
@@ -103,7 +105,7 @@ export interface ValidationStats {
  * @param actuals Array of actual (ground truth) values
  * @returns Object containing both metrics
  */
-export function calculateMetrics(predictions: number[], actuals: number[]): ValidationStats {
+export function calculateMetrics(predictions: MetricValue[], actuals: MetricValue[]): ValidationStats {
     return {
         rmse: calculateRMSE(predictions, actuals),
         pearsonR: calculatePearsonR(predictions, actuals)

@@ -4,6 +4,7 @@
     import { Send, PlayCircle } from "lucide-svelte";
 
     let inputText = $state("");
+    let runNote = $state("");
     let maxLength = 4000;
     let showAppendedText = $state(false);
 
@@ -15,7 +16,7 @@
     // Create event dispatcher
     import { createEventDispatcher } from 'svelte';
     const dispatch = createEventDispatcher<{
-        classify: { prompt: string; mode: 'quick' | 'full' };
+        classify: { prompt: string; note: string; mode: 'quick' | 'full' };
     }>();
 </script>
 
@@ -29,27 +30,39 @@
             class="min-h-[400px] resize-y"
         />
     </div>
-    
+
+    <div>
+        <label for="run-note" class="text-sm font-medium mb-2 block">Note to Self</label>
+        <Textarea
+            id="run-note"
+            bind:value={runNote}
+            placeholder="Optional: what you changed, what you expect, or what to inspect later. This is not sent to the model."
+            class="min-h-[96px] resize-y"
+        />
+        <p class="mt-1 text-xs text-muted-foreground">Saved with this run only; never included in the classification prompt.</p>
+    </div>
+
     <div class="border rounded-lg p-4">
-        <button 
+        <button
             class="flex items-center justify-between w-full text-left"
             onclick={() => showAppendedText = !showAppendedText}
         >
             <span class="text-sm font-medium">Appended Instructions</span>
             <span class="text-muted-foreground">{showAppendedText ? '▼' : '▶'}</span>
         </button>
-        
+
         {#if showAppendedText}
             <p class="text-sm text-muted-foreground italic mb-2">This is appended to your prompt. It cannot be changed.</p>
             <div class="mt-2 text-sm text-muted-foreground font-mono whitespace-pre-wrap">
 ## Final Output Format
 
-Include a triple-backtick-escaped CSV response with final annotations. If there were other requests, include those earlier in your response; the annotations should be at the very bottom of your response.
+Return final annotations as CSV in a single triple-backtick fenced block at the end of your response.
 
-## Examples to Label
+The CSV must have exactly two columns:
 
-- &#123;...&#125;
-- &#123;...&#125;
+id,score
+
+Use the exact example IDs supplied by the tool. Put only a numeric score in the score column.
 
 </div>
         {/if}
@@ -60,16 +73,16 @@ Include a triple-backtick-escaped CSV response with final annotations. If there 
             {inputText.length}/{maxLength} characters
         </span>
         <div class="space-x-2">
-            <Button 
-                variant="outline" 
-                on:click={() => dispatch('classify', { prompt: inputText, mode: 'quick' })}
+            <Button
+                variant="outline"
+                on:click={() => dispatch('classify', { prompt: inputText, note: runNote, mode: 'quick' })}
                 disabled={!disabledButtons}
             >
                 <Send class="mr-2 h-4 w-4" />
                 Quick Run
             </Button>
-            <Button 
-                on:click={() => dispatch('classify', { prompt: inputText, mode: 'full' })}
+            <Button
+                on:click={() => dispatch('classify', { prompt: inputText, note: runNote, mode: 'full' })}
                 disabled={!disabledButtons}
             >
                 <PlayCircle class="mr-2 h-4 w-4" />
@@ -77,4 +90,4 @@ Include a triple-backtick-escaped CSV response with final annotations. If there 
             </Button>
         </div>
     </div>
-</div> 
+</div>

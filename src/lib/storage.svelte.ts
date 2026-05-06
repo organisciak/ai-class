@@ -2,33 +2,56 @@ import type { PromptRun } from './types';
 
 const STORAGE_KEY = 'ai-prompt-scorer-history';
 
+let sharedHistory = $state<PromptRun[]>(getHistory());
+const subscribers = new Set<(value: PromptRun[]) => void>();
+
+function notifySubscribers(): void {
+    const snapshot = [...sharedHistory];
+    subscribers.forEach((callback) => callback(snapshot));
+}
+
+function persistHistory(): void {
+    if (typeof window !== 'undefined') {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(sharedHistory));
+    }
+}
+
 /**
  * Creates a store for managing prompt history
  */
 export function createPromptStore() {
-    // Create reactive state using $state
-    const history = $state(getHistory());
-
     return {
         subscribe: (callback: (value: PromptRun[]) => void) => {
-            // Initial call
-            callback(history);
-            
-            // Setup effect to watch for changes
-            $effect(() => {
-                callback(history);
-            });
-
-            // Return unsubscribe function
-            return () => {};
+            subscribers.add(callback);
+            callback([...sharedHistory]);
+            return () => subscribers.delete(callback);
         },
         saveRun: (run: PromptRun) => {
-            history.unshift(run);
-            localStorage.setItem(STORAGE_KEY, JSON.stringify(history));
+            sharedHistory.unshift(run);
+            persistHistory();
+            notifySubscribers();
         },
+        updateRunNote: (id: string, note: string) => {
+            const run = sharedHistory.find((historyRun) => historyRun.id === id);
+            if (!run) return;
+
+            run.note = note;
+            persistHistory();
+            notifySubscribers();
+        },
+        deleteRun: (id: string) => {
+            const index = sharedHistory.findIndex((historyRun) => historyRun.id === id);
+            if (index === -1) return;
+
+            sharedHistory.splice(index, 1);
+            persistHistory();
+            notifySubscribers();
+        },
+        getHistory: () => [...sharedHistory],
         clearHistory() {
-            history.length = 0; // Clear the array
+            sharedHistory.length = 0;
             localStorage.removeItem(STORAGE_KEY);
+            notifySubscribers();
         }
     };
 }
@@ -37,19 +60,12 @@ export function createPromptStore() {
 function getHistory(): PromptRun[] {
     try {
         // Check if we're in the browser environment
-        if (typeof window === 'undefined') return [];
+        if (typeof window === 'undefined' || typeof localStorage?.getItem !== 'function') return [];
 
         const stored = localStorage.getItem(STORAGE_KEY);
         return stored ? JSON.parse(stored) : [];
     } catch (e) {
         console.error('Error reading history from localStorage:', e);
         return [];
-    }
-}
-
-function persistHistory(history: PromptRun[]): void {
-    // Only persist if we're in the browser environment
-    if (typeof window !== 'undefined') {
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(history));
     }
 }

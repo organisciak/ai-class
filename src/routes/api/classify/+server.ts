@@ -1,7 +1,13 @@
 import type { RequestEvent } from '@sveltejs/kit';
-import type { Classification, ClassifyRequest, ClassifyResponse } from '$lib/types';
+import type { ClassifyRequest, ClassifyResponse } from '$lib/types';
 import { OpenAI } from 'openai';
-import { OPENAI_API_KEY } from '$env/static/private';
+import type { ChatCompletionMessageParam } from 'openai/resources/chat/completions';
+import { env } from '$env/dynamic/private';
+import {
+    buildClassificationPrompt,
+    DEFAULT_CLASSIFICATION_MODEL,
+    parseClassifications
+} from '$lib/server/classification';
 
 /*
 TEST
@@ -11,40 +17,37 @@ curl -X POST \
   http://localhost:5173/api/classify
 
 RESPONSE:
-{"classifications":[{"text":"Example 1","score":0.1},{"text":"Example 2","score":0.8}]}
+{"classifications":[{"text":"I hate this show","score":1},{"text":"This is pretty good","score":4}]}
 */
 
 export async function POST({ request }: RequestEvent) {
     const DEBUG = false;  // Debug flag - set to true to enable logging
-    
+
     // Parse the incoming request body
     const data: ClassifyRequest = await request.json();
-    
+
+    if (!data.prompt?.trim() || !Array.isArray(data.examples)) {
+        return new Response(JSON.stringify({ error: 'Prompt and examples are required' }), {
+            status: 400,
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+    }
+
     const client = new OpenAI({
-        apiKey: OPENAI_API_KEY,
+        apiKey: env.OPENAI_API_KEY,
     });
 
     try {
 
-        const fullPrompt = `${data.prompt}
-
-## Final Output Format
-
-Include a triple-backtick-escaped CSV response with final annotations. If there were other requests, include those earlier in your response; the annotations should be at the very bottom of your response.
-
-## Examples to Label
-
-**Label each of these examples**
-
-${data.examples.map(ex => `- ${ex.text}`).join('\n')}
-
-`;
+        const fullPrompt = buildClassificationPrompt(data);
 
         if (DEBUG) console.log("fullPrompt", fullPrompt);
-        const messages = [
+        const messages: ChatCompletionMessageParam[] = [
             {
                 role: 'system',
-                content: "You are a helpful classification assistant. You respond in markdown-escaped CSV, and classify the examples listed under  'Examples to Label'."
+                content: "You are a careful classification assistant. Follow the user's classification rubric, label only the examples listed under 'Examples to Label', and put final annotations in the required CSV format."
             },
             {
                 role: 'user',
@@ -56,7 +59,7 @@ ${data.examples.map(ex => `- ${ex.text}`).join('\n')}
         const results = await client.chat.completions.create({
                     messages: messages,
                     seed: 1234567890,
-                    model: 'gpt-4o-mini',
+                    model: env.OPENAI_CLASSIFICATION_MODEL || DEFAULT_CLASSIFICATION_MODEL,
                     temperature: 0,
                     max_completion_tokens: 2048,
                     frequency_penalty: 0,
@@ -67,30 +70,8 @@ ${data.examples.map(ex => `- ${ex.text}`).join('\n')}
 
         const content = results.choices[0].message?.content || '';
         //if (DEBUG) console.log("content", content);
-        
-        // Extract content between triple backticks
-        const match = content.match(/```(?:csv)?\s*([\s\S]*?)```/);
-        const csvContent = match ? match[1].trim() : content.trim();
-        if (DEBUG) console.log("csvContent", csvContent);
-
-        // Split into rows and handle potential header
-        const rows: string[] = csvContent.split('\n').map(row => row.trim()).filter(row => row.length > 0);
-        const hasHeader: boolean = rows.length > data.examples.length;
-        const dataRows: string[] = hasHeader ? rows.slice(1) : rows;
-        
-        const classifications: Classification[] = data.examples.map((example, index) => {
-            // Get the corresponding row for this example
-            const row = dataRows[index];
-            const columns = row ? row.split(',').map(col => col.trim()) : [];
-            const score = columns.length > 0 ? parseFloat(columns[columns.length - 1]) : null;
-            
-            if (DEBUG) console.log("score", score);
-
-            return {
-                text: example.text,
-                score: score
-            };
-        });
+        const classifications = parseClassifications(content, data.examples);
+        if (DEBUG) console.log("classifications", classifications);
 
         const responseData: ClassifyResponse = {
             classifications,
@@ -115,4 +96,4 @@ ${data.examples.map(ex => `- ${ex.text}`).join('\n')}
             }
         });
     }
-} 
+}

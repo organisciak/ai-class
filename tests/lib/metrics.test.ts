@@ -7,7 +7,7 @@ describe('Metrics Calculations', () => {
             const predictions = [1, 2, 3];
             const actuals = [1, 2, 3];
             expect(calculateRMSE(predictions, actuals)).toBe(0);
-            
+
             const predictions2 = [2, 3, 4];
             const actuals2 = [1, 2, 3];
             expect(calculateRMSE(predictions2, actuals2)).toBe(1);
@@ -57,6 +57,12 @@ describe('Metrics Calculations', () => {
             expect(calculatePearsonR(predictions2, actuals2)).toBe(null);
         });
 
+        it('should ignore null prediction pairs', () => {
+            const predictions = [1, null, 3, 4];
+            const actuals = [1, 10, 3, 4];
+            expect(calculatePearsonR(predictions, actuals)).toBe(1);
+        });
+
         it('should return null for invalid inputs', () => {
             expect(calculatePearsonR([], [])).toBe(null);
             expect(calculatePearsonR([1, 2], [1])).toBe(null);
@@ -72,7 +78,7 @@ describe('Metrics Calculations', () => {
             const predictions = [1, 2, 3];
             const actuals = [1, 2, 3];
             const result = calculateMetrics(predictions, actuals);
-            
+
             expect(result.rmse).toBe(0);
             expect(result.pearsonR).toBe(1);
         });
@@ -83,4 +89,4 @@ describe('Metrics Calculations', () => {
             expect(result.pearsonR).toBe(null);
         });
     });
-}); 
+});

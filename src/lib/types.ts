@@ -52,7 +52,7 @@ export type Grades = Record<string, LabGrade>;
 
 export interface LabeledExample {
     text: string;
-    truth: string;
+    truth: string | number;
 }
 
 /**
@@ -71,8 +71,8 @@ export interface ClassifyResponse {
  * Metrics for evaluating prompt performance
  */
 export interface PromptMetrics {
-    rmse: number;
-    pearsonR: number;
+    rmse: number | null;
+    pearsonR: number | null;
 }
 
 export interface PromptRunResultVsTruth {
@@ -88,6 +88,7 @@ export interface PromptRun {
     id?: string;
     timestamp: number;
     prompt: string;
+    note?: string;
     mode: "quick" | "full";
     dataset: string;
     rawResponse: string | null;
