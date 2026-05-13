@@ -96,11 +96,25 @@
         "gradingCriteria": "For grading, your prompt will be run against a hidden test dataset and compared to some bad, okay, and good prompts that I will write. A good grade will perform similarly to my good prompts, or better."
     },
     {
+        "original": "supervising-an-agent.md",
+        "title": "Supervising an Agent",
+        "description": "Give an AI coding agent a real LIS task, watch it plan and loop, then reflect on where it needed supervision — and where you'd trust it to run alone.",
+        "docPath": "/labs/supervising-an-agent",
+        "week": 7,
+        "coreCompetencies": [
+            "Skilling and Productivity",
+            "Critical Analysis, Fluency, and Evaluation",
+            "Technical Understanding"
+        ],
+        "pts": 2,
+        "gradingCriteria": "Grading focuses on the reflection — depth of observation about how the agent worked (plan, loop moment, failure, trust question), not the polish of the final artifact. A messy result with a sharp reflection scores higher than a polished output with a thin one."
+    },
+    {
         "original": "bias-analysis.md",
         "title": "Bias Analysis",
         "description": "Explore and analyze bias in language models through counterfactual prompting, role reversal, and synthetic data generation exercises.",
         "docPath": "/labs/bias-analysis",
-        "week": 7,
+        "week": 8,
         "coreCompetencies": [
         "Society, Ethics and Policy",
         "Critical Analysis, Fluency, and Evaluation"

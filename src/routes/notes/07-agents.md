@@ -62,6 +62,8 @@ The terminology of "agents" has been muddled in the AI community - there are man
 
 We'll focus on large language models that can *plan* the necessary actions to complete a task, have access to one or more tools to *execute* those actions, and summarize or *use* the outputs of those actions.
 
+<!-- removed for time - consider if re-running at 4 credits
+
 ---
 
 ## Exercise: Planning a Task
@@ -95,7 +97,7 @@ We'll focus on large language models that can *plan* the necessary actions to co
 </div>
 
 </div>
-
+ 
 ---
 
 ## Agent Components
@@ -112,22 +114,12 @@ We'll focus on large language models that can *plan* the necessary actions to co
 </p>
 
 ---
+-->
 
 ## We've Seen 'Agents' in Class Already
 
 - **Retrieval-Augmented Generation** → giving an LLM access to web search, or search over your own database
 - **Code Interpreter / Artifacts** *(Week 6 — classification)* → the LLM *writes the code* to visualize the data, sends it to a sandboxed runtime, observes the result, and revises. Plan, act, observe, revise — that's the loop
-
----
-
-## The Future of Agents
-
-- Autonomous assistants for complex tasks
-- Potential to save human time despite computational costs
-- Continuous improvement through:
-  - Better planning capabilities
-  - More sophisticated tools
-  - Enhanced security measures
 
 ----
 
@@ -150,8 +142,6 @@ We'll focus on large language models that can *plan* the necessary actions to co
   - 95% accuracy per step → 60% accuracy over 10 steps
 - **Higher stakes**: With tools, agents can perform more impactful tasks
   - You likely don't want to give access to your email or bank to any machine, but *especially* not to a poor, error-prone model
-
-**This is why this is the period of the class where my recommendation is to subscribe to Claude or OpenAI - you don't want poor models*
 
 ----
 
@@ -212,7 +202,6 @@ The history of AI coding assistance has three phases:
 **Phase 2: Chat + Code (2023–2024)**
 - Ask questions, get whole functions
 - Still mostly: you paste, you review, you run
-
 </div>
 <div class="column text-sm">
 
@@ -289,10 +278,11 @@ Claude Code is for developers. Cowork brings the same operating model to informa
 
 ### Claude Code in Action 
 
-*This is the terminal version. It's still the most powerful — but it is not the only one, and not the one you'll use today.*
+*This is the terminal version. Cowork is the app*
 
 <!-- FUTURE - remove terminal examples altogether -->
 
+<!-- removed to get to the lab quicker
 ----
 
 ## Coding Agents for Information Professionals
@@ -310,17 +300,17 @@ LIS-relevant use cases where coding agents reduce friction:
 
 </div>
 
-----
+---- 
+
+-->
 
 What's the good and bad of coding agents?
 
 ----
 
-# Lab: Supervising an Agent
+## Lab: Supervising an Agent
 
-*A real task, a real agent, a real reflection*
-
-- 
+<https://ai.porg.dev/labs/supervising-an-agent>
 
 ----
 
@@ -394,6 +384,7 @@ Ask the agent to *plan* your chosen task — not do it.
 
 1. With a result in hand, where did you get? Is it good? Is it bad? Is it workable?
 
+---
 
 ## Get Creative
 
@@ -422,28 +413,9 @@ Q: What was needed for making it?
 
 Try installing the 'playwright' skill to give the agent a browser.
 
-----
+---
 
-## Capture as You Go
-
-Open a doc alongside the agent. While you work, jot down:
-
-- The **plan** the agent proposed (copy/paste)
-- The **one loop moment** you noticed
-- The **one failure** when you tried to break it
-- A screenshot or two of anything that surprised you
-
-The reflection writes itself if you capture as you go.
-
-----
-
-## The Reflection — This Is What's Graded
-
-You will turn in the finished artifact (either for the project your started with, or another that you switched to) alongside a 1-2 paragraph reflection on the task, what the agents plan looked like, what the system's activities looked like, and your reactions (e.g. surprises, failures, highlights).
-
-For the portfolio: the finished artifact is included (an output from the project, or just a zip of the full folder). In-class, it's optional to post.
-
-Capture as you go along.
+# That's it for today!
 
 ----
 
