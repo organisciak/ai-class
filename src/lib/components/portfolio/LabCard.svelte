@@ -10,6 +10,7 @@
         pts: number;
         gradingCriteria: string;
         coreCompetencies: string[];
+        docPath?: string;
     };
     export let selected: boolean = false;
     
@@ -37,7 +38,11 @@
                 on:change={handleChange}
             />
             <label for={lab.original}>
-                {lab.title}
+                {#if lab.docPath}
+                    <a href={lab.docPath} target="_blank" rel="noopener noreferrer" class="hover:underline">{lab.title}</a>
+                {:else}
+                    {lab.title}
+                {/if}
             </label>
         </CardTitle>
     </CardHeader>
