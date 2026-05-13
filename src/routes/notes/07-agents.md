@@ -284,6 +284,7 @@ Claude Code is for developers. Cowork brings the same operating model to informa
 <!-- FUTURE - remove terminal examples altogether -->
 
 <!-- removed to get to the lab quicker
+
 ----
 
 ## Coding Agents for Information Professionals
