@@ -78,7 +78,11 @@ Rafner, J., Beaty, R. E., Kaufman, J. C., Lubart, T., & Sherson, J. (2023). Crea
 
 Regulation 2024/1689. *Regulation (EU) 2024/1689 of the European Parliament and of the Council of 13 June 2024 laying down harmonised rules on artificial intelligence (Artificial Intelligence Act)*. Official Journal of the European Union, L 1689. https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689
 
+Russell, J., Karpinska, M., & Iyyer, M. (2025). People who frequently use ChatGPT for writing tasks are accurate and robust detectors of AI-generated text. In *Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)*. Association for Computational Linguistics. https://aclanthology.org/2025.acl-long.267/
+
 Salton, G., Wong, A., & Yang, C. S. (1975). A vector space model for automatic indexing. *Communications of the ACM*, 18(11), 613–620. https://doi.org/10.1145/361219.361220
+
+Shen, S., & Wang, K. (2026). Detecting AI-generated content in academic peer reviews (arXiv:2602.00319). arXiv. https://doi.org/10.48550/arXiv.2602.00319
 
 Sweeney, L. (2013). Discrimination in online ad delivery. Communications of the ACM, 56(5), 44-54.
 
@@ -95,5 +99,7 @@ Wei, J., Wang, X., Schuurmans, D., Bosma, M., Ichter, B., Xia, F., Chi, E., Le, 
 White House Office of Science and Technology Policy. (2025, July 31). *Winning the Race: America's AI Action Plan*. https://www.whitehouse.gov/wp-content/uploads/2025/07/Americas-AI-Action-Plan.pdf
 
 Williamson, S. M., & Prybutok, V. (2024). The Era of Artificial Intelligence Deception: Unraveling the Complexities of False Realities. *Information*, *15*(6), 299.
+
+Xu, J., Li, G., & Jiang, J. Y. (2026). AI self-preferencing in algorithmic hiring: Empirical evidence and insights (arXiv:2509.00462). arXiv. https://doi.org/10.48550/arXiv.2509.00462
 
 Zhang, S., Xu, J., & Alvero, A. J. (2025). Generative AI meets open-ended survey responses: Research participant use of AI and homogenization. *Sociological Methods & Research*. Advance online publication. https://doi.org/10.1177/00491241251327130

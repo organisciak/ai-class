@@ -11,24 +11,30 @@ backgroundImage: "images/10/computer-use.png"
 
 ----
 
+## Pre-Lecture Install
+
+If you don't subscribe to any AI service, install Codex (https://chatgpt.com/codex). Antigravity IDE from Google is another option, but we'll focus on Codex.
+
+If you subscribe to Claude, install the desktop app (https://claude.com/download), and switch to the Cowork tab ![](/slides/images/10/cowork/2026-05-13-13-09-11.png). If you subscribe to Gemini, install Antigravity, if you subscribe to ChatGPT, use Codex.
+
+----
+
 ## What's Happening in AI?
 
 *Student presentation — Week 7*
 
 ----
 
-## Administration
+Admin
 
-- AI Gallery
-- High-level feedback on Portfolio Drafts
-- Review of Class Goals
-- Lab today?
+- No breaks today - we'll have choose-your-own break time during lab
+- We're *packed* today! Let's talk about our Prompt and Circumstance lab; Classification Prompt Battle may be next week.
 
 ----
 
-## Course Evaluations
+<!-- In the future this slide won't be necessary -->
 
-- 10 minutes for course evaluations
+![bg left:80% 100%](/slides/images/10/2026-05-13-11-36-59.png)
 
 ----
 
@@ -107,11 +113,10 @@ We'll focus on large language models that can *plan* the necessary actions to co
 
 ---
 
-## We've Seen Agents in Class Already
+## We've Seen 'Agents' in Class Already
 
-- Retrieval-Augmented Generation -> Giving an LLM access to web search, or search over your own database
-- DALL-E -> Currently, GPT doesn't generate images itself - If you ask for an image, it generates a text-to-image prompt and sends that prompt to a separate image generation tool
-- Code Interpreter -> In last week's classification class, we saw that you can visualize your data at the end of a workflow (e.g. our "sentiment classification" exercise). There, the LLM is *writing the code* to visualize the data, then sending that code to a separate tool to run, then returning and interpreting the result.
+- **Retrieval-Augmented Generation** → giving an LLM access to web search, or search over your own database
+- **Code Interpreter / Artifacts** *(Week 6 — classification)* → the LLM *writes the code* to visualize the data, sends it to a sandboxed runtime, observes the result, and revises. Plan, act, observe, revise — that's the loop
 
 ---
 
@@ -146,6 +151,8 @@ We'll focus on large language models that can *plan* the necessary actions to co
 - **Higher stakes**: With tools, agents can perform more impactful tasks
   - You likely don't want to give access to your email or bank to any machine, but *especially* not to a poor, error-prone model
 
+**This is why this is the period of the class where my recommendation is to subscribe to Claude or OpenAI - you don't want poor models*
+
 ----
 
 ## Agent Failure Modes
@@ -153,30 +160,6 @@ We'll focus on large language models that can *plan* the necessary actions to co
 - **Planning failures**: Incorrect reasoning, missing steps
 - **Tool failures**: Incorrect tool selection, misuse of tools
 - **Efficiency issues**: Too many steps, redundant actions
-
-----
-
-## Limits of red teaming
-
-> Since the model has access to the internet, the external red teamers were advised to avoid prompting the model to complete tasks that could cause real-world harm. In certain cases, they created test environments—such as mock websites, databases, or emails—to safely demonstrate possible exploits. Given this constraint, their findings may not fully capture the worst-case real-world risks, but still identified key vulnerabilities that informed additional mitigations
-
-- OpenAI - [Operator System Card](https://openai.com/index/operator-system-card/)
-
-----
-
-# Agents-lite
-
-Code-using LLMs are a basic - but powerful - form of tool-use agent
-
-- see 'code interpreter' in ChatGPT, Javascript artifacts in Claude
-
-![bg left:60% 100%](/slides/images/05/strawberry2.png)
-
-----
-
-# Langchain
-
-![Langchain](/slides/images/05/langchain.png)
 
 ----
 
@@ -195,27 +178,13 @@ Solutions?
 
 ![bg](/slides/images/10/computer-use.png)
 
-- Claude Computer Use
-- OpenAI Operator
-- Google Mariner
-
 ----
 
-<video src="/slides/images/10/deepresearch-recording-fast.mp4" controls height="550px"></video>
+## Coding Agents
 
-## Deep Research
-
-----
-
-<video src="/slides/images/10/claude-command-line-3x.mp4" controls height="550px"></video>
-
-## Claude Code
-
-----
+Your computer already has 1000s of commands that are usuable on the command line - give AI the ability to access *those*!
 
 <video src="/slides/images/10/aider-demo.mp4" controls height="550px"></video>
-
-## Aider
 
 ----
 
@@ -229,11 +198,7 @@ Solutions?
 
 ----
 
-# Coding Agents: AI That Writes, Runs, and Ships Code
-
-----
-
-## From Autocomplete to Autonomy
+# Coding Agents
 
 The history of AI coding assistance has three phases:
 
@@ -241,25 +206,19 @@ The history of AI coding assistance has three phases:
 <div class="column text-sm">
 
 **Phase 1: Autocomplete (2021–2023)**
-- GitHub Copilot (2021): completes the line you're typing
 - Helpful but you drive; AI just suggests
 - Works on one file at a time
 
 **Phase 2: Chat + Code (2023–2024)**
-- Cursor, ChatGPT Code Interpreter
 - Ask questions, get whole functions
 - Still mostly: you paste, you review, you run
-
 </div>
 <div class="column text-sm">
 
 **Phase 3: Agentic Coding (2025–present)**
-- Claude Code, Aider, Devin
 - Describe the goal; agent reads your codebase, edits files, runs tests, iterates
 - Works across dozens of files
 - Can commit, push, open pull requests
-
-*The difference: the AI holds the loop, not you*
 
 </div>
 </div>
@@ -270,167 +229,72 @@ The history of AI coding assistance has three phases:
 
 Modern agentic coding tools can:
 
-- **Read your entire codebase** — not just one open file
-- **Edit multiple files** to implement a feature end-to-end
-- **Run tests** and fix failing ones iteratively
+- **Read your files** — not just one open file
+- **Edit your files** to implement a feature end-to-end
+- **Run tests** and fix failures
 - **Execute terminal commands** (install packages, run linters, build)
-- **Commit code** and push to GitHub
+- **Open and use a browser**
+- **Version control** - make changes that can be reverted
 - **Spawn sub-agents** to work on different parts of a task in parallel
-- **Integrate with CI/CD** — review pull requests, catch regressions
-
-This is not science fiction — it is what Claude Code, Cursor, and Aider do in production today.
-
-<p class="footnote">Kolterhoff, RedMonk, 2025; ikangai.com coding tools guide, 2025</p>
-
-----
-
-## The Coding Agent Landscape (2026)
-
-<div class="text-sm">
-
-| Tool | Type | Key Feature | Approx. Market Position |
-|------|------|-------------|-------------------------|
-| **GitHub Copilot** | IDE plugin | Autocomplete + chat; 90% of Fortune 500 | ~20M users; 42% market share |
-| **Cursor** | AI-native IDE | Full codebase context; multi-file edits | $2B ARR; 1M+ daily active users |
-| **Claude Code** | Terminal / CLI agent | Reads whole repo, runs commands, autonomous | $1B+ ARR; 46% "most loved" by devs |
-| **OpenAI Codex** | Cloud agent | Async cloud tasks; parallel execution; delegates like a junior engineer | GA June 2025; ChatGPT Plus |
-| **Aider** | CLI agent | Open-source; pairs with any LLM | Active open-source community |
-| **Windsurf** | Agentic IDE | Full-repo Cascade agent; acquired by Cognition/Devin | Growing enterprise use |
-| **Devin** | Autonomous agent | Designed for fully autonomous coding tasks | First "AI software engineer" |
-
-</div>
-
-<p class="footnote">Sources: Sacra/TechBuzz (Cursor ARR Feb 2026); Anthropic (Claude Code adoption); GitHub/Microsoft (Copilot stats, July 2025)</p>
 
 ----
 
 # "Vibe Coding"
 
-*A new term for a new kind of development*
+> "There's a new kind of coding I call 'vibe coding', where you fully give in to the vibes, embrace exponentials, and forget that the code even exists."
+>
+> — Andrej Karpathy (co-founder of OpenAI, former AI lead at Tesla), February 2025
+
+**Collins English Dictionary Word of the Year 2025** 
 
 ----
 
 ## What Is Vibe Coding?
-
-> "There's a new kind of coding I call 'vibe coding', where you fully give in to the vibes, embrace exponentials, and forget that the code even exists."
->
-> — Andrej Karpathy, February 2025
-
-Coined by Karpathy (co-founder of OpenAI, former AI lead at Tesla), the term describes:
 
 - Describing what you want in plain language
 - Accepting AI-generated code without reviewing it line by line
 - Relying on *results* and follow-up prompts to guide changes
 - Iterating conversationally until the software does what you want
 
-**Collins English Dictionary Word of the Year 2025**
+----
 
-<p class="footnote">Karpathy, X (formerly Twitter), February 2025; Collins Dictionary, 2025; Wikipedia: Vibe Coding</p>
+## The Coding Agent Landscape
+
+This is *not* a 'list of tools' lecture. We'll focus on Cowork and Codex, but here are some names to be aware of:
+
+- Claude Code - The biggest one.
+- Claude Cowork - 'Claude Code' for non-developers.
+- Codex, Antigravitiy - OpenAI and Google versions.
+  - May 2026 - Codex is available to free users *for a limited time*; Antigravity also has a free tier
+- Aider, Pi, OpenCode - open source. 
+
+Not just for developers - a number of these options now have 'apps' instead or or in addition to command line interfaces, and the 'coding' of a coding agent is much more narrow than what it can do now.
+
 
 ----
 
-## Vibe Coding: Opportunity and Caution
-
-<div class="columns">
-<div class="column text-sm">
-
-**The opportunity:**
-- Lower barrier for people with ideas but limited coding background
-- Faster prototyping even for experienced developers
-- Data analysts, researchers, librarians building tools they couldn't before
-- Small one-off scripts: "parse this CSV and find duplicates"
-
-</div>
-<div class="column text-sm">
-
-**The honest limits:**
-- "Not reviewing the code" creates real risk — security holes, data leaks, silent errors
-- Debugging AI-generated code you don't understand is genuinely hard
-- Production software still requires engineering judgment
-- The learning curve for prompting well is real — it's a skill, not magic
-
-</div>
-</div>
-
-*For LIS students: vibe coding is most valuable for small, high-value, low-risk tasks — not for systems that handle sensitive patron data.*
-
-----
-
-## Claude Code: A Deep Dive
+## Claude Cowork
 
 ![bg right:40% 100%](/slides/images/10/computer-use.png)
 
-**Claude Code** (launched February 2025 as research preview; general availability May 2025):
+Claude Code is for developers. Cowork brings the same operating model to information professionals — and that includes you.
 
-- **Terminal-based**: runs in your project directory, reads everything
-- **Whole-codebase context**: not just the file you have open
-- **Agentic loop**: proposes changes → executes with approval → checks output → iterates
-- **CI/CD integration**: can commit, push to GitHub, review pull requests
-- **VS Code extension**: added September 2025; also web and iOS versions
-
-Internally at Anthropic: 20% adoption on day one, 80%+ of engineers using it daily within a week of internal release.
-
-<p class="footnote">Anthropic blog; Claude Code origin story, Panaversity/Agent Factory; Medium: Evolution of Claude Code, 2025</p>
+- **Computer use:** can open apps, navigate browsers, fill in forms
+- **Folder sandbox:** point it at a folder; it reads, creates, and edits files there
 
 ----
 
 <video src="/slides/images/10/claude-command-line-3x.mp4" controls height="500px"></video>
 
-### Claude Code in Action
+### Claude Code in Action 
 
-*Reads the codebase, proposes and implements changes, runs tests — all from the terminal*
+*This is the terminal version. It's still the most powerful — but it is not the only one, and not the one you'll use today.*
 
-----
-
-## Why Did It Get Significantly Better in Late 2025?
-
-Claude Code's quality is tied to the underlying model:
-
-- **February 2025** — launched with Claude 3.7 Sonnet (first hybrid reasoning model; set state-of-the-art on SWE-bench for real software issues)
-- **May 2025** — Claude 4 (Sonnet 4 + Opus 4) released alongside Claude Code GA; Cursor called Opus 4 "a leap forward in complex codebase understanding"
-- **Late 2025** — Claude 4 model family matures; parallel multi-agent execution added; $1B annualized revenue reached by November 2025
-
-**The key insight**: Compound reasoning matters more in agentic tasks than in single-turn chat. Each step in a multi-file refactor must be correct. Better models dramatically change what's possible.
-
-<p class="footnote">Anthropic: Claude 3.7 Sonnet and Claude Code (Feb 2025); Introducing Claude 4 (May 2025)</p>
-
-----
-
-## OpenAI Codex: Cloud-Based Autonomous Coding
-
-**Codex** (OpenAI, May 2025 preview / June 2025 GA) — a coding agent built into ChatGPT:
-
-- **Cloud-based**: runs in OpenAI-managed sandboxes — no local setup required
-- **Asynchronous**: assign a task, come back when it's done — like delegating to a junior engineer
-- **Parallel**: multiple tasks can run simultaneously in separate sandboxes
-- **GitHub-native**: reads your repo, writes code, proposes pull requests
-
-> The key contrast with Claude Code: Claude Code reasons with you in real-time in your terminal; Codex works silently in the background and surfaces results.
-
-<p class="footnote"><a href="https://openai.com/index/introducing-codex/">OpenAI: Introducing Codex</a>, May 2025</p>
-
-----
-
-## Claude Cowork: Agents for Everyone
-
-**Claude Cowork** (Anthropic, January 2026) — agentic AI without a terminal:
-
-- **Desktop agent**: built into the Claude macOS app — no coding knowledge required
-- **Folder sandbox**: designate a folder; Claude reads, creates, and edits files there
-- **Plain-language tasks**: describe what you want; Claude plans and executes autonomously
-- **Computer use** (March 2026): can open apps, navigate browsers, fill in forms directly on your Mac
-
-Example tasks: *"Organize my downloads folder by type and date", "Make a spreadsheet from these receipts", "Draft a report from these scattered notes"*
-
-> Claude Code is for developers. Cowork brings the same agentic loop to information professionals — including LIS students.
-
-<p class="footnote"><a href="https://claude.com/blog/cowork-research-preview">Anthropic: Introducing Cowork</a>, January 2026</p>
+<!-- FUTURE - remove terminal examples altogether -->
 
 ----
 
 ## Coding Agents for Information Professionals
-
-*You don't have to be a software engineer to benefit*
 
 LIS-relevant use cases where coding agents reduce friction:
 
@@ -447,86 +311,193 @@ LIS-relevant use cases where coding agents reduce friction:
 
 ----
 
-## The Democratization Argument — and Its Limits
-
-**The case for optimism:**
-- 81% of developers now use AI coding assistants (2025)
-- Coding agents may extend coding-adjacent capability to people who couldn't justify learning full programming
-- Particularly relevant for one-off analysis tasks (not maintaining production systems)
-
-**The honest counterweight:**
-- "Vibe coding" for critical library systems, patron databases, or systems with security requirements is risky
-- Prompting effectively takes practice — there is a learning curve
-- Debugging AI-generated code you don't understand can be harder than starting over
-- The "10x productivity" claims assume you know enough to evaluate the output
-
-*The Week 5 framing still holds: think of structured formats (SQL, Python, R) you already use. Coding agents lower the barrier to those formats — they don't eliminate the need to understand what you're asking for.*
+What's the good and bad of coding agents?
 
 ----
 
-## Connection: Week 5 → Week 7
+# Lab: Supervising an Agent
 
-In Week 5, we saw coding assistance as a form of structured-language help for professionals who aren't programmers.
+*A real task, a real agent, a real reflection*
 
-**What's changed since then:**
-
-| Week 5 framing (2023–2024) | Week 7 reality (2025–2026) |
-|---------------------------|------------------------------|
-| Suggest the next line of code | Read and edit your entire project |
-| One-file autocomplete | Multi-file agentic execution |
-| "Pair programmer" | Autonomous agent with approval gates |
-| Helpful for programmers | Accessible to non-programmers for many tasks |
-| GitHub Copilot / Cursor as examples | Claude Code, Cursor, Aider, Windsurf |
-
-The shift is real — but it amplifies both capability *and* risk.
+- 
 
 ----
 
-## Lab Concept: Try a Coding Agent
+## Lab Setup: Pick Your Path
 
-**Goal:** Experience agentic coding firsthand — even without prior programming experience
+If you don't subscribe to any AI service, install Codex (https://chatgpt.com/codex). Antigravity IDE from Google is another option, but we'll focus on Codex.
 
-**Options (choose one):**
+If you subscribe to Claude, install the desktop app (https://claude.com/download), and switch to the Cowork tab ![](/slides/images/10/cowork/2026-05-13-13-09-11.png). If you subscribe to Gemini, install Antigravity, if you subscribe to ChatGPT, use Codex.
+
+----
+
+## The Lab Task
 
 <div class="text-sm">
 
-1. **Claude Code or Cursor** — If you have a code project (even a small one), install Claude Code or try Cursor's free tier. Ask it to add a feature or fix a bug. Note what it does autonomously vs. what it asks you about.
+1. **Messy Bibliography.** I'll give you a CSV of ~100 citations with inconsistent author formatting, missing years, and a few duplicates. Clean it into a bibliography.
 
-2. **Claude Cowork or OpenAI Codex** — No coding project? Use Cowork to tackle a real file/productivity task (organize a folder, draft from notes), or use Codex via ChatGPT to assign a background task. No terminal or setup required.
+2. **Metadata Crosswalk.** Give the agent 10 MARC records. Have it produce a clean Dublin Core conversion with one-sentence notes on what got lost in translation.
 
-3. **Vibe coding a small tool** — Use Claude.ai or ChatGPT to iteratively build a tiny script: a text file analyzer, a CSV cleaner, a simple vocabulary quiz. No installation needed. Describe what you want; iterate until it works.
+3. **Reader's Advisory Bot.** Build a tiny tool for browsing book award winners.
 
-4. **LIS task simulation** — Give an AI model a messy dataset (e.g., a list of ISBNs, a sample MARC export, a circulation CSV). Ask it to write and explain code that does something useful with it. Evaluate: did the output work? Did you understand it? What would you change?
+4. **Research/Study Guide Builder** From a folder of materials from a class, produces a structured LibGuide-style document for yourself: background, key sources annotated, further reading.
 
-**Reflect:** What did the agent do well? Where did it need correction? What knowledge did *you* still need to guide it?
+5. **Interview Simulator** Set up a fake 'bot interviewer' based on a job posting. Collect more detail about the workplace than just what's posted. Iterate on the interview voice, and have it save your answers and suggestions.
 
 </div>
 
+The tasks are Task 1 - you'll get to decide on what to do next with the project (or can switch to *your own project* once you have the fundamentals).
+
+*If fact - if all goes well, you'll get through the first task faster than you imagine*
+
 ----
 
-## Exercise: Ask an Agent About This Course
+## Get Started
 
-A live demo of agents as document-understanding tools — using AI to explore the course itself.
+1. Set up your work folder with all your relevant files on your computer.
+
+2. In Codex, select 'Add New Project' (feature is similar in Cowork and Antigravity) and choose the work folder that you're using
+
+3. Get to know the directory - ask the agent what there is!
+
+4. Ask the agent to 'Initialize the project' or 'Initialize the AGENTS.md'. Give it more context if you think it needs it beyond what it can infer from the files. 
+
+Questions
+- Make sense of the new files that it writes, particularly AGENTS.md (or CLAUDE.md in Cowork). First person to figure out what that file is - share with the class!
+- Did it run any tools? How did it handle permissions?
+
+----
+
+## Plan First, Then Act
+
+Ask the agent to *plan* your chosen task — not do it.
+
+1. Read the plan. Anything missing? Anything that worries you? *Push back* if so.
+
+2. Once it looks right, tell it to go.
+
+----
+
+## Watch the Loop
+
+1. As it works, watch for the moment it re-reads its own output and changes course. **That's the loop.**
+
+2. Note one specific moment: what did it just do, what did it notice, what did it change?
+
+3. If it never self-corrects — note that too. Some tasks don't need it; others do and the agent missed it.
+
+----
+
+## Iterate and Audit, Audit and Iterate
+
+1. With a result in hand, where did you get? Is it good? Is it bad? Is it workable?
+
+
+## Get Creative
+
+Consider next steps for this project or, swap to a project of *your* choosing.
+
+See how well you can execute on your open-ended next idea.
+
+Tips: 
+- Note the operative 'consider' above - *you* are the idea person, try to keep that way
+- Push back;
+- Understand where you are better and faster
+
+Things to watch for:
+- Confidence - is the model confident-but-wrong? Is it overly-deferential?
+- Agency - does it may assumptions or ask you about big decision points?
+
+---
+
+## Bonus
+
+Type '/' and a dropdown will show skills. 
+Q: What skills do you have? 
+
+Try making a skill for something repeatable in your project.
+Q: What was needed for making it?
+
+Try installing the 'playwright' skill to give the agent a browser.
+
+----
+
+## Capture as You Go
+
+Open a doc alongside the agent. While you work, jot down:
+
+- The **plan** the agent proposed (copy/paste)
+- The **one loop moment** you noticed
+- The **one failure** when you tried to break it
+- A screenshot or two of anything that surprised you
+
+The reflection writes itself if you capture as you go.
+
+----
+
+## The Reflection — This Is What's Graded
+
+You will turn in the finished artifact (either for the project your started with, or another that you switched to) alongside a 1-2 paragraph reflection on the task, what the agents plan looked like, what the system's activities looked like, and your reactions (e.g. surprises, failures, highlights).
+
+For the portfolio: the finished artifact is included (an output from the project, or just a zip of the full folder). In-class, it's optional to post.
+
+Capture as you go along.
+
+----
+
+## Companion Exercise: Ask an Agent About This Course
+
+*A second small exercise — RAG + agents on a real corpus*
 
 <div class="text-sm">
 
 1. **Get the course materials**: Clone or download from the course GitHub repository (link on Canvas)
-2. **Open with an agent**: Claude Code, Cursor, or upload the files to ChatGPT
+2. **Open with an agent**:
+   - Paid path: Claude Code (web or VS Code), Cursor, Cowork
+   - Free path: upload the markdown files to Claude.ai or ChatGPT; or open in Antigravity
 3. **Ask questions of the corpus**:
-   - "What topics are covered each week?"
-   - "List all the labs — which are portfolio-eligible?"
-   - "Find every slide that mentions RAG"
-   - "What ethical concerns does this course raise about AI?"
-4. **Reflect**: How well did the agent navigate a set of documents? What did it get wrong?
+   - *"What topics are covered each week?"*
+   - *"List all the labs — which are portfolio-eligible?"*
+   - *"Find every slide that mentions RAG."*
+   - *"What ethical concerns does this course raise about AI?"*
+   - *"Where in the course do we contradict ourselves?"* ← my favorite stress test
+4. **Reflect**: How well did the agent navigate the corpus? What did it get wrong? What did it confidently make up?
 
 </div>
 
-*This is RAG + agents in action: the agent reads the corpus to answer questions, rather than guessing from training memory. This is exactly how enterprise document search and library knowledge systems are being built.*
+*This is RAG + agents in action: an agent reads a corpus to answer questions, rather than guessing from training memory. Exactly how enterprise document search and library knowledge systems work.*
 
 ----
 
+# Extra Material
+
+---
+
+## MCP
+
+Model Context Protocol is a standard for providing context to tools to LLMs.
+
+https://modelcontextprotocol.io/
+
+e.g. You can make a database or a filesystem available to a coding app, or a chat app, etc., without writing a custom tool for each
+
+(Mar 2025 - OpenAI is introducing MCP support: https://openai.github.io/openai-agents-python/mcp)
+
+----
+
+## Playwright
+
+- Playwright is a browser-testing tool, it's what Browser Use uses
+- with this server, you can give a browser to an llm to use
+
+![](/slides/images/10/playwright.png)
+
+---
+
 ## Code Interpreter / Claude Artifacts
 
+*Still relevant in 2026, but removed from lecture in favor of coding agents*
 <div class="text-sm">
 
 In ChatGPT, you can add more instructions to use the tools by saying "use Python to..."
@@ -546,38 +517,5 @@ Exercise: In pairs, try some of the following 'write and run code' tasks with Ch
 - Build an image resizer
 
 </div>
-
-----
-
-## The Big Quiz
-
-See Canvas. We'll do the quiz in pairs. Remember - it's just review, *unless* you include in your Portfolio.
-
-----
-
-# Updates
-
-*Updates since I last taught the class are here. They are not formatted as slides, so refer to the 'Notes' version of the deck <https://ai.porg.dev>*
-
-## MCP
-
-Model Context Protocol is a standard for providing context to tools to LLMs.
-
-https://modelcontextprotocol.io/
-
-e.g. You can make a database or a filesystem available to a coding app, or a chat app, etc., without writing a custom tool for each
-
-(Mar 2025 - OpenAI is introducing MCP support: https://openai.github.io/openai-agents-python/mcp)
-
-----
-
-## Playwright-MCP
-
-- Playwright is a browser-testing tool, it's what Browser Use uses
-- with this server, you can give a command to an MCP LLM (e.g. Claude on your computer) and it can use a browser (in image-based-mode or all text-based)
-
-![](/slides/images/10/playwright.png)
-
-(Simon Willison summarizes the tool and how to use it in Claude: https://simonwillison.net/2025/Mar/25/playwright-mcp/)
 
 ---
