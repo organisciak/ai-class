@@ -202,6 +202,7 @@ The history of AI coding assistance has three phases:
 **Phase 2: Chat + Code (2023–2024)**
 - Ask questions, get whole functions
 - Still mostly: you paste, you review, you run
+
 </div>
 <div class="column text-sm">
 
