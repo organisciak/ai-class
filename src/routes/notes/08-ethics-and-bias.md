@@ -18,11 +18,19 @@ backgroundImage: "images/07/image-of-pope.png"
 
 ----
 
-## Labs Discussion
+## Debrief: Last Week's Agents Class
 
-- reminder about completion of labs
-- Prompt & Circumstance
-- Classification Prompt Battle
+- What stuck with you?
+- What felt useful?
+- What questions remain? What was confusing?
+- Did you apply the skills to another problem? How?
+
+----
+
+## Portfolio Draft Feedback
+
+- Push on the systems. We're an active party - there is no AI response for us to react to without ourselves to have nudged it in the first place. Don't just observe the models as a separate artifact - observe and explore your place in the conversation. How do you adapt an ask? How do you reflect, respond, and iterate? How do you build on what you get?
+- Don't treat the models as a magic oracle that's expected to give you the perfect thing, suceeding or failing at that. It's a tool to your ends, a brush to your canvas. This puts a lot more burden on you and your creativity in applying the tool, but the magic oracle view stands in the way of fluent use of the tool.
 
 ----
 
