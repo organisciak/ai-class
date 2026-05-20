@@ -111,6 +111,11 @@ Research from Harvard (in 2013) showed that black names on Google are more likel
 
 ([Koo et al., 2023](https://arxiv.org/pdf/2309.17012))
 
+
+<div class="footnote">
+Lock it in: take a moment to plan a query to test one of these biases.
+</div>
+
 ----
 
 ![](/slides/images/07/cognitive-results.png)
