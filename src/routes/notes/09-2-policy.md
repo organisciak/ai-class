@@ -10,16 +10,6 @@ footer: "Policy and Regulatory Frameworks"
 
 ----
 
-## What's Happening in AI?
-
-*Student presentation — Week 9 (Policy)*
-
-After the presentation, consider:
-
-- What regulatory or policy responses might this development prompt?
-
-----
-
 ## The EU AI Act
 
 - First comprehensive AI regulation in the world
@@ -27,20 +17,6 @@ After the presentation, consider:
 - Risk-based approach to AI regulation
 - Focuses on transparency, safety, and fundamental rights
 - "Brussels Effect": Influence on other jurisdictions, including Colorado
-
-----
-
-## EU AI Act: Now in Force — Implementation Timeline
-
-The Act is rolling out in phases. Key dates:
-
-| Date | What Takes Effect |
-|------|-------------------|
-| **Feb 2, 2025** ✅ | **Prohibited practices BANNED** (social scoring, manipulative AI, biometric ID in public) |
-| **Aug 2, 2025** ✅ | **GPAI obligations NOW ACTIVE** (documentation, copyright summaries, transparency) |
-| **Aug 2, 2026** 🔜 | **High-risk rules** (hiring, credit, healthcare, education AI) |
-
-Penalties for prohibited practices: up to €35 million or 7% of global annual turnover.
 
 ----
 
@@ -134,7 +110,6 @@ With no federal law, states stepped in — and the federal government pushed bac
 - **December 11, 2025**: Trump EO directs DOJ to form "AI Litigation Task Force" to challenge state AI laws in court
 - **July 2025**: Senate budget bill included a proposed **10-year moratorium** on all state AI regulation
   - **Senate voted 99–1** to strip the moratorium from the bill (July 1, 2025)
-  - Only Sen. Thom Tillis voted to keep the moratorium
   - The final "One Big Beautiful Bill Act" (signed July 4) includes no restrictions on state AI laws
 - EO preemption attempts face legal limits: only Congress can constitutionally preempt state law
 
@@ -144,46 +119,37 @@ With no federal law, states stepped in — and the federal government pushed bac
 
 In the absence of federal law, states have become the primary regulatory arena:
 
-| State | Law | In Effect |
-|-------|-----|-----------|
-| **Illinois** | HB 3773 — prohibits AI discrimination in employment (amends Human Rights Act) | Jan 1, 2026 |
-| **California** | Transparency in Frontier AI Act — frontier model risk frameworks, safety incident reporting | Jan 1, 2026 |
-| **Texas** | Responsible AI Governance Act (RAIGA) — consumer protections, AI sandbox program | Jan 1, 2026 |
-| **Colorado** | SB 24-205 — high-risk AI impact assessments, anti-discrimination rules | *see next slide* |
+- **Illinois**: HB 3773 — prohibits AI discrimination in employment (amends Human Rights Act)
+- **California**: Transparency in Frontier AI Act — frontier model risk frameworks, safety incident reporting
+- **Texas**: Responsible AI Governance Act (RAIGA) — consumer protections, AI sandbox program | Jan 1, 2026 |
+- **Colorado**: SB 24-205 → repealed and replaced by SB 26-189 (transparency/disclosure approach)
 
 Over 40 states introduced AI legislation in 2025.
 
 ----
 
-## Colorado AI Act (SB 24-205): Local Context
+## Colorado AI Act: SB 24-205 (Original)
 
 Colorado was the **first state** to pass comprehensive AI legislation (signed May 2024):
 
-- Modeled partly on the EU AI Act's risk-based approach
-- Covers "high-risk" AI systems used in consequential decisions (employment, housing, credit, education, healthcare)
-- Requires: impact assessments, anti-discrimination safeguards, consumer notices, developer documentation
+- Modeled on the EU AI Act's risk-based approach
+- Covered "high-risk" AI systems in consequential decisions (employment, housing, credit, education, healthcare)
+- Required: **impact assessments**, **anti-discrimination duty of care**, risk management programs, consumer notices, developer documentation
 
-**Timeline of delays:**
-- Original effective date: **February 1, 2026**
-- Gov. Polis signed SB 25B-004 (Aug 28, 2025) → delayed to **June 30, 2026**
-- 2026 legislative session: active negotiations on repeal-and-replace; fate still uncertain as of March 2026
-- Trump Dec 2025 EO adds federal pressure; White House compiling list of "onerous" state AI laws
-
-*Bottom line: The law is on the books but its final form is in flux.*
+Original effective date Feb 2026 → delayed to June 30, 2026. Then repealed-and-replaced on May 14, 2026.
 
 ----
 
-## US vs. EU: Two Models of AI Governance
+## SB 26-189: The Replacement
 
-| Dimension | European Union | United States |
-|-----------|---------------|---------------|
-| **Approach** | Precautionary, rights-based | Innovation-first, deregulatory |
-| **Federal law** | AI Act — comprehensive, binding | None (Biden EO rescinded) |
-| **Enforcement** | Mandatory, with fines up to 7% revenue | Voluntary standards (CAISI) |
-| **State/member laws** | EU harmonizes across members | States filling the vacuum |
-| **Transparency** | Required for high-risk & GPAI | Largely voluntary |
+- SB 24-205 was singled out by a Trump EO (Dec 2025); DOJ formed an AI Litigation Task Force to challenge state AI laws.
+- xAI sued Colorado in federal court (Apr 2026) challenging constitutionality; DOJ moved to intervene in support.
 
-The EU AI Act is now the de facto global baseline — companies that sell into Europe must comply regardless of home country.
+Effective **January 1, 2027**.
+
+Fundamental shift: from risk management/prevention to transparency/disclosure.
+
+Structure for managing and pre-emptively mitigated risk is much smaller; more burden on disclosing automated decision making, explaining potential adverse outcomes, remedying adverse effects and providing consumer rights to human review
 
 ----
 
@@ -191,10 +157,8 @@ The EU AI Act is now the de facto global baseline — companies that sell into E
 
 - What are the potential positive impacts of the EU AI Act?
 - What are the potential concerns with the EU AI Act?
-- **Who benefits from the EU approach? Who benefits from the US approach?**
-- **Who is at risk under each model?**
-- The Senate voted 99–1 against a federal moratorium on state AI laws. What does that tell us about political will?
-- Colorado passed a law, then delayed it under industry pressure. Is that democracy working, or captured regulation?
+- Who benefits from the EU approach? Who benefits from the US approach?
+- Who is at risk under each model?
 
 ----
 

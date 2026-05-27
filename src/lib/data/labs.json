@@ -137,18 +137,6 @@
         "gradingCriteria": "Grading will focus on the clarity and appropriateness of your ideas and approach; the practical applicability of recommendation; and the evidence of understanding relevant AI principles"
     },
     {
-        "original": "ai-art-exhibition.md",
-        "title": "AI Art Exhibition and Critique",
-        "description": "Create AI-generated images and provide curator statements for others' work in a virtual gallery setting.",
-        "gradingCriteria": "Grading will focus on creativity in the prompting process, sophistication of generated images (avoiding generic/cliched outputs), and thoughtful iteration based on results.",
-        "docPath": "/labs/ai-art-exhibition",
-        "week": 9,
-        "coreCompetencies": [
-            "Art and Creativity"
-        ],
-        "pts": 1
-    },
-    {
         "original": "big-quiz.md",
         "title": "The Big Quiz",
         "description": "A comprehensive quiz covering the full range of course concepts, designed to demonstrate mastery of AI literacy fundamentals.",
