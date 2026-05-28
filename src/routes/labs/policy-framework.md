@@ -1,12 +1,12 @@
 ## AI Policy Framework
 
-*Week 8*
+*Week 8 (Optional)*
 
 Competencies: **Society, Ethics, and Policy**, Critical Analysis, Technical Understanding
 
 ### Overview
 
-Develop guidelines for AI use in a specific organizational context, addressing ethical considerations and practical implementation.
+Develop guidelines for AI use in a specific organizational context, addressing ethical considerations and practical implementation. This is an optional lab that can be included in your portfolio.
 
 ### Details
 
@@ -23,11 +23,9 @@ Whichever angle you choose, pursue it constructively.
 
 ### Completion Details
 
-Given the structure of our class, you don’t need to prepare the final handout: we don’t have space for that scale of effort.
+*This is a portfolio-only lab - no separate completion requirements*
 
-Rather, you’ll prepare an *outline* of the key points. 1) Who you’re targeting; 2) what structure and tact you’d take; then 3) an outline of points in each section. This should communicate your ideas directly and succinctly.
-
-Post your outline to the class Canvas.
+Prepare an *outline* of the key points. 1) Who you’re targeting; 2) what structure and tact you’d take; then 3) an outline of points in each section. This should communicate your ideas directly and succinctly.
 
 ### Portfolio Details
 

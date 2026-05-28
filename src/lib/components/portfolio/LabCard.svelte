@@ -11,6 +11,7 @@
         gradingCriteria: string;
         coreCompetencies: string[];
         docPath?: string;
+        optional?: boolean;
     };
     export let selected: boolean = false;
     
@@ -42,6 +43,9 @@
                     <a href={lab.docPath} target="_blank" rel="noopener noreferrer" class="hover:underline">{lab.title}</a>
                 {:else}
                     {lab.title}
+                {/if}
+                {#if lab.optional}
+                    <span class="text-xs text-gray-500 font-normal">(Optional)</span>
                 {/if}
             </label>
         </CardTitle>
