@@ -15,10 +15,6 @@ backgroundImage: "images/09/latentscape.png"
 
 *Student presentation — Week 10*
 
-After the presentation, consider:
-
-- How does this connect to how AI handles images, audio, video, or other modalities?
-
 ---
 
 ## Introduction to Multimodal AI
@@ -150,8 +146,6 @@ Became a cultural flashpoint about:
 - What does it mean to be an artist when style is instantly replicable?
 - Is this **homage or appropriation**?
 
-*Good discussion question: Where do you land on this?*
-
 -----
 
 ## Nano Banana: Google's Image Model Family
@@ -161,8 +155,6 @@ An unusual name for a powerful model family — the codename stuck:
 - **Nano Banana** *(Aug 2025)*: Debuted anonymously on Arena (chatbot benchmark platform); later revealed as a Google DeepMind model
 - **Nano Banana Pro** *(Nov 2025)*: More capable version
 - **Nano Banana 2** *(Feb 26, 2026)*: Integrated into Gemini, Google Search AI Mode, and Google Lens; built on Gemini Flash Image architecture; strong instruction-following image editing
-
-The name itself is a good class moment: AI model naming is sometimes arbitrary — codenames that were never meant to be public sometimes stick.
 
 -----
 
@@ -176,8 +168,6 @@ Video went from "impressive demo" to **production tool** in 2025:
 
 > Key shift: In 2024 these were party tricks. By 2025, filmmakers were shipping work made with these tools.
 
-*Note: The next slide covers OpenAI's Sora specifically.*
-
 -----
 
 ## [Sora](https://openai.com/index/sora/?video=913353498)
@@ -185,14 +175,8 @@ Video went from "impressive demo" to **production tool** in 2025:
 [![bg cover](/slides/images/09/sora-otter.png)](https://openai.com/index/sora/?video=913353498)
 
 <p class="footnote">
-Sora launched publicly <strong>December 2024</strong> (previously preview-only) — now a production product.
+Sora launched publicly <strong>December 2024</strong> (previously preview-only) — a production product by 2025... and killed by 2026.
 </p>
-
-----
-
-# [Oasis](https://oasis.decart.ai/)
-
-![bg contain](/slides/images/09/oasis.png)
 
 ----
 
@@ -273,28 +257,9 @@ The Vision Transformer approach makes clear that images can be treated the same 
 
 Short Exercise: Try GPT Voice Mode
 
-** In groups of 3-4, try out the new voice mode in GPT-4o, around one phone (onsite) or following with a single group leader (on Zoom) **
-
 ----
 
 # Creative Applications
-
-----
-
-[Whisk](https://labs.google/fx/tools/whisk)
-
-![bg left:15%](/slides/images/09/whisk1.png)
-
-![](/slides/images/09/whisk2.png)
-
-----
-
-Whisk: Example of clever application design
-  - Generating images based on example style, scene, and subject images
-  - Using analyzed text descriptions from examples to create prompts
-  - Demonstrates how application design can simplify complex technology
-
-----
 
 [Artbreeder Splicer](https://www.artbreeder.com/splicer)
 
@@ -336,9 +301,9 @@ Courts are actively working out the rules — expect continued uncertainty.
 
 ### Key Cases (2025)
 
-- **Thomson Reuters v. ROSS Intelligence** (Feb 2025): ROSS built a legal AI trained on Westlaw content — **not fair use** because it competed directly with the original
+- **Thomson Reuters v. ROSS Intelligence** (Feb 2025): ROSS built a legal AI trained on Westlaw content - **not fair use** because it competed directly with the original
 - **Bartz v. Anthropic** (June 2025): Training on books found "spectacularly transformative" (fair use), BUT acquiring books from pirate sources (LibGen) was not; Anthropic settled ~$1.5B
-- **Kadrey v. Meta** (June 2025): Training on books was fair use — narrow, fact-specific ruling; contrast with Thomson Reuters on the question of competitive substitution
+- **Kadrey v. Meta** (June 2025): Training on books was fair use - narrow, fact-specific ruling; contrast with Thomson Reuters on the question of competitive substitution
 - **US Copyright Office** (May 2025): Current AI training practices likely do not qualify as fair use when they compete with human creators' markets
 
 ----
@@ -349,8 +314,6 @@ Courts are actively working out the rules — expect continued uncertainty.
 - **For LIS professionals**: sourcing matters — licensed data vs. scraped or pirated content carries different legal risk
 - **For AI developers**: the "competitive substitution" test is the emerging standard
 - 74% of professional visual artists report lost income from AI substitution (Artists Rights Alliance, 2025)
-
-*Discussion: Who bears responsibility — the model maker, the platform, or the user?*
 
 ---
 
@@ -368,7 +331,47 @@ Consider:
 
 ----
 
-## [Lab: AI Art Exhibition and Critique](/labs/ai-art-exhibition)
+## Exercise: AI Art Gallery
+
+Generate and critique AI art — combining image *generation* and *vision* capabilities.
+
+----
+
+### Part 1: Create (15 min)
+
+Use an image generator to create and iterate on AI-generated images. Push past the "digital art" defaults — try different styles, remixes, subjects.
+
+Some options:
+- **ChatGPT** (GPT-Image native generation) or **Gemini Nano Banana** — just ask
+- [HuggingFace Spaces](https://huggingface.co/spaces?category=image-generation) (e.g. FLUX)
+- [Ideogram](https://ideogram.ai/t/explore) · [MidJourney](https://www.midjourney.com/explore?tab=top)
+
+Contribute your favorite image to the class gallery. Include a text box with your prompt and tool.
+
+----
+
+### Part 2: The Critic (10 min)
+
+Use a vision-capable model (ChatGPT, Claude, Gemini) to write a short **curator's statement** (< 50 words) for someone else's image in the gallery.
+
+You're curating — the AI writes the feedback, but you direct its voice and select what you like. Make it silly, serious, or surprising. Don't be mean.
+
+Post your statement as a Post-It note beside their image.
+
+----
+
+### Gallery Walk & Discussion
+
+- What styles or prompts produced the most interesting results?
+- How did the AI "critic" interpret the images — did it notice what you noticed?
+- Where did generation models default to cliché, and how did you push past it?
+
+-----
+
+## Wrap-Up
+
+- High-level feedback on Portfolio Drafts
+- Review of Class Goals
 
 -----
 

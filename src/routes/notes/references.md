@@ -18,6 +18,8 @@ Colorado General Assembly. (2024). *SB 24-205: Consumer Protections for Artifici
 
 Colorado General Assembly. (2025). *SB 25B-004: Increase Transparency for Algorithmic Systems Act* [amending SB 24-205, delaying effective date to June 30, 2026].
 
+Colorado General Assembly. (2026). *SB 26-189: Concerning the Use of Automated Decision-Making Technology in Consequential Decisions*. https://leg.colorado.gov/bills/sb26-189
+
 Cox, A. (2024). Algorithmic Literacy, AI Literacy and Responsible Generative AI Literacy. *Journal of Web Librarianship*, 1–18.
 
 Deerwester, S., Dumais, S. T., Furnas, G. W., Landauer, T. K., & Harshman, R. (1990). Indexing by latent semantic analysis. *Journal of the American Society for Information Science*, 41(6), 391–407. https://doi.org/10/db4ft5
