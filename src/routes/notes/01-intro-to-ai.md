@@ -11,6 +11,13 @@ backgroundImage: "images/01/alphafold.png"
 # Introduction to AI in Society
 ## Week 1: Foundations and Overview
 
+<!--
+Notes for next year:
+Maybe just eliminated the portfolio approach, and switch to individually graded labs (the 1 credit labs); and remove the extra lab participation score.
+Or maybe two portfolio submissions rather than one back-loaded submission
+
+-->
+
 ---
 
 # Agenda

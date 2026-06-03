@@ -8,7 +8,7 @@ backgroundImage: "images/07/image-of-pope.png"
 
 ---
 
-# Bias and Risks in AI Systems, Safety Considerations
+# Bias and Risks in AI Systems, Safety Considerations
 
 ----
 

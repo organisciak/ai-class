@@ -121,7 +121,7 @@
             </h2>
 
             <div class="grid gap-6 md:grid-cols-2">
-                {#each slides as slide}
+                {#each slides.filter(s => debug || !s.hidden) as slide}
                     {@const slideNumber = slide.original.split('-')[0]}
                     {@const available = isLectureAvailable(slideNumber)}
 

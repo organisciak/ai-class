@@ -56,7 +56,7 @@
     "backgroundImage": "/slides/images/10/computer-use.png"
   },
   {
-    "title": "Bias and Risk in AI Systems, Safety Considerations",
+    "title": "Bias and Risks in AI Systems, Safety Considerations",
     "filename": "08-ethics-and-bias.html",
     "slidePath": "/slides/08-ethics-and-bias.html",
     "docPath": "/notes/08-ethics-and-bias",
@@ -85,5 +85,13 @@
     "docPath": "/notes/10-multimodal",
     "original": "10-multimodal.md",
     "backgroundImage": "/slides/images/09/latentscape.png"
+  },
+  {
+    "title": "Week 10 - In-Class Wrap-Up",
+    "filename": "10b-wrap-up.html",
+    "slidePath": "/slides/10b-wrap-up.html",
+    "docPath": "/notes/10b-wrap-up",
+    "original": "10b-wrap-up.md",
+    "backgroundImage": "/slides/images/10b/ibm-accountability.png"
   }
 ]

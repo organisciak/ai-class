@@ -125,8 +125,10 @@ async function processSlides() {
     const headerMatch = content.match(/header:\s*"([^"]+)"/);
     const footerMatch = content.match(/footer:\s*"([^"]+)"/);
     const backgroundImageMatch = content.match(/backgroundImage:\s*"?([^"\n]+)"?/);
+    const hiddenMatch = content.match(/^hidden:\s*(true|false)\s*$/m);
     const header = headerMatch ? headerMatch[1] : '';
     const footer = footerMatch ? footerMatch[1] : '';
+    const hidden = hiddenMatch ? hiddenMatch[1] === 'true' : false;
     
     // Transform background image path if it exists
     let backgroundImage = '';
@@ -163,7 +165,8 @@ async function processSlides() {
       slidePath: `/slides/${outputName}`,
       docPath: `/notes/${slug}`,
       original: file,
-      backgroundImage: backgroundImage || undefined  // Only include if exists
+      backgroundImage: backgroundImage || undefined,  // Only include if exists
+      hidden: hidden || undefined  // Hide from front page listing but still serve the file
     })
   }
 

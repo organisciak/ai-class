@@ -7,6 +7,8 @@ footer: "Talking to Bots"
 backgroundImage: "images/03/log-probabilities.png"
 ----
 
+<!-- Changes for next year: the studio session lab didn't have enough meat on the bone - maybe just remove -->
+
 # How to Talk to Chat Bots
 
 - What instruction-tuned LLMs are good at

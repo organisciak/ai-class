@@ -68,6 +68,8 @@ Noy, S., & Zhang, W. (2023). Experimental evidence on the productivity effects o
 
 Organisciak, P., Acar, S., Dumas, D., & Berthiaume, K. (2023). Beyond semantic distance: Automated scoring of divergent thinking greatly improves with large language models. *Thinking Skills and Creativity*, 49, 101356. https://doi.org/10.1016/j.tsc.2023.101356
 
+Organisciak, P., & Gillette, E. (2026). Toward a new AI literacy. In W. Bishop, R. L. Chancellor, & J. Sánchez (Eds.), *A critical look at information science and librarianship in a new age: Constellation of insanity* (Advances in Librarianship, Vol. 60). Emerald Publishing. https://doi.org/10.1108/S0065-283020260000060012
+
 Pennington, J., Socher, R., & Manning, C. (2014). Glove: Global vectors for word representation. *Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing (EMNLP)*, 1532–1543.
 
 Piketty, T. (2014). Capital in the twenty-first century (A. Goldhammer, Trans.). Belknap Press.
