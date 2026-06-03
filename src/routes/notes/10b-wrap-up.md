@@ -306,29 +306,11 @@ Organisciak, P., & Gillette, E. (2026). Toward a New AI Literacy. In Bishop, Cha
 
 ---
 
-# Portfolio Work Time
-
-*I'll float around - grab me.*
-
-- Pull up your portfolio plan
-- Identify the 2–3 labs you'll polish
-- Reflection drafts welcome
-
----
-
-# Stump the Professor
-
-*Optional.*
-
-Bring me a real problem - from work, a class, or just curiosity.
-
-I'll walk through how **I** would approach it with AI today.
-
----
-
 # Course Refresher
 
-*One key idea from each week.*
+---
+
+First: let's go around the room. One (or two or three) things you're stepping away from this class with
 
 ---
 
@@ -349,6 +331,26 @@ I'll walk through how **I** would approach it with AI today.
 8. **Ethics & bias** - measurement and mitigation
 9. **Society & policy** - labor, environment, regulation
 10. **Multimodal** *(recorded)* - image, video, audio
+
+---
+
+# Portfolio Work Time
+
+*I'll float around - grab me.*
+
+- Pull up your portfolio plan
+- Identify the 2–3 labs you'll polish
+- Reflection drafts welcome
+
+---
+
+# Stump the Professor
+
+*Optional.*
+
+Bring me a real problem - from work, a class, or just curiosity.
+
+I'll walk through how **I** would approach it with AI today.
 
 ---
 

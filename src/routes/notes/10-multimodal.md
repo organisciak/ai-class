@@ -352,7 +352,7 @@ Contribute your favorite image to the class gallery. Include a text box with you
 
 ### Part 2: The Critic (10 min)
 
-Use a vision-capable model (ChatGPT, Claude, Gemini) to write a short **curator's statement** (< 50 words) for someone else's image in the gallery.
+Use a vision-capable model (ChatGPT, Claude, Gemini) to write a short **curator's statement** (under 50 words) for someone else's image in the gallery.
 
 You're curating — the AI writes the feedback, but you direct its voice and select what you like. Make it silly, serious, or surprising. Don't be mean.
 
